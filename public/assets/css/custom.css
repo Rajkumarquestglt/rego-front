@@ -1,0 +1,118 @@
+﻿.header__search {
+    width: 20%;
+}
+.upper-strip {
+    background-color: #5138ee;
+    padding: 5px;
+}
+.upper-strip ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    flex-wrap: wrap;
+}
+.upper-strip ul li {
+    text-align: center;
+    list-style: none;
+    font-weight: 600;
+    color: #fff;
+    width: 18%;
+    font-size: 13px;
+}
+.upper-strip ul li:nth-child(5) {
+    width: 7%;
+}
+.upper-strip ul li:nth-child(6) {
+    width: 7%;
+}
+.header-main {
+    position: absolute;
+    top: 42px;
+}
+.header-main.index-header.bg-color{
+    position: fixed;
+    top: 0;
+}
+.upper-strip ul li a img {
+    height: 25px;
+    margin: 0 5px;
+}
+.header__nav-item {
+    margin-left: 10px;
+    height: auto;
+}
+.header.light-version .header__nav-link, .header.light-version a {
+    color: #000;
+    margin-right: 18px;
+    font-size: 16px;
+}
+.header__content {
+    padding-inline: 4%;
+}
+
+.sign-up-btn {
+    text-align: center;
+    min-width: auto;
+    border-radius: 2px;
+    padding: 8px 10px !important;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    height: auto;
+    background-color: #5138ee;
+    color: #fff !important;
+    margin-right: 0 !important;
+}
+.header {
+    box-shadow: 0 0 10px rgba(3,0,16,.2);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    top: 35px;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 70px;
+    background-color: #fff;
+    z-index: 101;
+}
+.signup-three-btn{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.signup-three-btn .default-btn {
+    width: 32% !important;
+    line-height: inherit;
+    font-size: 15px;
+    padding: 10px 10px;
+    color: #fff !important;
+    text-decoration: none !important;
+}
+.account-wrapper {
+    padding: 10px 20px;
+}
+.signup-three-btn .default-btn:hover {
+   color: #5138ee !important;
+}
+.header__logo {
+    padding-right: 0;
+    margin-right: 0;
+}
+
+@media (max-width: 991px){
+	.upper-strip {
+    display: none;
+}
+.header__search {
+    width: 100%;
+}
+.header {
+    top: 70px;
+}
+.padding-top.login-section {
+    padding-top: 175px;
+}
+}

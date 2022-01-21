@@ -1,17 +1,23 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "../Components/Layout";
-import Home from "../pages/Home";
+import {BrowserRouter,Routes,Route} from "react-router-dom";
+import Signup from "../Components/signUp.js"
+import Signin from "../Components/signIn.js"
+import Explorer from "../Components/Explorer.js"
+import Index from "../Components/Index.js";
+import ItemDetails from "../Components/itemDetails";
 
 
-const mainRoute = () => {
+function MainRoutes() {
+  return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-       
-      </Route>
-    </Routes>
- </BrowserRouter>
-
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/Explore" element={<Explorer />} />
+        <Route path="/item-details" element={<ItemDetails />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
-export default mainRoute;
+
+export default MainRoutes;
