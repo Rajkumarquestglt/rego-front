@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 export default function Category() {
     return (
         <section className="category-section padding-top padding-bottom">
-        <div className="container">
+        <div className='container'>
             <div className="section-header style-3">
                 <div className="header-shape"><span></span></div>
                 <h3>Browse By Catergory</h3>

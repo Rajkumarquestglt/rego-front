@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 export default function Auction() {
     return (
         <section className="auction-section padding-bottom">
-        <div className="container">
+        <div className='container'>
             <div className="section-header style-3">
                 <div className="header-shape"><span></span></div>
                 <h3>Live Auctions</h3>

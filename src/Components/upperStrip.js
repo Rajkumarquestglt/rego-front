@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 export default function UpperStrip() {
   return (
     <div className="upper-strip">
-      <ul className="for-desktop">
+      <ul className='for-desktop'>
         <li>1 REGO = 2 BTC</li>
         <li>1 REGO = 2 INR</li>
         <li>1 REGO = 2 ETH</li>

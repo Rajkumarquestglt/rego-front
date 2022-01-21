@@ -7,7 +7,7 @@ export default function Banner() {
       className="banner-section light-version"
       style={{backgroundImage: `url(${require('../assets/images/banner/bg-4.png')}`}}
     >
-      <div className="container">
+      <div className='container'>
         <div className="banner-wrapper">
           <div className="row align-items-center g-5">
             <div className="col-lg-6">

@@ -18,7 +18,7 @@ export default function Explorer() {
         <UpperStrip />
         <Header />
         <section className="explore-section light-version padding-top padding-bottom">
-        <div className="container">
+        <div className='container'>
             <div className="section-header light-version">
                 <div className="nft-filter d-flex flex-wrap justify-content-center">
                     <div className="form-floating">

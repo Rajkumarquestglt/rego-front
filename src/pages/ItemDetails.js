@@ -18,7 +18,7 @@ export default function ItemDetails() {
         <UpperStrip />
         <Header />
         <div className="item-details-section light-version padding-top padding-bottom">
-          <div className="container">
+          <div className='container'>
             <div className="item-details-wrapper">
               <div className="row g-5">
                 <div className="col-lg-6">
