@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 
-export default function auction() {
+export default function Auction() {
     return (
         <section className="auction-section padding-bottom">
         <div className="container">

@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 
-export default function category() {
+export default function Category() {
     return (
         <section className="category-section padding-top padding-bottom">
         <div className="container">

@@ -1,9 +1,9 @@
 import {BrowserRouter,Routes,Route} from "react-router-dom";
-import Signup from "../Components/signUp.js"
-import Signin from "../Components/signIn.js"
-import Explorer from "../Components/Explorer.js"
-import Index from "../Components/Index.js";
-import ItemDetails from "../Components/itemDetails";
+import Signup from "../pages/SignUp.js"
+import Signin from "../pages/SignIn.js"
+import Explorer from "../pages/Explorer.js"
+import Index from "../pages/Index.js";
+import ItemDetails from "../pages/ItemDetails";
 
 
 function MainRoutes() {

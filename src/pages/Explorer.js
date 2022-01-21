@@ -1,7 +1,7 @@
 import React from 'react'
-import Footer from './Footer'
-import Header from './Header'
-import UpperStrip from './upperStrip'
+import Footer from '../Components/Footer'
+import Header from '../Components/Header'
+import UpperStrip from '../Components/UpperStrip'
 import {Link} from "react-router-dom";
 // import "../assets/css/bootstrap.min.css"
 import "../assets/css/icofont.min.css"

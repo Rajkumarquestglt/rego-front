@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 
-export default function blogSection() {
+export default function BlogSection() {
     return (
         <section className="blog-section pb-120">
         <div className="container">

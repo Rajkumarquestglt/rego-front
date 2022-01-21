@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from './Header'
-import UpperStrip from './upperStrip'
+import Header from '../Components/Header'
+import UpperStrip from '../Components/UpperStrip'
 import {Link} from "react-router-dom";
 // import "../assets/css/bootstrap.min.css"
 import "../assets/css/icofont.min.css"
@@ -10,7 +10,7 @@ import "../assets/css/swiper-bundle.min.css"
 import "../assets/css/style.min.css"
 import "../assets/css/custom.css"
 
-export default function signIn() {
+export default function SignIn() {
     return (
         <>
         

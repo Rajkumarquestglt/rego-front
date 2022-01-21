@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-export default function topSeller() {
+export default function TopSeller() {
   return (
     <section className="topseller-section padding-bottom">
       <div className="container">
