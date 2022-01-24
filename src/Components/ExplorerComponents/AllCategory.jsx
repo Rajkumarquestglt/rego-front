@@ -14,7 +14,7 @@ export default function AllCategory() {
       <option value="3">Video</option>
       <option value="3">Digital Anime</option>
     </select>
-    <label for="catSelect">Select a Category</label>
+    <label htmlFor="catSelect">Select a Category</label>
   </div>
   )
 }

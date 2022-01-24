@@ -17,7 +17,7 @@ export default function SortBy() {
         <option value="3">Recently Viewed </option>
         <option value="3">Ending Soon</option>
       </select>
-      <label for="sortSelect">Sort By</label>
+      <label htmlFor="sortSelect">Sort By</label>
     </div>
   );
 }

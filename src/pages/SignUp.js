@@ -56,11 +56,13 @@ export default function SignUp() {
         });
         return;
       }
+      console.log(formData);
 
-      const response = await axios.post("http://localhost:3000/signup", {
+      const response = await axios.post("http://nft.regoex.com:3005/users/signup", {
         name,
         email,
         password,
+
       });
       if (response.status === 200) {
         toast.success("Message Has Been Sent Successfully", {
@@ -79,8 +81,6 @@ export default function SignUp() {
       return;
     };
   
-  
-
     return (
       <>
         <UpperStrip />
@@ -104,7 +104,7 @@ export default function SignUp() {
                             id="userIdInput"
                             placeholder="user-id"
                           />
-                          <label for="userIdInput">User ID</label>
+                          <label htmlFor="userIdInput">User ID</label>
                         </div>
                       </div>
                       <div className="col-md-6">
@@ -118,7 +118,7 @@ export default function SignUp() {
                             id="floatingInput"
                             placeholder="name@example.com"
                           />
-                          <label for="floatingInput">Email address</label>
+                          <label htmlFor="floatingInput">Email address</label>
                         </div>
                       </div>
                     </div>
@@ -134,7 +134,7 @@ export default function SignUp() {
                             id="floatingPassword"
                             placeholder="Password"
                           />
-                          <label for="floatingPassword">Password</label>
+                          <label htmlFor="floatingPassword">Password</label>
                         </div>
                       </div>
                       <div className="col-md-6">
@@ -148,7 +148,7 @@ export default function SignUp() {
                             id="confirmPass"
                             placeholder="Confirm Password"
                           />
-                          <label for="confirmPass">Confirm Password</label>
+                          <label htmlFor="confirmPass">Confirm Password</label>
                         </div>
                       </div>
                     </div>
@@ -161,7 +161,7 @@ export default function SignUp() {
                             name="remember"
                             id="remember"
                           />
-                          <label for="remember">Remember Me</label>
+                          <label htmlFor="remember">Remember Me</label>
                         </div>
                         <Link to="forgot-pass.html">Forgot Password?</Link>
                       </div>
@@ -183,7 +183,7 @@ export default function SignUp() {
                   <div className="account-bottom">
                     <span className="d-block cate pt-10">
                       Already Have an Account?{" "}
-                      <Link to="signin.html"> Sign In</Link>
+                      <Link to="/signin"> Sign In</Link>
                     </span>
                   </div>
                 </div>
