@@ -10,7 +10,9 @@ import "../assets/css/swiper-bundle.min.css"
 import "../assets/css/style.min.css"
 import "../assets/css/custom.css"
 
+
 export default function SignIn() {
+    
     return (
         <>
         
@@ -33,8 +35,6 @@ export default function SignIn() {
                                     placeholder="Password" />
                                 <label for="floatingPassword">Password</label>
                             </div>
-                           
-                           
                            
                             <div className="form-group">
                                 <div className="d-flex justify-content-between flex-wrap pt-sm-2">
