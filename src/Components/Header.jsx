@@ -182,7 +182,7 @@ export default function Header() {
                 </Link>
               </li>
               <li className="header__nav-item">
-                <Link to="/signup" className="header__nav-link sign-up-btn">
+                <Link to="/create" className="header__nav-link sign-up-btn">
                   Create NFT
                 </Link>
               </li>
