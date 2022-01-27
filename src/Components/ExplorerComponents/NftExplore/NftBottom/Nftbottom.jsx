@@ -14,7 +14,7 @@ export default function Nftbottom({ item }) {
   //   console.log(collectionData)
 
   const buyNowHandler = async (item) => {
-    console.log(item);
+    console.log("loginUser",loginUser);
 
      if(isAuthenticated)
        {
