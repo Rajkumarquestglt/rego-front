@@ -18,9 +18,15 @@ import SearchNft from "../Components/ExplorerComponents/SearchNft";
 import Singlenft from "../Components/ExplorerComponents/NftExplore/Singlenft";
 import TripleNft from "../Components/ExplorerComponents/NftExplore/TripleNft";
 import Doublenft from "../Components/ExplorerComponents/NftExplore/Doublenft";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function Explorer() {
   const url = "http://nft.regoex.com:3001/users/content";
+
+  const isAuthenticated = useSelector(
+              (state) => state.auth.value.isAuthenticated
+       );
+const  loginUser  = useSelector((state) => state.auth.value.user);
 
   const [collectionData, setCollectionData] = useState({
     list: [],
@@ -36,6 +42,7 @@ export default function Explorer() {
       limit,
       search_tag: tag,
     });
+    console.log('data',res)
     setCollectionData({
       list: res.data.data,
       total: res.data.total,
@@ -44,9 +51,9 @@ export default function Explorer() {
   };
   console.log(list);
 
-  useEffect(() => {
+  useEffect( async() => {
     setCollectionData({ ...collectionData, loading: true });
-    getData(1, 20, "");
+   await getData(1, 20, "");
   }, []);
 
   return (
@@ -67,7 +74,7 @@ export default function Explorer() {
               <div className="row justify-content-center gx-4 gy-3">
                 {/*Name is for nft-top paramater and  detail,price,likes is for nftBottom   */}
 
-                {list?.content.length > 0 &&
+                {loading==false &&
                   list?.content.map((item, i) => (
                     <Singlenft
                       key={i}

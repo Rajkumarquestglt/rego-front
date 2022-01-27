@@ -1,7 +1,7 @@
 import { web3 } from "./Web3Helper"
 export const BuyNFT=async(tokenId,uri,minPrice,signature)=>{
 
-       const Web3= web3();
+       const Web3= await web3();
        
        const accounts = await Web3.eth.getAccounts();
        
@@ -36,7 +36,7 @@ export const BuyNFT=async(tokenId,uri,minPrice,signature)=>{
      let estimates_gas = await Web3.eth.estimateGas({
         'from':selectedAccount,
         'to':contractAddress,
-        'value':web3.utils.toHex(web3.utils.toWei('0', 'wei')),
+        'value':Web3.utils.toHex(Web3.utils.toWei('0', 'wei')),
         "data":nftcontract.methods.redeem(selectedAccount,voucher,admin_address,admin_address,amount,0)
         .encodeABI(),
       }); 
@@ -48,13 +48,13 @@ export const BuyNFT=async(tokenId,uri,minPrice,signature)=>{
       let gasPrice =Web3.utils.toHex(gasPrice_bal*2);
 
    
-     tx = {
+    const tx = {
         'from':selectedAccount,
         'to':contractAddress,
         'nonce': nonce,
         'gasPrice':gasPrice,
         'gasLimit':gasLimit,
-        'value':web3.utils.toHex(web3.utils.toWei('0', 'wei')),
+        'value':Web3.utils.toHex(Web3.utils.toWei('0', 'wei')),
         //'maxPriorityFeePerGas': 1999999987,
         'data': nftcontract.methods.redeem(selectedAccount,voucher,admin_address,admin_address,amount,0)
         .encodeABI()

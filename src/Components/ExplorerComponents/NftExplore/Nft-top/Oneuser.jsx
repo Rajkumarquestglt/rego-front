@@ -8,7 +8,7 @@ export default function Oneuser(props) {
               <ul className="author-list d-flex">
                   <li className="single-author d-flex align-items-center">
                       <Link to="author.html" className="veryfied">
-                          <img loading="lazy" src={require("../../../../assets/images/seller/04.png")} alt="author-img" />
+                          <img loading="lazy" src={"https://regoex.com/assets/images/logo-white.png"} alt="author-img" />
                       </Link>
                       <h6>
                           <Link to="author.html">{props.name}</Link>

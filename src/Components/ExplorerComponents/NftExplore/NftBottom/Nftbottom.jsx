@@ -1,12 +1,56 @@
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import axios from "axios";
-// import { ToastContainer,toast } from "react-toastify";
+import { ToastContainer,toast } from "react-toastify";
+import { useSelector, useDispatch } from "react-redux";
 
+import { BuyNFT } from "../../../../helpers/BuyNFT";
+const url="http://regoex.com/Buy-NFT";
 export default function Nftbottom({ item }) {
+
+  const isAuthenticated = useSelector(
+    (state) => state.auth.value.isAuthenticated
+      );
+  const  loginUser  = useSelector((state) => state.auth.value.user);
   //   console.log(collectionData)
 
-  const buyNowHandler = (item) => {
+  const buyNowHandler = async (item) => {
     console.log(item);
+
+     if(isAuthenticated)
+       {
+         const res=await axios.post(url,{email:user.email,
+                                         amount:item.price,
+                                         content_price:item.price 
+
+                                    });
+              
+              if(res.data.status==true){
+
+                
+                     let hash=await BuyNFT(item.tokenId,item.ipfs_hash,item.price,item.signature);
+
+                   console.log('hash',hash);
+
+                   toast.success("Transaction Successful", {
+                    position: "top-center",
+                  });
+              }
+              else
+                {
+                  toast.error("You do not have sufficient Fund", {
+                    position: "top-center",
+                  });
+                }                      
+
+
+       }
+       else
+         {
+           useNavigate('/')
+         }
+
+   
+
   };
 
   return (

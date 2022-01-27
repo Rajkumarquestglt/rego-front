@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import {Link} from "react-router-dom";
 import axios from 'axios'
 import { ToastContainer,toast } from "react-toastify";
+import { useSelector, useDispatch } from "react-redux";
+import { login } from "../reducers/authReducer";
 
 import Header from '../Components/Header'
 import UpperStrip from '../Components/UpperStrip'
@@ -16,6 +18,8 @@ import "../assets/css/custom.css"
 
 
 export default function SignIn() {
+     const dispatch = useDispatch();
+
     const [formData, setFormData] = useState({
         email: "",
         password: "",
@@ -55,6 +59,15 @@ export default function SignIn() {
             toast.success("Login Successful", {
               position: "top-center",
             });
+
+            dispatch(
+              login({
+                  user:response.data,
+                  isAuthenticated: true,
+              })
+          );
+
+
           } else {
             toast.error("Please enter Valid Cradential", {
               position: "top-center",
