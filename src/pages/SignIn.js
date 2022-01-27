@@ -67,7 +67,8 @@ export default function SignIn() {
               })
              );
             
-          Navigate('/')
+             return <Navigate to='/' />;
+
 
           } else {
             toast.error("Please enter Valid Cradential", {
