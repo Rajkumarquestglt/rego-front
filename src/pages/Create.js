@@ -8,7 +8,6 @@ import Header from "../Components/Header"
 import Footer from "../Components/Footer"
 import SectionHeader from "../Components/CreateNft/SectionHeader"
 import SectionCreate from "../Components/CreateNft/SectionCreate"
-
 function Create() {
     
   return (

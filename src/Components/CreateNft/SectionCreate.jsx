@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
-
+import {ipfsMint} from "../../helpers/ipfs"
+import { Mint } from "../../helpers/Mint";
 function SectionCreate() {
   const url = "http://nft.regoex.com:3001/users/add-content";
   const [photoUrl, setPhotoUrl] = useState(null);
+  const [contentImage,setContentImage]=useState(null);
   const [formData, setFormData] = useState({
     title: "",
     file: "",
@@ -17,6 +19,49 @@ function SectionCreate() {
 
   const { title, file, price, category, metadata, description } = formData;
 
+  const handleFile=(e)=>{
+
+    const { files } = e.target;
+
+
+      
+    const reader = new window.FileReader();
+    reader.readAsArrayBuffer(files[0]);
+     
+    reader.onloadend = () => {
+      setContentImage(reader.result)
+     }
+
+
+
+
+     if (files[0]) { 
+
+      
+      
+      if (files[0].type.includes("image")) {
+        const filename = files[0].name;
+        const fileExtension = filename.substr(
+          filename.lastIndexOf(".") + 1
+        );
+        if (
+          fileExtension.toLowerCase() === "png" ||
+          fileExtension.toLowerCase() === "jpg" ||
+          fileExtension.toLowerCase() === "gif" ||
+          fileExtension.toLowerCase() === "jpeg"
+        ) {
+          setFormData({
+            ...formData,
+            file: e.currentTarget.files[0],
+          });
+          setPhotoUrl(
+            URL.createObjectURL(files[0])
+          );
+        }
+      }
+    }
+
+  }  
   const handleFormInput = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -43,7 +88,11 @@ function SectionCreate() {
     }
 
     console.log(formData);
+    const DataObj={name:title,price:price,description:description}
+    const hash=await ipfsMint(contentImage,DataObj);
 
+    const voucher= await Mint(hash,price);
+    console.log('voucher',voucher)
     const dataToSubmit = new FormData();
     dataToSubmit.append("email", "amantotla@questglt.org");
     dataToSubmit.append("title", title);
@@ -52,8 +101,13 @@ function SectionCreate() {
     dataToSubmit.append("metadata", metadata);
     dataToSubmit.append("category", category);
     dataToSubmit.append("description", description);
-    dataToSubmit.append("wallet_address", null);
-    dataToSubmit.append("ipfs_hash", null);
+    dataToSubmit.append("wallet_address","0x7f114c790246b850dc707bc14439919b49984157");
+    dataToSubmit.append("ipfs_hash", hash);
+     
+    dataToSubmit.append("tokenId",voucher.tokenId);
+
+    dataToSubmit.append("signature",voucher.signature);
+
 
     console.log(dataToSubmit);
 
@@ -137,31 +191,7 @@ function SectionCreate() {
                                 className="form-control file-upload-text"
                                 disabled=""
                                 placeholder="Select a File..."
-                                onChange={(e) => {
-                                  const { files } = e.target;
-                                  if (files[0]) {
-                                    if (files[0].type.includes("image")) {
-                                      const filename = files[0].name;
-                                      const fileExtension = filename.substr(
-                                        filename.lastIndexOf(".") + 1
-                                      );
-                                      if (
-                                        fileExtension.toLowerCase() === "png" ||
-                                        fileExtension.toLowerCase() === "jpg" ||
-                                        fileExtension.toLowerCase() === "gif" ||
-                                        fileExtension.toLowerCase() === "jpeg"
-                                      ) {
-                                        setFormData({
-                                          ...formData,
-                                          file: e.currentTarget.files[0],
-                                        });
-                                        setPhotoUrl(
-                                          URL.createObjectURL(files[0])
-                                        );
-                                      }
-                                    }
-                                  }
-                                }}
+                                onChange={(e) =>handleFile(e)}
                               />
                               <button
                                 type="button"

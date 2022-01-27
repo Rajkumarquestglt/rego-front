@@ -34,9 +34,9 @@ export const ipfsMint = async (testFile, data) => {
 
     let hash2 = ImgUrl.path;
 
-    //contentUrl =`https://gateway.ipfs.io/ipfs/${hash1}`; //`https://gateway.ipfs.io/ipfs/${hash2}`;
+    const contentUrl =`https://gateway.ipfs.io/ipfs/${hash2}`; //`https://gateway.ipfs.io/ipfs/${hash2}`;
 
-    return hash2;
+    return contentUrl;
   } catch (e) {
     console.log(e);
   }
