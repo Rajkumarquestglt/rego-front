@@ -1,4 +1,4 @@
-import { Link,useNavigate } from "react-router-dom";
+import { Link,Navigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer,toast } from "react-toastify";
 import { useSelector, useDispatch } from "react-redux";
@@ -18,7 +18,7 @@ export default function Nftbottom({ item }) {
 
      if(isAuthenticated)
        {
-         const res=await axios.post(url,{email:user.email,
+         const res=await axios.post(url,{email:loginUser.email,
                                          amount:item.price,
                                          content_price:item.price 
 
@@ -46,7 +46,7 @@ export default function Nftbottom({ item }) {
        }
        else
          {
-           useNavigate('/')
+           Navigate('/')
          }
 
    
