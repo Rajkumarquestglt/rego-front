@@ -3,6 +3,9 @@ import Footer from '../Components/Footer'
 import Header from '../Components/Header'
 import UpperStrip from '../Components/UpperStrip'
 import {Link} from "react-router-dom";
+import {useEffect, useState} from 'react';
+
+import axios from "axios"
 
 import "../assets/css/icofont.min.css"
 import "../assets/css/lightcase.css"
@@ -18,6 +21,43 @@ import TripleNft from '../Components/ExplorerComponents/NftExplore/TripleNft';
 import Doublenft from '../Components/ExplorerComponents/NftExplore/Doublenft';
 
 export default function Explorer() {
+    const url = "http://nft.regoex.com:3001/users/content"
+
+    const Collection = () => {
+        
+        const [collectionData, setCollectionData] = useState({
+          list: [],
+          total: "",
+          loading: true,
+        });
+        const { list, total, loading } = collectionData;
+
+        const getData = async (page, limit, tag) => {
+            console.log("get data hit");
+            const res = await axios.post(url, {
+              page,
+              limit,
+              search_tag: tag,
+
+            });
+            setCollectionData({
+              list: res.data.data,
+              total: res.data.total,
+              loading: false,
+            });
+          };
+          useEffect(() => {
+            setCollectionData({ ...collectionData, loading: true });
+            getData(1,20,"");
+          }, []);
+          setCollectionData({
+            ...collectionData,
+            list: [],
+            loading: true,
+          });
+
+        }
+        
     return (
         <>
         

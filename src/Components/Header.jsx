@@ -53,12 +53,12 @@ export default function Header() {
 
                 <ul className="dropdown-menu header__nav-menu">
                   <li>
-                    <Link className="drop-down-item" to="#">
+                    <Link className="drop-down-item" to="/explore">
                       Explore NFT's
                     </Link>
                   </li>
                   <li>
-                    <Link className="drop-down-item" to="#">
+                    <Link className="drop-down-item" to="/auction">
                       Auction
                     </Link>
                   </li>
@@ -182,7 +182,7 @@ export default function Header() {
                 </Link>
               </li>
               <li className="header__nav-item">
-                <Link to="/signup" className="header__nav-link sign-up-btn">
+                <Link to="/create" className="header__nav-link sign-up-btn">
                   Create NFT
                 </Link>
               </li>

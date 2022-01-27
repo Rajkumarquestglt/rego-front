@@ -7,6 +7,7 @@ import ItemDetails from "../pages/ItemDetails";
 import ForgotPass from "../pages/ForgotPass.js";
 import FourOFour from "../pages/404.js";
 import Create from "../pages/Create.js";
+import Auction from "../pages/Auction.js";
 
 
 function MainRoutes() {
@@ -21,6 +22,7 @@ function MainRoutes() {
         <Route path="/forgot-pass" element={<ForgotPass />} />
         <Route path="/404" element={<FourOFour />} />
         <Route path="/create" element={<Create />} />
+        <Route path="/auction" element={<Auction />} />
         
       </Routes>
     </BrowserRouter>

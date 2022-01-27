@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-function SectionHeader(props) {
+function AuctionHeader() {
   return (
   <div>
       {/* <!-- ==========Page Header Section Start Here========== --> */}
@@ -10,20 +9,19 @@ function SectionHeader(props) {
             <div className="page-header-content">
                 <div className="page-header-inner">
                     <div className="page-title">
-                        <h2>Create NFT{props.name} </h2>
+                        <h2>NFT's Live Auction </h2>
                     </div>
                     <ol className="breadcrumb">
-                        <li><Link to="/index">Home{props.Deatils}</Link></li>
-                        <li className="active">Create NFT{props.activity} </li>
+                        <li><a href="/index">Home</a></li>
+                        <li className="active">auction</li>
                     </ol>
                 </div>
             </div>
         </div>
     </section>
     {/* <!-- ==========Page Header Section Ends Here========== --> */}
-
   </div>
   )
 }
 
-export default SectionHeader;
+export default AuctionHeader;

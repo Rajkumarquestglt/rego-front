@@ -1,42 +1,20 @@
 import React,{useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import axios from "axios"
+// import { ToastContainer,toast } from "react-toastify";
 
 export default function Nftbottom(props) {
-    const url = "http://nft.regoex.com:3001/users/content"
-
-    const [collectionData, setCollectionData] = useState({
-        list: [],
-        total: "",
-        loading: true,
-      });
     
-      const getData = async () => {
-        console.log("get data hit");
-        const res = await axios.post(url, {
-
-        });
-        setCollectionData({
-          list: res.data.data,
-          total: res.data.total,
-          loading: false,
-        });
-      };
-    
-      useEffect(() => {
-        setCollectionData({ ...collectionData, loading: true });
-        getData();
-      }, []);
-       
+      
     
 
       
-      console.log(collectionData)
+    //   console.log(collectionData)
        
   return (
       <div className="nft-item-bottom">
           <div className="nft-thumb">
-              <img loading="lazy" src={require("../../../../assets/images/nft-item/02.gif")} alt="nft-img" />
+              <img loading="lazy" src={require()} alt="nft-img" />
 
               {/* <!-- nft countdwon --> */}
               {/* <!-- <ul className="nft-countdown count-down" data-date="July 05, 2022 21:14:01">
