@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Link} from "react-router-dom";
+import {Link ,Navigate} from "react-router-dom";
 import axios from 'axios'
 import { ToastContainer,toast } from "react-toastify";
 import { useSelector, useDispatch } from "react-redux";
@@ -65,8 +65,9 @@ export default function SignIn() {
                   user:response.data,
                   isAuthenticated: true,
               })
-          );
-
+             );
+            
+          Navigate('/')
 
           } else {
             toast.error("Please enter Valid Cradential", {
