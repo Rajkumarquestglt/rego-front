@@ -1,6 +1,6 @@
-import React from 'react';
-import Oneuser from './Nft-top/Oneuser';
-import Nftbottom from './NftBottom/Nftbottom';
+import React from "react";
+import Oneuser from "./Nft-top/Oneuser";
+import Nftbottom from "./NftBottom/Nftbottom";
 
 export default function Singlenft(props) {
   return (
@@ -8,9 +8,10 @@ export default function Singlenft(props) {
       <div className="nft-item light-version">
         <div className="nft-inner">
           {/* <!-- nft top part --> */}
-          <Oneuser name ={props.name}/>
+          <Oneuser name={props.item.title} />
           {/* <!-- nft-bottom part --> */}
-          <Nftbottom nftDetail = {props.Detail} price ={props.price} likes={props.likes}/>
+          {/* <Nftbottom nftDetail = {props.Detail} price ={props.price} likes={props.likes}/> */}
+          <Nftbottom item={props.item} />
         </div>
       </div>
     </div>
