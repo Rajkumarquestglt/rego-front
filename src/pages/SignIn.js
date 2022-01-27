@@ -49,7 +49,7 @@ export default function SignIn() {
           
           console.log(formData);
     
-          const response = await axios.post("http://nft.regoex.com:3001/users/login", {
+          const response = await axios.post("http://regoex.com/NFT-login", {
             email:email,
             password:password,
     
