@@ -274,7 +274,7 @@ export default function ItemDetails() {
                       <span>Buy Now</span>{" "}
                     </Link>
                     <Link to="wallet.html" className="default-btn move-right">
-                      <span>Place a Bid</span>{" "}
+                      <span>Make a Offer</span>{" "}
                     </Link>
                   </div>
                 </div>

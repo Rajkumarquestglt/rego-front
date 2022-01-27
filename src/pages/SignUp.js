@@ -44,6 +44,7 @@ export default function SignUp() {
         });
         return;
       }
+
       if(password !== confirmPassword){
         toast.warn("Password Does not Match", {
           position: "top-center",
@@ -58,12 +59,16 @@ export default function SignUp() {
       }
       console.log(formData);
 
-      const response = await axios.post("http://nft.regoex.com:3005/users/signup", {
-        name,
-        email,
-        password,
+      // const temp = await axios.get("http://nft.regoex.com:3001/users/crypto-price");
+
+      // console.log(temp)
+      const response = await axios.post("http://nft.regoex.com:3001/users/signup", {
+        name:name,
+        email:email,
+        password:password,
 
       });
+      // console.log(response)
       if (response.status === 200) {
         toast.success("Message Has Been Sent Successfully", {
           position: "top-center",
@@ -73,6 +78,7 @@ export default function SignUp() {
           position: "top-center",
         });
       }
+
       setFormData({
         name: "",
         email: "",
@@ -160,10 +166,11 @@ export default function SignUp() {
                             type="checkbox"
                             name="remember"
                             id="remember"
+                            defaultChecked={false}
                           />
                           <label htmlFor="remember">Remember Me</label>
                         </div>
-                        <Link to="forgot-pass.html">Forgot Password?</Link>
+                        <Link to="/forgot-pass">Forgot Password?</Link>
                       </div>
                     </div>
                     <div className="form-group signup-three-btn">

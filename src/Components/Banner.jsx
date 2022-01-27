@@ -35,7 +35,7 @@ export default function Banner() {
                   >
                     <span>Explore</span>{" "}
                   </Link>
-                  <Link to="/signin" className="default-btn move-right">
+                  <Link to="/create" className="default-btn move-right">
                     <span>Create</span>{" "}
                   </Link>
                 </div>

@@ -1,7 +1,38 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
+import axios from "axios"
 
 export default function Nftbottom(props) {
+    const url = "http://nft.regoex.com:3001/users/content"
+
+    const [collectionData, setCollectionData] = useState({
+        list: [],
+        total: "",
+        loading: true,
+      });
+    
+      const getData = async () => {
+        console.log("get data hit");
+        const res = await axios.post(url, {
+
+        });
+        setCollectionData({
+          list: res.data.data,
+          total: res.data.total,
+          loading: false,
+        });
+      };
+    
+      useEffect(() => {
+        setCollectionData({ ...collectionData, loading: true });
+        getData();
+      }, []);
+       
+    
+
+      
+      console.log(collectionData)
+       
   return (
       <div className="nft-item-bottom">
           <div className="nft-thumb">
