@@ -18,7 +18,7 @@ export default function Nftbottom({ item }) {
 
      if(isAuthenticated)
        {
-         const res=await axios.post(url,{email:loginUser.email,
+         const res=await axios.post(url,{email:loginUser.user.email,
                                          amount:item.price,
                                          content_price:item.price 
 
