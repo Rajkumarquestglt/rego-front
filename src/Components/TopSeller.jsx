@@ -67,8 +67,11 @@ export default function TopSeller() {
                             <h5>
                               <Link to="author.html">Gihan Fernindo</Link>{" "}
                             </h5>
-                            <p className="nft-price yellow-color">
-                              ${item.price}
+                            <p className="nft-price">
+                              Price:{" "}
+                              <span className="yellow-color">
+                                {item.price} Rego
+                              </span>
                             </p>
                           </div>
                         </div>
