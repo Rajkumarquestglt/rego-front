@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Link ,Navigate} from "react-router-dom";
+import {Link ,useNavigate} from "react-router-dom";
 import axios from 'axios'
 import { ToastContainer,toast } from "react-toastify";
 import { useSelector, useDispatch } from "react-redux";
@@ -19,6 +19,7 @@ import "../assets/css/custom.css"
 
 export default function SignIn() {
      const dispatch = useDispatch();
+     let navigate=useNavigate();
 
     const [formData, setFormData] = useState({
         email: "",
@@ -67,7 +68,7 @@ export default function SignIn() {
               })
              );
             
-             return <Navigate to='/' />;
+              navigate('/explore');
 
 
           } else {
