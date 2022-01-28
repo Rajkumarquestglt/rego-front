@@ -170,6 +170,21 @@ function SectionCreate() {
                             <label>Name</label>
                           </div>
                         </div>
+                        
+                        <div className="col-md-6">
+                          <div className="form-floating">
+                            <input
+                              type="text"
+                              value={title}
+                              name="title"
+                              onChange={(e) => handleFormInput(e)}
+                              className="form-control"
+                              placeholder="Title"
+                            />
+                            <label>Title</label>
+                          </div>
+                        </div>
+
                         <div className="col-md-6">
                           <div className="form-floating">
                             <select
@@ -187,19 +202,6 @@ function SectionCreate() {
                             </select>
 
                             <label>Category</label>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="form-floating">
-                            <input
-                              type="text"
-                              value={title}
-                              name="title"
-                              onChange={(e) => handleFormInput(e)}
-                              className="form-control"
-                              placeholder="Title"
-                            />
-                            <label>Title</label>
                           </div>
                         </div>
                         <div className="col-md-12">
