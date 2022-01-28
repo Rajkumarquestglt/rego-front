@@ -8,6 +8,10 @@ import ForgotPass from "../pages/ForgotPass.js";
 import FourOFour from "../pages/404.js";
 import Create from "../pages/Create.js";
 import Auction from "../pages/Auction.js";
+import AllAuthor from "../pages/AllAuthor.js";
+import ContactUs from "../pages/ContactUs.js";
+import Activity from "../pages/Activity.js";
+
 
 function MainRoutes() {
   return (
@@ -22,7 +26,14 @@ function MainRoutes() {
         <Route path="/404" element={<FourOFour />} />
         <Route path="/create" element={<Create />} />
         <Route path="/auction" element={<Auction />} />
+        <Route path="/all-authors" element={<AllAuthor />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/activity" element={<Activity />} />
+        {/* <Route path="/contact" element={<ContactUs />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/contact" element={<ContactUs />} /> */}
       </Routes>
+
     </BrowserRouter>
   );
 }

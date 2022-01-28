@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 
 export default function Footer() {
     return (
+        <>
         <footer className="footer-section light-version">
         <div className="footer-top" style={{backgroundImage: `url(${bgLight})`}}>
             <div className="footer-newsletter">
@@ -62,7 +63,7 @@ export default function Footer() {
                                     <li><Link to="#" className="footer-link">Services</Link></li>
                                     <li><Link to="#" className="footer-link">Faqs</Link></li>
                                     <li><Link to="#" className="footer-link">About Us</Link></li>
-                                    <li><Link to="#" className="footer-link">Contact Us</Link></li>
+                                    <li><Link to="/contact" className="footer-link">Contact Us</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -114,5 +115,10 @@ export default function Footer() {
             </div>
         </div>
     </footer>
+    {/* // <!-- scrollToTop start here --> */}
+    <Link to="#" className="scrollToTop light-version"><i class="icofont-stylish-up"></i></Link>
+    {/* // <!-- scrollToTop ending here --> */}
+    </>
     )
+
 }

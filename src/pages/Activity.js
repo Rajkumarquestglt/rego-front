@@ -1,21 +1,18 @@
 import React from 'react';
-import AuctionBody from '../Components/auction/AuctionBody';
-import AuctionHeader from '../Components/auction/AuctionHeader';
+import ActivityBody from '../Components/Activity/ActivityBody';
+import ActivityHeader from '../Components/Activity/ActivityHeader';
 import Footer from '../Components/Footer';
 import Header from '../Components/Header';
 import UpperStrip from '../Components/UpperStrip';
 
-function Auction() {
+export default function Activity() {
   return (
   <div>
       <UpperStrip />
       <Header />
-      <AuctionHeader />
-      <AuctionBody />
+      <ActivityHeader />
+      <ActivityBody />
       <Footer />
-
   </div>
   )
 }
-
-export default Auction;

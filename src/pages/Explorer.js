@@ -16,9 +16,8 @@ import AllCategory from "../Components/ExplorerComponents/AllCategory";
 import SortBy from "../Components/ExplorerComponents/SortBy";
 import SearchNft from "../Components/ExplorerComponents/SearchNft";
 import Singlenft from "../Components/ExplorerComponents/NftExplore/Singlenft";
-import TripleNft from "../Components/ExplorerComponents/NftExplore/TripleNft";
-import Doublenft from "../Components/ExplorerComponents/NftExplore/Doublenft";
-import { useSelector, useDispatch } from "react-redux";
+
+import { useSelector } from "react-redux";
 
 export default function Explorer() {
   const url = "http://nft.regoex.com:3001/users/content";
