@@ -46,7 +46,7 @@ export default function Nftbottom({ item }) {
        }
        else
          {
-          return <Navigate to='/signin' />;
+           <Navigate to='/signin' />;
          }
 
    
