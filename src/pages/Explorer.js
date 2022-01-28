@@ -18,6 +18,7 @@ import SearchNft from "../Components/ExplorerComponents/SearchNft";
 import Singlenft from "../Components/ExplorerComponents/NftExplore/Singlenft";
 
 import { useSelector } from "react-redux";
+import { ToastContainer } from "react-toastify";
 
 export default function Explorer() {
   const url = "http://nft.regoex.com:3001/users/content";
@@ -59,6 +60,7 @@ export default function Explorer() {
     <>
       <UpperStrip />
       <Header />
+      <ToastContainer />
       <section className="explore-section light-version padding-top padding-bottom">
         <div className="container">
           <div className="section-header light-version">

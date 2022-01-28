@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { useSelector, useDispatch } from "react-redux";
 
 import { BuyNFT } from "../../../../helpers/BuyNFT";
@@ -33,11 +33,6 @@ export default function Nftbottom({ item }) {
         );
 
         console.log("hash", hash);
-        
-        toast.success("Transaction Successful", {
-          position: "top-center",
-        });
-
 
         const buyRes = await axios.post(
           "http://nft.regoex.com:3001/users/buy",
@@ -50,9 +45,10 @@ export default function Nftbottom({ item }) {
             hash: hash.transactionHash,
             nft_url: item.ipfs_hash,
           }
-         );
+        );
 
-        if (buyRes.status === true) {
+        console.log(buyRes);
+        if (buyRes.data.status === true) {
           toast.success("Transaction Successful", {
             position: "top-center",
           });
