@@ -183,7 +183,7 @@ export default function Header() {
               </li>
 
               <li className="header__nav-item">
-                <Link to="/signup" className="header__nav-link sign-up-btn">
+                <Link to="https://regoex.com/buy" className="header__nav-link sign-up-btn">
                   Buy Rego
                 </Link>
               </li>
