@@ -12,7 +12,8 @@ export const Mint=async(tokenUrl,minPrice)=>{
     console.log(contract.getChainID())
     const signer = provider.getSigner();
     console.log(signer.getAddress())
-   const wallet_address=signer.getAddress;
+   const wallet_address=await signer.getAddress;
+   console.log("wallet_address", wallet_address);
     var token =Math.floor(Math.random() * 10000);
     let voucher={};
     voucher.address=wallet_address;
