@@ -24,9 +24,9 @@ export default function Explorer() {
   const url = "http://nft.regoex.com:3001/users/content";
 
   const isAuthenticated = useSelector(
-              (state) => state.auth.value.isAuthenticated
-       );
-const  loginUser  = useSelector((state) => state.auth.value.user);
+    (state) => state.auth.value.isAuthenticated
+  );
+  const loginUser = useSelector((state) => state.auth.value.user);
 
   const [collectionData, setCollectionData] = useState({
     list: [],
@@ -42,7 +42,7 @@ const  loginUser  = useSelector((state) => state.auth.value.user);
       limit,
       search_tag: tag,
     });
-    console.log('data',res)
+    console.log("data", res);
     setCollectionData({
       list: res.data.data,
       total: res.data.total,
@@ -51,9 +51,9 @@ const  loginUser  = useSelector((state) => state.auth.value.user);
   };
   console.log(list);
 
-  useEffect( async() => {
+  useEffect(async () => {
     setCollectionData({ ...collectionData, loading: true });
-   await getData(1, 20, "");
+    await getData(1, 20, "");
   }, []);
 
   return (
@@ -74,7 +74,7 @@ const  loginUser  = useSelector((state) => state.auth.value.user);
               <div className="row justify-content-center gx-4 gy-3">
                 {/*Name is for nft-top paramater and  detail,price,likes is for nftBottom   */}
 
-                {loading==false &&
+                {loading == false &&
                   list?.content.map((item, i) => (
                     <Singlenft
                       key={i}
@@ -85,11 +85,6 @@ const  loginUser  = useSelector((state) => state.auth.value.user);
                       likes="230"
                     />
                   ))}
-              </div>
-              <div className="load-btn mt-5">
-                <Link to="#" className="default-btn move-bottom">
-                  <span>Load More</span>
-                </Link>
               </div>
             </div>
           </div>

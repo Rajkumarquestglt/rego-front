@@ -1,5 +1,7 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import logoImage from "../assets/images/logo/logo-2.png";
 
 export default function Header() {
   return (
@@ -8,18 +10,19 @@ export default function Header() {
       <div className="container-fluid">
         <div className="header__content">
           <div className="header__logo">
-            <Link to="#">
+            <Link to="/">
               <img
-                src={require("../assets/images/logo-white.png")}
+                src={logoImage}
                 alt="logo"
                 style={{ height: "45px", maxWidth: "initial" }}
               />
             </Link>
           </div>
 
-          <form action="/" className="header__search">
+          <form action="/search-result" className="header__search">
             <input
               type="text"
+              name="search"
               placeholder="Search items, collections, and creators"
             />
             <button type="button">

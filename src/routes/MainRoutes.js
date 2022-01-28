@@ -2,12 +2,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Signup from "../pages/SignUp.js";
 import Signin from "../pages/SignIn.js";
 import Explorer from "../pages/Explorer.js";
-import Index from "../pages/index.js";
+import Index from "../pages/Index.js";
 import ItemDetails from "../pages/ItemDetails";
 import ForgotPass from "../pages/ForgotPass.js";
 import FourOFour from "../pages/404.js";
 import Create from "../pages/Create.js";
 import Auction from "../pages/Auction.js";
+import SearchResult from "../pages/SearchResult.js";
 
 function MainRoutes() {
   return (
@@ -22,6 +23,7 @@ function MainRoutes() {
         <Route path="/404" element={<FourOFour />} />
         <Route path="/create" element={<Create />} />
         <Route path="/auction" element={<Auction />} />
+        <Route path="/search-result" element={<SearchResult />} />
       </Routes>
     </BrowserRouter>
   );
