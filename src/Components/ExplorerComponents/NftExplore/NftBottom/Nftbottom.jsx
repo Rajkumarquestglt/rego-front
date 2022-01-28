@@ -1,4 +1,4 @@
-import { Link,Navigate } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer,toast } from "react-toastify";
 import { useSelector, useDispatch } from "react-redux";
@@ -12,6 +12,7 @@ export default function Nftbottom({ item }) {
       );
   const  loginUser  = useSelector((state) => state.auth.value.user);
   //   console.log(collectionData)
+  let navigate=useNavigate();
 
   const buyNowHandler = async (item) => {
     console.log("loginUser",loginUser);
@@ -46,7 +47,7 @@ export default function Nftbottom({ item }) {
        }
        else
          {
-           <Navigate to='/signin' />;
+          navigate('/signin');
          }
 
    
