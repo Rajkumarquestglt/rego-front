@@ -172,6 +172,25 @@ function SectionCreate() {
                         </div>
                         <div className="col-md-6">
                           <div className="form-floating">
+                            <select
+                              className="form-control"
+                              onChange={(e) =>
+                                setFormData({
+                                  ...formData,
+                                  category: e.target.value,
+                                })
+                              }
+                            >
+                              <option value="category">Category</option>
+                              <option value="text">Text</option>
+                              <option value="text">File</option>
+                            </select>
+
+                            <label>Category</label>
+                          </div>
+                        </div>
+                        <div className="col-md-6">
+                          <div className="form-floating">
                             <input
                               type="text"
                               value={title}
@@ -226,25 +245,7 @@ function SectionCreate() {
                             <label>Price</label>
                           </div>
                         </div>
-                        <div className="col-md-6">
-                          <div className="form-floating">
-                            <select
-                              className="form-control"
-                              onChange={(e) =>
-                                setFormData({
-                                  ...formData,
-                                  category: e.target.value,
-                                })
-                              }
-                            >
-                              <option value="category">Category</option>
-                              <option value="text">Text</option>
-                              <option value="text">File</option>
-                            </select>
-
-                            <label>Category</label>
-                          </div>
-                        </div>
+                        
                         <div className="col-md-6 d-none">
                           <div className="form-floating">
                             <input
