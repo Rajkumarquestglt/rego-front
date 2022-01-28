@@ -33,6 +33,12 @@ export default function Nftbottom({ item }) {
         );
 
         console.log("hash", hash);
+        
+        toast.success("Transaction Successful", {
+          position: "top-center",
+        });
+
+
         const buyRes = await axios.post(
           "http://nft.regoex.com:3001/users/buy",
           {
@@ -44,7 +50,8 @@ export default function Nftbottom({ item }) {
             hash: hash,
             nft_url: item.ipfs_hash,
           }
-        );
+         );
+
         if (buyRes.status === true) {
           toast.success("Transaction Successful", {
             position: "top-center",
