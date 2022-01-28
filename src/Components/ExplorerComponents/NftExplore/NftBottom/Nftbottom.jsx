@@ -47,7 +47,7 @@ export default function Nftbottom({ item }) {
             token_id: item.tokenId,
             to_address: null,
             from_address: null,
-            hash: hash,
+            hash: hash.transactionHash,
             nft_url: item.ipfs_hash,
           }
          );
