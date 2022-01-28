@@ -1,16 +1,17 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import image from "../assets/images/logo-white.png"
+import { Link } from "react-router-dom";
+import image from "../assets/images/logo-white.png";
 import { useSelector, useDispatch } from "react-redux";
-
+import { logout } from "../reducers/authReducer";
 import logoImage from "../assets/images/logo/logo-2.png";
 
-
 export default function Header() {
+  const dispatch = useDispatch();
   const isAuthenticated = useSelector(
     (state) => state.auth.value.isAuthenticated
-      );
-  const  loginUser  = useSelector((state) => state.auth.value.user);
+  );
+  const loginUser = useSelector((state) => state.auth.value.user);
+  console.log(loginUser);
   return (
     // <!-- ===============// header section start here \\================= -->
     <header className="header light-version">
@@ -19,7 +20,6 @@ export default function Header() {
           <div className="header__logo">
             <Link to="/">
               <img
-
                 src={logoImage}
                 alt="logo"
                 style={{ height: "45px", maxWidth: "initial" }}
@@ -187,13 +187,15 @@ export default function Header() {
                   Buy Rego
                 </Link>
               </li>
-              {isAuthenticated ?"":
-              <li className="header__nav-item">
-                <Link to="/signin" className="header__nav-link sign-up-btn">
-                  Login
-                </Link>
-              </li>
-}
+              {isAuthenticated ? (
+                ""
+              ) : (
+                <li className="header__nav-item">
+                  <Link to="/signin" className="header__nav-link sign-up-btn">
+                    Login
+                  </Link>
+                </li>
+              )}
               <li className="header__nav-item">
                 <Link to="/create" className="header__nav-link sign-up-btn">
                   Create NFT
@@ -201,51 +203,82 @@ export default function Header() {
               </li>
             </ul>
           </div>
-           {isAuthenticated &&             
-          <div className="header__actions">
-                    <div className="header__action header__action--search">
-                        <button className="header__action-btn" type="button"><i className="icofont-search-1"></i></button>
-                    </div>
+          {isAuthenticated && (
+            <div className="header__actions">
+              <div className="header__action header__action--search">
+                <button className="header__action-btn" type="button">
+                  <i className="icofont-search-1"></i>
+                </button>
+              </div>
 
-                    <div className="header__action header__action--profile">
-                        <div className="dropdown">
-                            <Link className="dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false" data-bs-offset="-100,10">
-                                <span data-blast="bgColor"><i className="icofont-user"></i></span> <span
-                                    className="d-none d-md-inline">Alex
-                                    Joe</span>
-                            </Link>
+              <div className="header__action header__action--profile">
+                <div className="dropdown">
+                  <Link
+                    className="dropdown-toggle"
+                    to="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    data-bs-offset="-100,10"
+                  >
+                    <span data-blast="bgColor">
+                      <i className="icofont-user"></i>
+                    </span>{" "}
+                    <span className="d-none d-md-inline">
+                      {loginUser?.data.user.name}
+                    </span>
+                  </Link>
 
-                            <ul className="dropdown-menu">
-                                <li><Link className="dropdown-item" to="author.html"><span className="me-1"><i
-                                                className="icofont-options"></i></span>
-                                        Profile</Link></li>
-                                <li><Link className="dropdown-item" to="/activity"><span className="me-1"><i
-                                                className="icofont-lightning-ray"></i></span>
-                                        Activity</Link></li>
-                                <li><Link className="dropdown-item" to="/signup"><span className="me-1"><i
-                                                className="icofont-space-shuttle"></i></span>
-                                        Sign
-                                        Up</Link></li>
-                                <li><Link className="dropdown-item" to="/signin"><span className="me-1"><i
-                                                className="icofont-login"></i></span> Sign
-                                        In</Link></li>
-                                <li>
-                                    <hr className="dropdown-divider" />
-                                </li>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link className="dropdown-item" to="author.html">
+                        <span className="me-1">
+                          <i className="icofont-options"></i>
+                        </span>
+                        Profile
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/activity">
+                        <span className="me-1">
+                          <i className="icofont-lightning-ray"></i>
+                        </span>
+                        Activity
+                      </Link>
+                    </li>
+                    <li>
+                      <hr className="dropdown-divider" />
+                    </li>
 
-                                <li><Link className="dropdown-item" to="#"> Sign
-                                        Out <span className="ms-1"><i className="icofont-logout"></i></span></Link></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="wallet-btn">
-                        <Link to="wallet.html"><span><i className="icofont-wallet" data-blast="color"></i></span> <span
-                                className="d-none d-md-inline">234.98ETH</span> </Link>
-                    </div>
-
-                </div> 
-}
+                    <li>
+                      <button
+                        className="dropdown-item"
+                        onClick={() => {
+                          dispatch(logout());
+                        }}
+                      >
+                        {" "}
+                        Sign Out{" "}
+                        <span className="ms-1">
+                          <i className="icofont-logout"></i>
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="wallet-btn">
+                <Link to="wallet.html">
+                  <span>
+                    <i className="icofont-wallet" data-blast="color"></i>
+                  </span>{" "}
+                  <span className="d-none d-md-inline">
+                    {loginUser?.data.balance}Rego
+                  </span>{" "}
+                </Link>
+              </div>
+            </div>
+          )}
           <button className="menu-trigger header__btn" id="menu05">
             <span></span>
             <span></span>
