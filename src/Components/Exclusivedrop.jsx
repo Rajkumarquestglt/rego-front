@@ -131,7 +131,7 @@ export default function Exclusivedrop() {
                             <p className="nft-price">
                               Price:{" "}
                               <span className="yellow-color">
-                                {item.price} ETH
+                                {item.price} Rego
                               </span>
                             </p>
                             <Link to="#" className="nft-like">
