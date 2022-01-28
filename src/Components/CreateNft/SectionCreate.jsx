@@ -101,12 +101,12 @@ function SectionCreate() {
     dataToSubmit.append("metadata", metadata);
     dataToSubmit.append("category", category);
     dataToSubmit.append("description", description);
-    dataToSubmit.append("wallet_address","0x7f114c790246b850dc707bc14439919b49984157");
+    dataToSubmit.append("wallet_address",voucher.address);
     dataToSubmit.append("ipfs_hash", hash);
      
-    dataToSubmit.append("tokenId",voucher.tokenId);
+    dataToSubmit.append("tokenId",voucher.voucher.tokenId);
 
-    dataToSubmit.append("signature",voucher.signature);
+    dataToSubmit.append("signature",voucher.voucher.signature);
 
 
     console.log(dataToSubmit);
