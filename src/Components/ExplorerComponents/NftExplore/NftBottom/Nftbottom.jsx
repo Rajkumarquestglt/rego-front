@@ -1,57 +1,66 @@
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { ToastContainer,toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import { useSelector, useDispatch } from "react-redux";
 
 import { BuyNFT } from "../../../../helpers/BuyNFT";
-const url="http://regoex.com/Buy-NFT";
-export default function Nftbottom({ item }) {
+const url = "http://regoex.com/Buy-NFT";
 
+export default function Nftbottom({ item }) {
   const isAuthenticated = useSelector(
     (state) => state.auth.value.isAuthenticated
-      );
-  const  loginUser  = useSelector((state) => state.auth.value.user);
+  );
+  const loginUser = useSelector((state) => state.auth.value.user);
   //   console.log(collectionData)
-  let navigate=useNavigate();
+  let navigate = useNavigate();
 
   const buyNowHandler = async (item) => {
-    console.log("loginUser",loginUser);
+    console.log("loginUser", loginUser);
 
-     if(isAuthenticated)
-       {
-         const res=await axios.post(url,{email:loginUser.user.email,
-                                         amount:item.price,
-                                         content_price:item.price 
+    if (isAuthenticated) {
+      const res = await axios.post(url, {
+        email: loginUser.user.email,
+        amount: item.price,
+        content_price: item.price,
+      });
 
-                                    });
-              
-              if(res.data.status==true){
+      if (res.data.status == true) {
+        let hash = await BuyNFT(
+          item.tokenId,
+          item.ipfs_hash,
+          item.price,
+          item.signature
+        );
 
-                
-                     let hash=await BuyNFT(item.tokenId,item.ipfs_hash,item.price,item.signature);
-
-                   console.log('hash',hash);
-
-                   toast.success("Transaction Successful", {
-                    position: "top-center",
-                  });
-              }
-              else
-                {
-                  toast.error("You do not have sufficient Fund", {
-                    position: "top-center",
-                  });
-                }                      
-
-
-       }
-       else
-         {
-          navigate('/signin');
-         }
-
-   
-
+        console.log("hash", hash);
+        const buyRes = await axios.post(
+          "http://nft.regoex.com:3001/users/buy",
+          {
+            content_id: item._id,
+            amount: item.price,
+            token_id: item.tokenId,
+            to_address: null,
+            from_address: null,
+            hash: hash,
+            nft_url: item.ipfs_hash,
+          }
+        );
+        if (buyRes.status === true) {
+          toast.success("Transaction Successful", {
+            position: "top-center",
+          });
+          setTimeout(() => {
+            window.location.reload();
+          }, 1500);
+        }
+      } else {
+        toast.error("You do not have sufficient Fund", {
+          position: "top-center",
+        });
+      }
+    } else {
+      navigate("/signin");
+    }
   };
 
   return (
@@ -59,8 +68,8 @@ export default function Nftbottom({ item }) {
       <div className="nft-thumb">
         <img
           loading="lazy"
-             src={`http://nft.regoex.com:3001/content/${item.image}`}
-         // src={`https://images.unsplash.com/photo-1643236294618-d60e33412802?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80`}
+          src={`http://nft.regoex.com:3001/content/${item.image}`}
+          // src={`https://images.unsplash.com/photo-1643236294618-d60e33412802?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80`}
           alt="nft-img"
         />
 
@@ -88,9 +97,13 @@ export default function Nftbottom({ item }) {
           <p className="nft-price">
             Price: <span className="yellow-color">{item.price} Rego</span>
           </p>
-          <button onClick={() => buyNowHandler(item)} className="btn">
-            Buy Now
-          </button>
+          {item.is_sold === "No" ? (
+            <button onClick={() => buyNowHandler(item)} className="btn">
+              Buy Now
+            </button>
+          ) : (
+            "Sold Out"
+          )}
           {/* <Link to="#" className="nft-like">
             <i className="icofont-heart"></i>
             {item.likes}
