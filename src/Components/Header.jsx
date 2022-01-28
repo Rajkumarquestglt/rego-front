@@ -183,9 +183,10 @@ export default function Header() {
               </li>
 
               <li className="header__nav-item">
-                <Link to="https://regoex.com/buy" target="_blank" className="header__nav-link sign-up-btn">
+                {/* <Link to="https://regoex.com/buy" target="_blank" className="header__nav-link sign-up-btn">
                   Buy Rego
-                </Link>
+                </Link> */}
+                <a href="https://regoex.com/buy" target="_blank" className="header__nav-link sign-up-btn">Buy Rego</a>
               </li>
               {isAuthenticated ? (
                 ""
