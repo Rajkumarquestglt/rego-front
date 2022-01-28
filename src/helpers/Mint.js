@@ -20,8 +20,8 @@ export const Mint=async(tokenUrl,minPrice)=>{
     
     if (window.ethereum){ 
 
-       window.ethereum.enable();
-
+       let accounts = await window.ethereum.enable();
+      console.log("accounts", accounts);
        console.log('ready to go!') 
   
         
