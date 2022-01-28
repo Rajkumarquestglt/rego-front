@@ -1,7 +1,10 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
+
 function AuctionBody() {
+    
+
   return (
   <div>
       {/* <!-- ==========Auction Section start Here========== --> */}

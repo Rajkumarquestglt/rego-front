@@ -1,9 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
+import image from "../assets/images/logo-white.png"
+import { useSelector, useDispatch } from "react-redux";
 
 import logoImage from "../assets/images/logo/logo-2.png";
 
+
 export default function Header() {
+  const isAuthenticated = useSelector(
+    (state) => state.auth.value.isAuthenticated
+      );
+  const  loginUser  = useSelector((state) => state.auth.value.user);
   return (
     // <!-- ===============// header section start here \\================= -->
     <header className="header light-version">
@@ -12,6 +19,7 @@ export default function Header() {
           <div className="header__logo">
             <Link to="/">
               <img
+
                 src={logoImage}
                 alt="logo"
                 style={{ height: "45px", maxWidth: "initial" }}
@@ -37,7 +45,7 @@ export default function Header() {
           <div className="header__menu ms-auto">
             <ul className="header__nav mb-0">
               <li className="header__nav-item">
-                <Link to="#" className="header__nav-link">
+                <Link to="/" className="header__nav-link">
                   Drop
                 </Link>
               </li>
@@ -116,8 +124,8 @@ export default function Header() {
               </li>
 
               <li className="header__nav-item">
-                <Link to="all-authors-2.html" className="header__nav-link">
-                  Creater
+                <Link to="/all-authors" className="header__nav-link">
+                  Creaters
                 </Link>
               </li>
 
@@ -137,7 +145,7 @@ export default function Header() {
                             </ul>
                         </li> --> */}
 
-              <li className="header__nav-item">
+              <li className="header__nav-item d-none">
                 <Link
                   className="header__nav-link"
                   to="#"
@@ -179,11 +187,13 @@ export default function Header() {
                   Buy Rego
                 </Link>
               </li>
+              {isAuthenticated ?"":
               <li className="header__nav-item">
                 <Link to="/signin" className="header__nav-link sign-up-btn">
                   Login
                 </Link>
               </li>
+}
               <li className="header__nav-item">
                 <Link to="/create" className="header__nav-link sign-up-btn">
                   Create NFT
@@ -191,8 +201,8 @@ export default function Header() {
               </li>
             </ul>
           </div>
-
-          {/* <!-- <div className="header__actions">
+           {isAuthenticated &&             
+          <div className="header__actions">
                     <div className="header__action header__action--search">
                         <button className="header__action-btn" type="button"><i className="icofont-search-1"></i></button>
                     </div>
@@ -210,18 +220,18 @@ export default function Header() {
                                 <li><Link className="dropdown-item" to="author.html"><span className="me-1"><i
                                                 className="icofont-options"></i></span>
                                         Profile</Link></li>
-                                <li><Link className="dropdown-item" to="activity.html"><span className="me-1"><i
+                                <li><Link className="dropdown-item" to="/activity"><span className="me-1"><i
                                                 className="icofont-lightning-ray"></i></span>
                                         Activity</Link></li>
-                                <li><Link className="dropdown-item" to="signup.html"><span className="me-1"><i
+                                <li><Link className="dropdown-item" to="/signup"><span className="me-1"><i
                                                 className="icofont-space-shuttle"></i></span>
                                         Sign
                                         Up</Link></li>
-                                <li><Link className="dropdown-item" to="signin.html"><span className="me-1"><i
+                                <li><Link className="dropdown-item" to="/signin"><span className="me-1"><i
                                                 className="icofont-login"></i></span> Sign
                                         In</Link></li>
                                 <li>
-                                    <hr className="dropdown-divider">
+                                    <hr className="dropdown-divider" />
                                 </li>
 
                                 <li><Link className="dropdown-item" to="#"> Sign
@@ -234,8 +244,8 @@ export default function Header() {
                                 className="d-none d-md-inline">234.98ETH</span> </Link>
                     </div>
 
-                </div> --> */}
-
+                </div> 
+}
           <button className="menu-trigger header__btn" id="menu05">
             <span></span>
             <span></span>

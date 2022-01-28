@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AuctionHeader() {
+export default function ActivityHeader() {
   return (
   <div>
       {/* <!-- ==========Page Header Section Start Here========== --> */}
@@ -9,11 +9,11 @@ function AuctionHeader() {
             <div className="page-header-content">
                 <div className="page-header-inner">
                     <div className="page-title">
-                        <h2>NFT's Live Auction </h2>
+                        <h2>All Activities </h2>
                     </div>
                     <ol className="breadcrumb">
                         <li><a href="/">Home</a></li>
-                        <li className="active">auction</li>
+                        <li className="active">Activity</li>
                     </ol>
                 </div>
             </div>
@@ -23,5 +23,3 @@ function AuctionHeader() {
   </div>
   )
 }
-
-export default AuctionHeader;

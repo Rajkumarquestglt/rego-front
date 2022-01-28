@@ -1,6 +1,30 @@
 ﻿.header__search {
     width: 20%;
 }
+.form-control.file-upload-text{
+	height: calc(3.5rem + 2px);
+    padding: 1rem 0.75rem;
+        padding-top: 1.625rem;
+        padding-bottom: 0.625rem;
+        color: #212529;
+}
+.form-floating.file-input-outer>label{
+	color: #5138ee;
+    opacity: .8;
+    transform: scale(.85) translateY(-0.5rem) translateX(0.15rem);
+}
+.input-group.file-input{
+	position: relative;
+}
+.btn.file-upload-btn.upload-btn {
+    position: absolute;
+    box-shadow: none !important;
+    outline: none !important;
+    bottom: 5px;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
 .upper-strip {
     background-color: #5138ee;
     padding: 5px;

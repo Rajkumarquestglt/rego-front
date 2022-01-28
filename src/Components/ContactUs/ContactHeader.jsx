@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AuctionHeader() {
+export default function ContactHeader() {
   return (
   <div>
       {/* <!-- ==========Page Header Section Start Here========== --> */}
@@ -9,11 +9,11 @@ function AuctionHeader() {
             <div className="page-header-content">
                 <div className="page-header-inner">
                     <div className="page-title">
-                        <h2>NFT's Live Auction </h2>
+                        <h2>Contact Us </h2>
                     </div>
                     <ol className="breadcrumb">
-                        <li><a href="/">Home</a></li>
-                        <li className="active">auction</li>
+                        <li><a href="index.html">Home</a></li>
+                        <li className="active">Contact </li>
                     </ol>
                 </div>
             </div>
@@ -21,7 +21,5 @@ function AuctionHeader() {
     </section>
     {/* <!-- ==========Page Header Section Ends Here========== --> */}
   </div>
-  )
+    )
 }
-
-export default AuctionHeader;

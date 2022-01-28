@@ -208,11 +208,11 @@ function SectionCreate() {
                           <div className="form-floating file-input-outer">
                             <div className="input-group file-input">
                               <input
-                                type="file"
-                                className="form-control file-upload-text"
+                                type="text"
+                                className="form-control file-upload-text "
                                 disabled=""
                                 placeholder="Select a File..."
-                                onChange={(e) =>handleFile(e)}
+                                // onChange={(e) =>handleFile(e)}
                               />
                               <button
                                 type="button"
@@ -227,6 +227,7 @@ function SectionCreate() {
                                   id="file-input-1"
                                   style={{ width: "0" }}
                                   placeholder="No File Selected"
+                                  onChange={(e) =>handleFile(e)}
                                   aria-required="true"
                                 />
                                 <span className="input-group-btn"></span>
