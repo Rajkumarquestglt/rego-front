@@ -12,16 +12,17 @@ export const Mint=async(tokenUrl,minPrice)=>{
     console.log(contract.getChainID())
     const signer = provider.getSigner();
     console.log(signer.getAddress())
-   const wallet_address=signer.getAddress;
+   const wallet_address=await signer.getAddress;
+   console.log("wallet_address", wallet_address);
     var token =Math.floor(Math.random() * 10000);
     let voucher={};
-    voucher.address=wallet_address;
     
     if (window.ethereum){ 
 
-       window.ethereum.enable();
-
+       let accounts = await window.ethereum.enable();
+      console.log("accounts", accounts);
        console.log('ready to go!') 
+      voucher.address=accounts[0];
   
         
        const lazyminter = new LazyMinter({contract,signer})

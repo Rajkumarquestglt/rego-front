@@ -1,11 +1,13 @@
-
-import './App.css';
-import MainRoutes from './routes/MainRoutes';
-
+import "./App.css";
+import PreLoader from "./Components/PreLoader";
+import MainRoutes from "./routes/MainRoutes";
 
 function App() {
   return (
-    <MainRoutes />
+    <>
+      <PreLoader />
+      <MainRoutes />
+    </>
   );
 }
 

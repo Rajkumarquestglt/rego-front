@@ -3,6 +3,9 @@ import {Link} from "react-router-dom";
 import image from "../assets/images/logo-white.png"
 import { useSelector, useDispatch } from "react-redux";
 
+import logoImage from "../assets/images/logo/logo-2.png";
+
+
 export default function Header() {
   const isAuthenticated = useSelector(
     (state) => state.auth.value.isAuthenticated
@@ -16,16 +19,18 @@ export default function Header() {
           <div className="header__logo">
             <Link to="/">
               <img
-                src={image}
+
+                src={logoImage}
                 alt="logo"
                 style={{ height: "45px", maxWidth: "initial" }}
               />
             </Link>
           </div>
 
-          <form action="/" className="header__search">
+          <form action="/search-result" className="header__search">
             <input
               type="text"
+              name="search"
               placeholder="Search items, collections, and creators"
             />
             <button type="button">

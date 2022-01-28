@@ -1,58 +1,39 @@
 import { useEffect, useState } from "react";
-import Footer from "../Components/Footer";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import axios from "axios";
 import Header from "../Components/Header";
 import UpperStrip from "../Components/UpperStrip";
-import { Link } from "react-router-dom";
-
-import axios from "axios";
-
-import "../assets/css/icofont.min.css";
-import "../assets/css/lightcase.css";
-import "../assets/css/animate.css";
-import "../assets/css/swiper-bundle.min.css";
-import "../assets/css/style.min.css";
-import "../assets/css/custom.css";
 import AllCategory from "../Components/ExplorerComponents/AllCategory";
 import SortBy from "../Components/ExplorerComponents/SortBy";
-import SearchNft from "../Components/ExplorerComponents/SearchNft";
 import Singlenft from "../Components/ExplorerComponents/NftExplore/Singlenft";
+import SearchNft from "../Components/ExplorerComponents/SearchNft";
 
-import { useSelector } from "react-redux";
+const url = "http://nft.regoex.com:3001/users/search";
 
-export default function Explorer() {
-  const url = "http://nft.regoex.com:3001/users/content";
+const SearchResult = () => {
+  const { search } = useLocation();
 
-  const isAuthenticated = useSelector(
-    (state) => state.auth.value.isAuthenticated
-  );
-  const loginUser = useSelector((state) => state.auth.value.user);
+  let search_tag = search.split("=")[1];
 
-  const [collectionData, setCollectionData] = useState({
+  const [searchData, setSearchData] = useState({
     list: [],
     total: "",
     loading: true,
   });
-  const { list, total, loading } = collectionData;
+  const { list, total, loading } = searchData;
 
-  const getData = async (page, limit, tag) => {
-    console.log("get data hit");
-    const res = await axios.post(url, {
-      page,
-      limit,
-      search_tag: tag,
-    });
-    console.log("data", res);
-    setCollectionData({
-      list: res.data.data,
-      total: res.data.total,
+  const getData = async () => {
+    const res = await axios.post(url, { search_tag });
+    setSearchData({
+      list: [...res.data],
+      total: res.data?.length,
       loading: false,
     });
   };
-  console.log(list);
 
-  useEffect(async () => {
-    setCollectionData({ ...collectionData, loading: true });
-    await getData(1, 20, "");
+  useEffect(() => {
+    getData();
   }, []);
 
   return (
@@ -70,11 +51,12 @@ export default function Explorer() {
           </div>
           <div className="section-wrapper">
             <div className="explore-wrapper">
+              You Searched For : {search_tag}
               <div className="row justify-content-center gx-4 gy-3">
                 {/*Name is for nft-top paramater and  detail,price,likes is for nftBottom   */}
-
                 {loading == false &&
-                  list?.content.map((item, i) => (
+                  list?.length > 0 &&
+                  list?.map((item, i) => (
                     <Singlenft
                       key={i}
                       item={item}
@@ -84,15 +66,23 @@ export default function Explorer() {
                       likes="230"
                     />
                   ))}
+                {loading == false && list?.length === 0 && (
+                  <div> No Data Found</div>
+                )}
               </div>
+              {loading == false && list?.length > 0 && (
+                <div className="load-btn mt-5">
+                  <Link to="#" className="default-btn move-bottom">
+                    <span>Load More</span>
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </section>
-      <Footer />
-      <Link to="#" className="scrollToTop light-version">
-        <i className="icofont-stylish-up"></i>
-      </Link>
     </>
   );
-}
+};
+
+export default SearchResult;

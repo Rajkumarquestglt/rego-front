@@ -1,5 +1,4 @@
-
-import "../assets/js/createnft.js"
+import "../assets/js/createnft.js";
 
 
 import React from 'react';
@@ -9,16 +8,16 @@ import Footer from "../Components/Footer"
 import SectionHeader from "../Components/CreateNft/SectionHeader"
 import SectionCreate from "../Components/CreateNft/SectionCreate"
 import UpperStrip from "../Components/UpperStrip.jsx";
+
 function Create() {
-    
   return (
     <>
+
       {/* <PreLoader /> */}
       <UpperStrip />
       <Header />
       <SectionHeader />
       <SectionCreate />
-
       <Footer />
     </>
   );
