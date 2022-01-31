@@ -15,6 +15,8 @@ export default function SortBy() {
         <option value="3">Recently Sold </option>
         <option value="3">Recently Created </option>
         <option value="3">Recently Viewed </option>
+        <option value="3">Price</option>
+
         <option value="3">Ending Soon</option>
       </select>
       <label htmlFor="sortSelect">Sort By</label>

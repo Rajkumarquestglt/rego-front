@@ -312,7 +312,7 @@ function SectionCreate() {
                                   <Link to="/author" className="veryfied">
                                     <img
                                       loading="lazy"
-                                      src={require("../../assets/images/seller/04.png")}
+                                      src={("../../assets/images/seller/04.png")}
                                       alt="author-img"
                                     />
                                   </Link>

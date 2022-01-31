@@ -10,6 +10,8 @@ import "../assets/css/animate.css"
 import "../assets/css/swiper-bundle.min.css"
 import "../assets/css/style.min.css"
 import "../assets/css/custom.css"
+import nft_img from "../assets/images/nft-item/item-details-light.gif"
+import author_img from "../assets/images/seller/02.gif"
 
 export default function ItemDetails() {
   return (
@@ -25,7 +27,7 @@ export default function ItemDetails() {
                 <div className="item-desc-part">
                   <div className="item-desc-inner">
                     <div className="item-desc-thumb">
-                      <img src={require("../assets/images/nft-item/item-details-light.gif")} alt="item-img"/>
+                      <img src={nft_img} alt="item-img"/>
                     </div>
                     <div className="item-desc-content">
                       <nav>
@@ -89,7 +91,7 @@ export default function ItemDetails() {
                             <div className="author-p-thumb">
                               <Link to="author.html">
                                 <img
-                                  src={require("../assets/images/seller/02.gif")}
+                                  src={author_img}
                                   alt="author-img "
                                 />
                               </Link>
