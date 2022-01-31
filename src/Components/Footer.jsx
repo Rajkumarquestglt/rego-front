@@ -13,7 +13,7 @@ export default function Footer() {
                         <div className="col-lg-6">
                             <div className="newsletter-part">
                                 <div className="ft-header">
-                                    <h4>Get The Latest Rarible Updates</h4>
+                                    <h4>Get The Latest Rego NFT Updates</h4>
                                 </div>
                                 <form action="/">
                                     <input type="email" placeholder="Your Mail Address" />

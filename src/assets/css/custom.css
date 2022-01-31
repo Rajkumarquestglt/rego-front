@@ -94,7 +94,7 @@
 .header {
     box-shadow: 0 0 10px rgba(3,0,16,.2);
     border-bottom: 1px solid rgba(255,255,255,.1);
-    top: 35px;
+    top: 0px;
     left: 0;
     right: 0;
     width: auto;
@@ -124,6 +124,10 @@ justify-content: space-between;
 .header__logo {
     padding-right: 0;
     margin-right: 0;
+}
+.nft-item .nft-item-top .author-part .author-list .single-author a img {
+    max-width: 68px;
+    width: 68px !important;
 }
 
 @media (max-width: 991px){

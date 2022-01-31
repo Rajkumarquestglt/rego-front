@@ -14,19 +14,16 @@ export default function Banner() {
               <div className="banner-content">
                 <h1>
                   <span className="theme-color" data-blast="color">
-                    Discover
+                    Exclusive 
                   </span>{" "}
-                  Collect <br />
-                  And Sell{" "}
+                  Celebrity <br />
+                 
                   <span className="theme-color" data-blast="color">
                     NFT
                   </span>{" "}
-                  Assets
+                  Marketplace 
                 </h1>
-                <p>
-                  Digital Marketplace For Crypto Collectibles And Non-Fungible
-                  Tokens. Buy, Sell, And Discover Exclusive Digital Assets.
-                </p>
+               
                 <div className="banner-btns d-flex flex-wrap">
                   <Link
                     data-blast="bgColor"
@@ -35,8 +32,8 @@ export default function Banner() {
                   >
                     <span>Explore</span>{" "}
                   </Link>
-                  <Link to="/create" className="default-btn move-right">
-                    <span>Create</span>{" "}
+                  <Link to="/auction" className="default-btn move-right">
+                    <span>Add Live Auctions</span>{" "}
                   </Link>
                 </div>
               </div>

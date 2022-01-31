@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Signup from "../pages/SignUp.js";
 import Signin from "../pages/SignIn.js";
 import Explorer from "../pages/Explorer.js";
-import Index from "../pages/Index.js";
+import Index from "../pages/index.js";
 import ItemDetails from "../pages/ItemDetails";
 import ForgotPass from "../pages/ForgotPass.js";
 import FourOFour from "../pages/404.js";

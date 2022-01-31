@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import image from "../assets/images/logo-white.png";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../reducers/authReducer";
-import logoImage from "../assets/images/logo/logo-2.png";
+import logoImage from "../assets/images/logo-white.png";
 
 export default function Header() {
   const dispatch = useDispatch();
@@ -44,7 +44,7 @@ export default function Header() {
           </form>
           <div className="header__menu ms-auto">
             <ul className="header__nav mb-0">
-              <li className="header__nav-item">
+             {/* <!-- <li className="header__nav-item">
                 <Link to="/" className="header__nav-link">
                   Drop
                 </Link>
@@ -121,13 +121,14 @@ export default function Header() {
                     </Link>
                   </li>
                 </ul>
-              </li>
+              </li> 
 
               <li className="header__nav-item">
                 <Link to="/all-authors" className="header__nav-link">
                   Creaters
                 </Link>
-              </li>
+              </li>-->
+              */}
 
               {/* <!--   <li className="header__nav-item">
                             <Link className="header__nav-link" to="#" role="button" data-bs-toggle="dropdown"
@@ -188,7 +189,7 @@ export default function Header() {
                 </Link> */}
                 <a href="https://regoex.com/buy" target="_blank" className="header__nav-link sign-up-btn">Buy Rego</a>
               </li>
-              {isAuthenticated ? (
+            {/*<!--   {isAuthenticated ? (
                 ""
               ) : (
                 <li className="header__nav-item">
@@ -196,10 +197,10 @@ export default function Header() {
                     Login
                   </Link>
                 </li>
-              )}
+              )} -->*/}
               <li className="header__nav-item">
                 <Link to="/create" className="header__nav-link sign-up-btn">
-                  Create NFT
+                  Buy NFTs
                 </Link>
               </li>
             </ul>
