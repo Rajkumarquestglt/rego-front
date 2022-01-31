@@ -17,7 +17,7 @@ export default function BlogSection() {
                             <div className="nft-item light-version blog-item">
                                 <div className="nft-inner">
                                     <div className="nft-thumb">
-                                        <img src={require("../assets/images/nft-item/blog/02.jpg")} alt="blog-img"/>
+                                        <img src={("../assets/images/nft-item/blog/02.jpg")} alt="blog-img"/>
                                     </div>
                                     <div className="nft-content">
                                         <div className="author-details">
@@ -39,7 +39,7 @@ export default function BlogSection() {
                             <div className="nft-item light-version blog-item">
                                 <div className="nft-inner">
                                     <div className="nft-thumb">
-                                        <img src={require("../assets/images/nft-item/blog/03.jpg")} alt="blog-img"/>
+                                        <img src={("../assets/images/nft-item/blog/03.jpg")} alt="blog-img"/>
                                     </div>
                                     <div className="nft-content">
                                         <div className="author-details">
@@ -61,7 +61,7 @@ export default function BlogSection() {
                             <div className="nft-item light-version blog-item">
                                 <div className="nft-inner">
                                     <div className="nft-thumb">
-                                        <img src={require("../assets/images/nft-item/blog/01.jpg")} alt="blog-img"/>
+                                        <img src={("../assets/images/nft-item/blog/01.jpg")} alt="blog-img"/>
                                     </div>
                                     <div className="nft-content">
                                         <div className="author-details">

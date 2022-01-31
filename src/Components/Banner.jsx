@@ -1,11 +1,20 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
+
+import bprak from "../assets/images/bprak.png"
+import banner1 from "../assets/images/banner1.jpg"
+import banner2 from "../assets/images/banner2.jpg"
+import banner3 from "../assets/images/banner3.jpg"
+import banner4 from "../assets/images/banner4.jpg"
+
+
 export default function Banner() {
+
   return (
     <section
       className="banner-section light-version"
-      style={{backgroundImage: `url(${require('../assets/images/banner/bg-4.png')}`}}
+      style={{backgroundImage: `url(${('../assets/images/banner/bg-4.png')}`}}
     >
       <div className='container'>
         <div className="banner-wrapper">
@@ -38,10 +47,14 @@ export default function Banner() {
                 </div>
               </div>
             </div>
+            
             <div className="col-lg-6">
-              <div className="nft-slider-wrapper">
-                <div className="banner-item-slider">
-                  <div className="swiper-wrapper">
+            {/* <Slider {...settings}>  */}
+              <div className="nft-slider-wrapper"> 
+                          
+                <div className="banner-item-slider"> 
+                           
+                  <div className="swiper-wrapper">                
                     <div className="swiper-slide">
                       <div className="nft-item light-version">
                         <div className="nft-inner">
@@ -53,7 +66,7 @@ export default function Banner() {
                                   <Link to="author.html" className="veryfied">
                                     <img
                                       loading="lazy"
-                                      src={require("../assets/images/seller/04.png")}
+                                      src={bprak}
                                       alt="author-img"
                                     />
                                   </Link>
@@ -102,7 +115,7 @@ export default function Banner() {
                             <div className="nft-thumb">
                               <img
                                 loading="lazy"
-                                src={require("../assets/images/banner/01.gif")}
+                                src={banner1}
                                 alt="nft-img"
                               />
                             </div>
@@ -136,7 +149,7 @@ export default function Banner() {
                                   <Link to="author.html" className="veryfied">
                                     <img
                                       loading="lazy"
-                                      src={require("../assets/images/seller/04.png")}
+                                      src={bprak}
                                       alt="author-img"
                                     />
                                   </Link>
@@ -185,7 +198,7 @@ export default function Banner() {
                             <div className="nft-thumb">
                               <img
                                 loading="lazy"
-                                src={require("../assets/images/banner/01.png")}
+                                src={banner3}
                                 alt="nft-img"
                               />
 
@@ -235,7 +248,7 @@ export default function Banner() {
                                   <Link to="author.html" className="veryfied">
                                     <img
                                       loading="lazy"
-                                      src={require("../assets/images/seller/04.png")}
+                                      src={bprak}
                                       alt="author-img"
                                     />
                                   </Link>
@@ -284,7 +297,7 @@ export default function Banner() {
                             <div className="nft-thumb">
                               <img
                                 loading="lazy"
-                                src={require("../assets/images/banner/02.gif")}
+                                src={banner2}
                                 alt="nft-img"
                               />
 
@@ -334,7 +347,7 @@ export default function Banner() {
                                   <Link to="author.html" className="veryfied">
                                     <img
                                       loading="lazy"
-                                      src={require("../assets/images/seller/03.png")}
+                                      src={bprak}
                                       alt="author-img"
                                     />
                                   </Link>
@@ -383,7 +396,7 @@ export default function Banner() {
                             <div className="nft-thumb">
                               <img
                                 loading="lazy"
-                                src={require("../assets/images/banner/04.jpg")}
+                                src={banner4}
                                 alt="nft-img"
                               />
 
@@ -421,11 +434,15 @@ export default function Banner() {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div>               
                   </div>
+                  
                 </div>
+                
               </div>
+              {/* </Slider> */}
             </div>
+            
           </div>
         </div>
       </div>

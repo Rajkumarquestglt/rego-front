@@ -44,7 +44,7 @@ function AuctionBody() {
                                             <ul className="author-list d-flex">
                                                 <li className="single-author d-flex align-items-center">
                                                     <Link to="author.html" className="veryfied"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/04.png")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/04.png")} alt="author-img" /></Link>
                                                     <h6><Link to="author.html">Gucci Lucas</Link></h6>
                                                 </li>
                                             </ul>
@@ -72,7 +72,7 @@ function AuctionBody() {
                                     {/* <!-- nft-bottom part --> */}
                                     <div className="nft-item-bottom">
                                         <div className="nft-thumb">
-                                            <img loading="lazy" src={require("../../assets/images/nft-item/01.gif")} alt="nft-img" />
+                                            <img loading="lazy" src={("../../assets/images/nft-item/01.gif")} alt="nft-img" />
 
                                             {/* <!-- nft countdwon --> */}
                                             <ul className="nft-countdown count-down" data-date="July 05, 2022 21:14:01">
@@ -112,15 +112,15 @@ function AuctionBody() {
                                             <ul className="author-list d-flex">
                                                 <li className="single-author">
                                                     <Link to="author.html"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/01.png")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/01.png")} alt="author-img" /></Link>
                                                 </li>
                                                 <li className="single-author">
                                                     <Link to="author.html"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/01.gif")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/01.gif")} alt="author-img" /></Link>
                                                 </li>
                                                 <li className="single-author d-flex align-items-center">
                                                     <Link to="author.html" className="veryfied"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/02.png")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/02.png")} alt="author-img" /></Link>
                                                     <h6><Link to="author.html">Ecalo jers</Link></h6>
                                                 </li>
                                             </ul>
@@ -148,7 +148,7 @@ function AuctionBody() {
                                     {/* <!-- nft-bottom part --> */}
                                     <div className="nft-item-bottom">
                                         <div className="nft-thumb">
-                                            <img loading="lazy" src={require("../../assets/images/nft-item/02.jpg")} alt="nft-img" />
+                                            <img loading="lazy" src={("../../assets/images/nft-item/02.jpg")} alt="nft-img" />
 
                                             {/* <!-- nft countdwon --> */}
                                             <ul className="nft-countdown count-down" data-date="July 05, 2022 21:14:01">
@@ -188,15 +188,15 @@ function AuctionBody() {
                                             <ul className="author-list d-flex">
                                                 <li className="single-author">
                                                     <Link to="author.html"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/02.png")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/02.png")} alt="author-img" /></Link>
                                                 </li>
                                                 <li className="single-author">
                                                     <Link to="author.html"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/05.png")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/05.png")} alt="author-img" /></Link>
                                                 </li>
                                                 <li className="single-author d-flex align-items-center">
                                                     <Link to="author.html" className="veryfied"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/04.png")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/04.png")} alt="author-img" /></Link>
                                                     <h6><Link to="author.html">Hola moc</Link></h6>
                                                 </li>
                                             </ul>
@@ -224,7 +224,7 @@ function AuctionBody() {
                                     {/* <!-- nft-bottom part --> */}
                                     <div className="nft-item-bottom">
                                         <div className="nft-thumb">
-                                            <img loading="lazy" src={require("../../assets/images/nft-item/03.jpg")} alt="nft-img" />
+                                            <img loading="lazy" src={("../../assets/images/nft-item/03.jpg")} alt="nft-img" />
 
                                             {/* <!-- nft countdwon --> */}
                                             <ul className="nft-countdown count-down" data-date="July 05, 2022 21:14:01">
@@ -264,11 +264,11 @@ function AuctionBody() {
                                             <ul className="author-list d-flex">
                                                 <li className="single-author">
                                                     <Link to="author.html"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/06.png")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/06.png")} alt="author-img" /></Link>
                                                 </li>
                                                 <li className="single-author d-flex align-items-center">
                                                     <Link to="author.html" className="veryfied"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/05.gif")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/05.gif")} alt="author-img" /></Link>
                                                     <h6><Link to="author.html">Logicto pen</Link></h6>
                                                 </li>
                                             </ul>
@@ -296,7 +296,7 @@ function AuctionBody() {
                                     {/* <!-- nft-bottom part --> */}
                                     <div className="nft-item-bottom">
                                         <div className="nft-thumb">
-                                            <img loading="lazy" src={require("../../assets/images/nft-item/06.gif")} alt="nft-img" />
+                                            <img loading="lazy" src={("../../assets/images/nft-item/06.gif")} alt="nft-img" />
 
                                             {/* <!-- nft countdwon --> */}
                                             <ul className="nft-countdown count-down" data-date="July 05, 2022 21:14:01">
@@ -336,15 +336,15 @@ function AuctionBody() {
                                             <ul className="author-list d-flex">
                                                 <li className="single-author">
                                                     <Link to="author.html"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/06.png")}alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/06.png")}alt="author-img" /></Link>
                                                 </li>
                                                 <li className="single-author">
                                                     <Link to="author.html"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/07.gif")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/07.gif")} alt="author-img" /></Link>
                                                 </li>
                                                 <li className="single-author d-flex align-items-center">
                                                     <Link to="author.html" className="veryfied"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/09.png")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/09.png")} alt="author-img" /></Link>
                                                     <h6><Link to="author.html">unique lo</Link></h6>
                                                 </li>
                                             </ul>
@@ -372,7 +372,7 @@ function AuctionBody() {
                                     {/* <!-- nft-bottom part --> */}
                                     <div className="nft-item-bottom">
                                         <div className="nft-thumb">
-                                            <img loading="lazy" src={require("../../assets/images/nft-item/09.jpg")} alt="nft-img" />
+                                            <img loading="lazy" src={("../../assets/images/nft-item/09.jpg")} alt="nft-img" />
 
                                             {/* <!-- nft countdwon --> */}
                                             <ul className="nft-countdown count-down" data-date="July 05, 2022 21:14:01">
@@ -412,7 +412,7 @@ function AuctionBody() {
                                             <ul className="author-list d-flex">
                                                 <li className="single-author d-flex align-items-center">
                                                     <Link to="author.html" className="veryfied"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/05.gif")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/05.gif")} alt="author-img" /></Link>
                                                     <h6><Link to="author.html">Monica bel</Link></h6>
                                                 </li>
                                             </ul>
@@ -440,7 +440,7 @@ function AuctionBody() {
                                     {/* <!-- nft-bottom part --> */}
                                     <div className="nft-item-bottom">
                                         <div className="nft-thumb">
-                                            <img loading="lazy" src={require("../../assets/images/nft-item/06.jpg")} alt="nft-img" />
+                                            <img loading="lazy" src={("../../assets/images/nft-item/06.jpg")} alt="nft-img" />
 
                                             {/* <!-- nft countdwon --> */}
                                             <ul className="nft-countdown count-down" data-date="July 05, 2022 21:14:01">
@@ -480,15 +480,15 @@ function AuctionBody() {
                                             <ul className="author-list d-flex">
                                                 <li className="single-author">
                                                     <Link to="author.html"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/08.gif")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/08.gif")} alt="author-img" /></Link>
                                                 </li>
                                                 <li className="single-author">
                                                     <Link to="author.html"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/01.png")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/01.png")} alt="author-img" /></Link>
                                                 </li>
                                                 <li className="single-author d-flex align-items-center">
                                                     <Link to="author.html" className="veryfied"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/11.png")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/11.png")} alt="author-img" /></Link>
                                                     <h6><Link to="author.html">Gucci L.</Link></h6>
                                                 </li>
                                             </ul>
@@ -516,7 +516,7 @@ function AuctionBody() {
                                     {/* <!-- nft-bottom part --> */}
                                     <div className="nft-item-bottom">
                                         <div className="nft-thumb">
-                                            <img loading="lazy" src={require("../../assets/images/nft-item/04.gif")} alt="nft-img" />
+                                            <img loading="lazy" src={("../../assets/images/nft-item/04.gif")} alt="nft-img" />
 
                                             {/* <!-- nft countdwon --> */}
                                             <ul className="nft-countdown count-down" data-date="July 05, 2022 21:14:01">
@@ -556,15 +556,15 @@ function AuctionBody() {
                                             <ul className="author-list d-flex">
                                                 <li className="single-author">
                                                     <Link to="author.html"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/01.png")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/01.png")} alt="author-img" /></Link>
                                                 </li>
                                                 <li className="single-author">
                                                     <Link to="author.html"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/07.png")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/07.png")} alt="author-img" /></Link>
                                                 </li>
                                                 <li className="single-author d-flex align-items-center">
                                                     <Link to="author.html" className="veryfied"><img loading="lazy"
-                                                            src={require("../../assets/images/seller/09.png")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/09.png")} alt="author-img" /></Link>
                                                     <h6><Link to="author.html">ptrax elm.</Link></h6>
                                                 </li>
                                             </ul>
@@ -592,7 +592,7 @@ function AuctionBody() {
                                     {/* <!-- nft-bottom part --> */}
                                     <div className="nft-item-bottom">
                                         <div className="nft-thumb">
-                                            <img loading="lazy" src={require("../../assets/images/nft-item/08.jpg")} alt="nft-img" />
+                                            <img loading="lazy" src={("../../assets/images/nft-item/08.jpg")} alt="nft-img" />
 
                                             {/* <!-- nft countdwon --> */}
                                             <ul className="nft-countdown count-down" data-date="July 05, 2022 21:14:01">
@@ -631,12 +631,12 @@ function AuctionBody() {
                                         <div className="author-part">
                                             <ul className="author-list d-flex">
                                                 <li className="single-author">
-                                                    <Link to="author.html"><img src={require("../../assets/images/seller/01.png")}
+                                                    <Link to="author.html"><img src={("../../assets/images/seller/01.png")}
                                                             alt="author-img" /></Link>
                                                 </li>
                                                 <li className="single-author d-flex align-items-center">
                                                     <Link to="author.html" className="veryfied"><img
-                                                            src={require("../../assets/images/seller/01.gif")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/01.gif")} alt="author-img" /></Link>
                                                     <h6><Link to="author.html">Jhon Doe</Link></h6>
                                                 </li>
                                             </ul>
@@ -663,7 +663,7 @@ function AuctionBody() {
                                     {/* <!-- nft-bottom part --> */}
                                     <div className="nft-item-bottom">
                                         <div className="nft-thumb">
-                                            <img src={require("../../assets/images/nft-item/03.gif")} alt="nft-img" />
+                                            <img src={("../../assets/images/nft-item/03.gif")} alt="nft-img" />
 
                                             {/* <!-- nft countdwon --> */}
                                             <ul className="nft-countdown count-down" data-date="July 05, 2022 21:14:01"
@@ -704,16 +704,16 @@ function AuctionBody() {
                                         <div className="author-part">
                                             <ul className="author-list d-flex">
                                                 <li className="single-author">
-                                                    <Link to="author.html"><img src={require("../../assets/images/seller/01.png")}
+                                                    <Link to="author.html"><img src={("../../assets/images/seller/01.png")}
                                                             alt="author-img" /></Link>
                                                 </li>
                                                 <li className="single-author">
-                                                    <Link to="author.html"><img src={require("../../assets/images/seller/02.gif")}
+                                                    <Link to="author.html"><img src={("../../assets/images/seller/02.gif")}
                                                             alt="author-img" /></Link>
                                                 </li>
                                                 <li className="single-author d-flex align-items-center">
                                                     <Link to="author.html" className="veryfied"><img
-                                                            src={require("../../assets/images/seller/02.png")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/02.png")} alt="author-img" /></Link>
                                                     <h6><Link to="author.html">Gucci L.</Link></h6>
                                                 </li>
                                             </ul>
@@ -740,7 +740,7 @@ function AuctionBody() {
                                     {/* <!-- nft-bottom part --> */}
                                     <div className="nft-item-bottom">
                                         <div className="nft-thumb">
-                                            <img src={require("../../assets/images/nft-item/03.jpg")} alt="nft-img" />
+                                            <img src={("../../assets/images/nft-item/03.jpg")} alt="nft-img" />
 
                                             {/* <!-- nft countdwon --> */}
                                             <ul className="nft-countdown count-down" data-date="July 05, 2022 21:14:01"
@@ -781,7 +781,7 @@ function AuctionBody() {
                                             <ul className="author-list d-flex">
                                                 <li className="single-author d-flex align-items-center">
                                                     <Link to="author.html" className="veryfied"><img
-                                                            src={require("../../assets/images/seller/04.png")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/04.png")} alt="author-img" /></Link>
                                                     <h6><Link to="author.html">Rassel mrh</Link></h6>
                                                 </li>
                                             </ul>
@@ -808,7 +808,7 @@ function AuctionBody() {
                                     {/* <!-- nft-bottom part --> */}
                                     <div className="nft-item-bottom">
                                         <div className="nft-thumb">
-                                            <img src={require("../../assets/images/nft-item/04.jpg")} alt="nft-img" />
+                                            <img src={("../../assets/images/nft-item/04.jpg")} alt="nft-img" />
 
                                             {/* <!-- nft countdwon --> */}
                                             <ul className="nft-countdown count-down" data-date="July 05, 2022 21:14:01"
@@ -848,16 +848,16 @@ function AuctionBody() {
                                         <div className="author-part">
                                             <ul className="author-list d-flex">
                                                 <li className="single-author">
-                                                    <Link to="author.html"><img src={require("../../assets/images/seller/04.png")}
+                                                    <Link to="author.html"><img src={("../../assets/images/seller/04.png")}
                                                             alt="author-img"/></Link>
                                                 </li>
                                                 <li className="single-author">
-                                                    <Link to="author.html"><img src={require("../../assets/images/seller/05.png")}
+                                                    <Link to="author.html"><img src={("../../assets/images/seller/05.png")}
                                                             alt="author-img"/></Link>
                                                 </li>
                                                 <li className="single-author d-flex align-items-center">
                                                     <Link to="author.html" className="veryfied"><img
-                                                            src={require("../../assets/images/seller/04.gif")} alt="author-img" /></Link>
+                                                            src={("../../assets/images/seller/04.gif")} alt="author-img" /></Link>
                                                     <h6><Link to="author.html">Blexa z</Link></h6>
                                                 </li>
                                             </ul>
@@ -884,7 +884,7 @@ function AuctionBody() {
                                     {/* <!-- nft-bottom part --> */}
                                     <div className="nft-item-bottom">
                                         <div className="nft-thumb">
-                                            <img src={require("../../assets/images/nft-item/05.gif")} alt="nft-img" />
+                                            <img src={("../../assets/images/nft-item/05.gif")} alt="nft-img" />
 
                                             {/* <!-- nft countdwon --> */}
                                             <ul className="nft-countdown count-down" data-date="July 05, 2022 21:14:01"

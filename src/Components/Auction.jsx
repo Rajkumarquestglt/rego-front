@@ -2,34 +2,42 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import sellerImage from "../assets/images/seller/01.png";
+// import "../assets/css/icofont.min.css"
+// import "../assets/css/lightcase.css"
+// import "../assets/css/animate.css"
+// import "../assets/css/swiper-bundle.min.css"
+// import "../assets/css/style.min.css"
+// import "../assets/css/custom.css"
+// import "../assets/js/countdown.min.js"
 
-const limitedCollectionUrl =
-  "http://nft.regoex.com:3001/users/limited-collection";
+
+// const limitedCollectionUrl =
+//   "http://nft.regoex.com:3001/users/limited-collection";
 
 export default function Auction() {
-  const [collectionData, setCollectionData] = useState({
-    list: [],
-    total: "",
-    loading: true,
-  });
-  const { list, total, loading } = collectionData;
+  // const [collectionData, setCollectionData] = useState({
+  //   list: [],
+  //   total: "",
+  //   loading: true,
+  // });
+  // const { list, total, loading } = collectionData;
 
-  const getData = async () => {
-    console.log("get data hit");
-    const res = await axios.post(limitedCollectionUrl, {});
-    console.log("limited collection \n", res);
-    setCollectionData({
-      list: res.data.data,
-      total: res.data.total,
-      loading: false,
-    });
-  };
-  console.log({ list });
+  // const getData = async () => {
+  //   console.log("get data hit");
+  //   const res = await axios.post(limitedCollectionUrl, {});
+  //   console.log("limited collection \n", res);
+  //   setCollectionData({
+  //     list: res.data.data,
+  //     total: res.data.total,
+  //     loading: false,
+  //   });
+  // };
+  // console.log({ list });
 
-  useEffect(() => {
-    setCollectionData({ ...collectionData, loading: true });
-    getData();
-  }, []);
+  // useEffect(() => {
+  //   setCollectionData({ ...collectionData, loading: true });
+  //   getData();
+  // }, []);
 
   return (
     <section className="auction-section padding-bottom">
