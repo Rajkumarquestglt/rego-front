@@ -206,7 +206,7 @@ export default function Header() {
               </li>
             </ul>
           </div>
-          {isAuthenticated && (
+          
             <div className="header__actions">
               <div className="header__action header__action--search">
                 <button className="header__action-btn" type="button">
@@ -214,74 +214,77 @@ export default function Header() {
                 </button>
               </div>
 
-              <div className="header__action header__action--profile">
-                <div className="dropdown">
-                  <Link
-                    className="dropdown-toggle"
-                    to="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    data-bs-offset="-100,10"
-                  >
-                    <span data-blast="bgColor">
-                      <i className="icofont-user"></i>
-                    </span>{" "}
-                    <span className="d-none d-md-inline">
-                      {loginUser?.data?.user.name}
-                    </span>
-                  </Link>
-
-                  <ul className="dropdown-menu">
-                    <li>
-                      <Link className="dropdown-item" to="author.html">
-                        <span className="me-1">
-                          <i className="icofont-options"></i>
-                        </span>
-                        Profile
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="dropdown-item" to="/activity">
-                        <span className="me-1">
-                          <i className="icofont-lightning-ray"></i>
-                        </span>
-                        Activity
-                      </Link>
-                    </li>
-                    <li>
-                      <hr className="dropdown-divider" />
-                    </li>
-
-                    <li>
-                      <button
-                        className="dropdown-item"
-                        onClick={() => {
-                          dispatch(logout());
-                        }}
+               {isAuthenticated && (
+                <>
+                  <div className="header__action header__action--profile">
+                    <div className="dropdown">
+                      <Link
+                        className="dropdown-toggle"
+                        to="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        data-bs-offset="-100,10"
                       >
-                        {" "}
-                        Sign Out{" "}
-                        <span className="ms-1">
-                          <i className="icofont-logout"></i>
+                        <span data-blast="bgColor">
+                          <i className="icofont-user"></i>
+                        </span>{" "}
+                        <span className="d-none d-md-inline">
+                          {loginUser?.data?.user.name}
                         </span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="wallet-btn">
-                <Link to="wallet.html">
-                  <span>
-                    <i className="icofont-wallet" data-blast="color"></i>
-                  </span>{" "}
-                  <span className="d-none d-md-inline">
-                    {loginUser?.data?.balance}Rego
-                  </span>{" "}
-                </Link>
-              </div>
+                      </Link>
+
+                      <ul className="dropdown-menu">
+                        <li>
+                          <Link className="dropdown-item" to="author.html">
+                            <span className="me-1">
+                              <i className="icofont-options"></i>
+                            </span>
+                            Profile
+                          </Link>
+                        </li>
+                        <li>
+                          <Link className="dropdown-item" to="/activity">
+                            <span className="me-1">
+                              <i className="icofont-lightning-ray"></i>
+                            </span>
+                            Activity
+                          </Link>
+                        </li>
+                        <li>
+                          <hr className="dropdown-divider" />
+                        </li>
+
+                        <li>
+                          <button
+                            className="dropdown-item"
+                            onClick={() => {
+                              dispatch(logout());
+                            }}
+                          >
+                            {" "}
+                            Sign Out{" "}
+                            <span className="ms-1">
+                              <i className="icofont-logout"></i>
+                            </span>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="wallet-btn">
+                    <Link to="wallet.html">
+                      <span>
+                        <i className="icofont-wallet" data-blast="color"></i>
+                      </span>{" "}
+                      <span className="d-none d-md-inline">
+                        {loginUser?.data?.balance}Rego
+                      </span>{" "}
+                    </Link>
+                  </div>
+                </>
+              )}
             </div>
-          )}
           <button className="menu-trigger header__btn" id="menu05">
             <span></span>
             <span></span>

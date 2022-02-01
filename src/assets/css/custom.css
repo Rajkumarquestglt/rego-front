@@ -152,6 +152,12 @@ justify-content: space-between;
     padding-top: 120px !important;
     padding-bottom: 85px !important;
 }
+.nft-item.light-version .nft-inner .dropdown-item:focus, 
+.nft-item.light-version .nft-inner .dropdown-item:hover {
+    color: #1e2125;
+    background-color: transparent !important;
+}
+
 
 @media (max-width: 991px){
 	.upper-strip {
@@ -160,14 +166,9 @@ justify-content: space-between;
 .header__search {
     width: 100%;
 }
-.header {
-    top: 70px;
-}
+
 .padding-top.login-section {
     padding-top: 175px;
 }
-.banner-wrapper {
-    padding-top: 170px !important;
-    padding-bottom: 85px !important;
-}
+
 }
