@@ -12,6 +12,8 @@ import "../assets/css/animate.css";
 import "../assets/css/swiper-bundle.min.css";
 import "../assets/css/style.min.css";
 import "../assets/css/custom.css";
+
+import SortByPrice from "../Components/ExplorerComponents/SortByPrice";
 import AllCategory from "../Components/ExplorerComponents/AllCategory";
 import SortBy from "../Components/ExplorerComponents/SortBy";
 import SearchNft from "../Components/ExplorerComponents/SearchNft";
@@ -67,6 +69,7 @@ export default function Explorer() {
             <div className="nft-filter d-flex flex-wrap justify-content-center">
               <AllCategory />
               <SortBy />
+              <SortByPrice />
             </div>
             <SearchNft />
           </div>

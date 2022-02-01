@@ -4,7 +4,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../reducers/authReducer";
 import logoImage from "../assets/images/logo-white.png";
 
+
 export default function Header() {
+
   const dispatch = useDispatch();
   const isAuthenticated = useSelector(
     (state) => state.auth.value.isAuthenticated

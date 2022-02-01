@@ -1,38 +1,38 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
-import bprak from "../assets/images/bprak.png"
-import banner1 from "../assets/images/banner1.jpg"
-import banner2 from "../assets/images/banner2.jpg"
-import banner3 from "../assets/images/banner3.jpg"
-import banner4 from "../assets/images/banner4.jpg"
-
+import bprak from "../assets/images/bprak.png";
+import banner1 from "../assets/images/banner1.jpg";
+import banner2 from "../assets/images/banner2.jpg";
+import banner3 from "../assets/images/banner3.jpg";
+import banner4 from "../assets/images/banner4.jpg";
 
 export default function Banner() {
+
+  
 
   return (
     <section
       className="banner-section light-version"
-      style={{backgroundImage: `url(${('../assets/images/banner/bg-4.png')}`}}
+      style={{ backgroundImage: `url(${"../assets/images/banner/bg-4.png"}` }}
     >
-      <div className='container'>
+      <div className="container">
         <div className="banner-wrapper">
           <div className="row align-items-center g-5">
             <div className="col-lg-6">
               <div className="banner-content">
                 <h1>
                   <span className="theme-color" data-blast="color">
-                    Exclusive 
+                    Exclusive
                   </span>{" "}
                   Celebrity <br />
-                 
                   <span className="theme-color" data-blast="color">
                     NFT
                   </span>{" "}
-                  Marketplace 
+                  Marketplace
                 </h1>
-               
+
                 <div className="banner-btns d-flex flex-wrap">
                   <Link
                     data-blast="bgColor"
@@ -47,14 +47,13 @@ export default function Banner() {
                 </div>
               </div>
             </div>
-            
+
             <div className="col-lg-6">
-            {/* <Slider {...settings}>  */}
-              <div className="nft-slider-wrapper"> 
-                          
-                <div className="banner-item-slider"> 
-                           
-                  <div className="swiper-wrapper">                
+              
+              <div className="nft-slider-wrapper">
+                <div className="banner-item-slider">
+                  <div className="swiper-wrapper">
+                  
                     <div className="swiper-slide">
                       <div className="nft-item light-version">
                         <div className="nft-inner">
@@ -76,48 +75,19 @@ export default function Banner() {
                                 </li>
                               </ul>
                             </div>
-                            <div className="more-part">
-                              <div className=" dropstart">
-                                <Link
-                                  className=" dropdown-toggle"
-                                  to="#"
-                                  role="button"
-                                  data-bs-toggle="dropdown"
-                                  aria-expanded="false"
-                                  data-bs-offset="25,0"
-                                >
-                                  <i className="icofont-flikr"></i>
-                                </Link>
-
-                                <ul className="dropdown-menu">
-                                  <li>
-                                    <Link className="dropdown-item" to="#">
-                                      <span>
-                                        <i className="icofont-warning"></i>
-                                      </span>{" "}
-                                      Report{" "}
-                                    </Link>
-                                  </li>
-                                  <li>
-                                    <Link className="dropdown-item" to="#">
-                                      <span>
-                                        <i className="icofont-reply"></i>
-                                      </span>
-                                      Share
-                                    </Link>
-                                  </li>
-                                </ul>
-                              </div>
+                            <div className="dropdown-item" style={{textAlign:'right'}}>
+                              <Link to="#" style={{color:'blue'}}>
+                                <span>
+                                  <i className="icofont-reply"></i>
+                                </span>
+                                Share
+                              </Link>
                             </div>
                           </div>
                           {/* <!-- nft-bottom part --> */}
                           <div className="nft-item-bottom">
                             <div className="nft-thumb">
-                              <img
-                                loading="lazy"
-                                src={banner1}
-                                alt="nft-img"
-                              />
+                              <img loading="lazy" src={banner1} alt="nft-img" />
                             </div>
                             <div className="nft-content">
                               <h4>
@@ -138,6 +108,7 @@ export default function Banner() {
                         </div>
                       </div>
                     </div>
+                    
                     <div className="swiper-slide">
                       <div className="nft-item light-version">
                         <div className="nft-inner">
@@ -159,48 +130,19 @@ export default function Banner() {
                                 </li>
                               </ul>
                             </div>
-                            <div className="more-part">
-                              <div className=" dropstart">
-                                <Link
-                                  className=" dropdown-toggle"
-                                  to="#"
-                                  role="button"
-                                  data-bs-toggle="dropdown"
-                                  aria-expanded="false"
-                                  data-bs-offset="25,0"
-                                >
-                                  <i className="icofont-flikr"></i>
-                                </Link>
-
-                                <ul className="dropdown-menu">
-                                  <li>
-                                    <Link className="dropdown-item" to="#">
-                                      <span>
-                                        <i className="icofont-warning"></i>
-                                      </span>{" "}
-                                      Report{" "}
-                                    </Link>
-                                  </li>
-                                  <li>
-                                    <Link className="dropdown-item" to="#">
-                                      <span>
-                                        <i className="icofont-reply"></i>
-                                      </span>
-                                      Share
-                                    </Link>
-                                  </li>
-                                </ul>
-                              </div>
+                            <div className="dropdown-item" style={{textAlign:'right'}}>
+                              <Link to="#" style={{color:'blue'}}>
+                                <span>
+                                  <i className="icofont-reply"></i>
+                                </span>
+                                Share
+                              </Link>
                             </div>
                           </div>
                           {/* <!-- nft-bottom part --> */}
                           <div className="nft-item-bottom">
                             <div className="nft-thumb">
-                              <img
-                                loading="lazy"
-                                src={banner3}
-                                alt="nft-img"
-                              />
+                              <img loading="lazy" src={banner3} alt="nft-img" />
 
                               {/* <!-- nft countdwon --> */}
                               {/* <!-- <ul className="nft-countdown count-down" data-date="July 05, 2022 21:14:01">
@@ -237,6 +179,7 @@ export default function Banner() {
                         </div>
                       </div>
                     </div>
+                    
                     <div className="swiper-slide">
                       <div className="nft-item light-version">
                         <div className="nft-inner">
@@ -258,48 +201,19 @@ export default function Banner() {
                                 </li>
                               </ul>
                             </div>
-                            <div className="more-part">
-                              <div className=" dropstart">
-                                <Link
-                                  className=" dropdown-toggle"
-                                  to="#"
-                                  role="button"
-                                  data-bs-toggle="dropdown"
-                                  aria-expanded="false"
-                                  data-bs-offset="25,0"
-                                >
-                                  <i className="icofont-flikr"></i>
-                                </Link>
-
-                                <ul className="dropdown-menu">
-                                  <li>
-                                    <Link className="dropdown-item" to="#">
-                                      <span>
-                                        <i className="icofont-warning"></i>
-                                      </span>{" "}
-                                      Report{" "}
-                                    </Link>
-                                  </li>
-                                  <li>
-                                    <Link className="dropdown-item" to="#">
-                                      <span>
-                                        <i className="icofont-reply"></i>
-                                      </span>
-                                      Share
-                                    </Link>
-                                  </li>
-                                </ul>
-                              </div>
+                            <div className="dropdown-item" style={{textAlign:'right'}}>
+                              <Link to="#" style={{color:'blue'}}>
+                                <span>
+                                  <i className="icofont-reply"></i>
+                                </span>
+                                Share
+                              </Link>
                             </div>
                           </div>
                           {/* <!-- nft-bottom part --> */}
                           <div className="nft-item-bottom">
                             <div className="nft-thumb">
-                              <img
-                                loading="lazy"
-                                src={banner2}
-                                alt="nft-img"
-                              />
+                              <img loading="lazy" src={banner2} alt="nft-img" />
 
                               {/* <!-- nft countdwon --> */}
                               {/* <!-- <ul className="nft-countdown count-down" data-date="July 05, 2022 21:14:01">
@@ -357,48 +271,19 @@ export default function Banner() {
                                 </li>
                               </ul>
                             </div>
-                            <div className="more-part">
-                              <div className=" dropstart">
-                                <Link
-                                  className=" dropdown-toggle"
-                                  to="#"
-                                  role="button"
-                                  data-bs-toggle="dropdown"
-                                  aria-expanded="false"
-                                  data-bs-offset="25,0"
-                                >
-                                  <i className="icofont-flikr"></i>
-                                </Link>
-
-                                <ul className="dropdown-menu">
-                                  <li>
-                                    <Link className="dropdown-item" to="#">
-                                      <span>
-                                        <i className="icofont-warning"></i>
-                                      </span>{" "}
-                                      Report{" "}
-                                    </Link>
-                                  </li>
-                                  <li>
-                                    <Link className="dropdown-item" to="#">
-                                      <span>
-                                        <i className="icofont-reply"></i>
-                                      </span>
-                                      Share
-                                    </Link>
-                                  </li>
-                                </ul>
-                              </div>
+                            <div className="dropdown-item" style={{textAlign:'right'}}>
+                              <Link to="#" style={{color:'blue'}}>
+                                <span >
+                                  <i className="icofont-reply" ></i>
+                                </span>
+                                Share
+                              </Link>
                             </div>
                           </div>
                           {/* <!-- nft-bottom part --> */}
                           <div className="nft-item-bottom">
                             <div className="nft-thumb">
-                              <img
-                                loading="lazy"
-                                src={banner4}
-                                alt="nft-img"
-                              />
+                              <img loading="lazy" src={banner4} alt="nft-img" />
 
                               {/* <!-- nft countdwon --> */}
                               {/* <!-- <ul className="nft-countdown count-down" data-date="July 05, 2022 21:14:01">
@@ -418,7 +303,9 @@ export default function Banner() {
                             </div>
                             <div className="nft-content">
                               <h4>
-                                <Link to="item-details.html">Future Rocket</Link>{" "}
+                                <Link to="item-details.html">
+                                  Future Rocket
+                                </Link>{" "}
                               </h4>
                               <div className="price-like d-flex justify-content-between align-items-center">
                                 <p className="nft-price">
@@ -434,15 +321,13 @@ export default function Banner() {
                           </div>
                         </div>
                       </div>
-                    </div>               
+                    </div>
+                    
                   </div>
-                  
                 </div>
-                
               </div>
-              {/* </Slider> */}
+              
             </div>
-            
           </div>
         </div>
       </div>

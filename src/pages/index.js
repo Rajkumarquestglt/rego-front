@@ -11,6 +11,7 @@ import Footer from "../Components/Footer";
 import Banner from "../Components/Banner";
 
 
+
 export default function Index() {
   return (
     <div>

@@ -1,3 +1,5 @@
+// import $ from "jquery"
+const Swiper = require("./swiper-bundle.min.js")
 /*============= Preloader JS==============*/
 $(window).on('load', function () {
     $('.preloader').fadeOut(1000);
