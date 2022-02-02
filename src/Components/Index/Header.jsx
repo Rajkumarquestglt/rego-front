@@ -200,7 +200,7 @@ export default function Header() {
                 </li>
               )} -->*/}
               <li className="header__nav-item">
-                <Link to="/create" className="header__nav-link sign-up-btn">
+                <Link to="/explore" className="header__nav-link sign-up-btn">
                   Buy NFTs
                 </Link>
               </li>
