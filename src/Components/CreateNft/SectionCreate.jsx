@@ -196,9 +196,11 @@ function SectionCreate() {
                                 })
                               }
                             >
-                              <option value="category">Category</option>
-                              <option value="text">Text</option>
-                              <option value="text">File</option>
+                              {/* <option value="category">Category</option> */}
+                              <option value="Art">Art</option>
+                              <option value="Music">Music</option>
+                              <option value="Video">Video</option>
+                              <option value="Digital Anime">Digital Anime</option>
                             </select>
 
                             <label>Category</label>
