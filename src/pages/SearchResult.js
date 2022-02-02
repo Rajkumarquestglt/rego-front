@@ -4,10 +4,7 @@ import { useLocation } from "react-router-dom";
 import axios from "axios";
 import Header from "../Components/Index/Header";
 import UpperStrip from "../Components/Index/UpperStrip";
-import AllCategory from "../Components/ExplorerComponents/AllCategory";
-import SortBy from "../Components/ExplorerComponents/SortBy";
 import Singlenft from "../Components/ExplorerComponents/NftExplore/Singlenft";
-import SearchNft from "../Components/ExplorerComponents/SearchNft";
 
 const url = "http://nft.regoex.com:3001/users/search";
 
@@ -44,10 +41,56 @@ const SearchResult = () => {
         <div className="container">
           <div className="section-header light-version">
             <div className="nft-filter d-flex flex-wrap justify-content-center">
-              <AllCategory />
-              <SortBy />
+              <div className="form-floating">
+                <select
+                  className="form-select"
+                  id="catSelect"
+                  aria-label="Floating label select example"
+                >
+                  <option selected>All Category</option>
+                  <option value="1">Art</option>
+                  <option value="2">Music</option>
+                  <option value="3">Video</option>
+                  <option value="3">Digital Anime</option>
+                </select>
+                <label htmlFor="catSelect">Select a Category</label>
+              </div>
+              <div className="form-floating">
+                <select
+                  className="form-select"
+                  id="sortSelect"
+                  aria-label="Floating label select example"
+                >
+                  <option selected>Newest</option>
+                  <option value="1">Oldest</option>
+                  <option value="2">Trending</option>
+                  <option value="3">Most Viewed</option>
+                  <option value="4">Less Viewed</option>
+                  <option value="5">Ending Soon</option>
+                  <option value="6">Recently Sold </option>
+                  <option value="7">Recently Created </option>
+                  <option value="8">Recently Viewed </option>
+                </select>
+                <label htmlFor="sortSelect">Sort By</label>
+              </div>
             </div>
-            <SearchNft />
+            <div className="nft-search">
+              <form action="/search-result">
+                <div className="form-floating nft-search-input">
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="nftSearch"
+                    placeholder="Search NFT"
+                    name="search"
+                  />
+                  <label htmlFor="nftSearch">Search NFT</label>
+                  <button type="button">
+                    <i className="icofont-search-1"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
           <div className="section-wrapper">
             <div className="explore-wrapper">

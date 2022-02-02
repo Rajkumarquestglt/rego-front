@@ -14,28 +14,28 @@ import ContactUs from "../pages/ContactUs.js";
 import Activity from "../pages/Activity.js";
 
 import SearchResult from "../pages/SearchResult.js";
-
+import ScrollToTop from "../Components/ScrollToTop.jsx";
 
 function MainRoutes() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/signin" element={<Signin />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/Explore" element={<Explorer />} />
-        <Route path="/item-details" element={<ItemDetails />} />
-        <Route path="/forgot-pass" element={<ForgotPass />} />
-        <Route path="/create" element={<Create />} />
-        <Route path="/auction" element={<Auction />} />
-        <Route path="/all-authors" element={<AllAuthor />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="/activity" element={<Activity />} />
-        <Route path="/search-result" element={<SearchResult />} />
-        <Route component={NotFound} />
-
-      </Routes>
-
+      <ScrollToTop>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/Explore" element={<Explorer />} />
+          <Route path="/item-details" element={<ItemDetails />} />
+          <Route path="/forgot-pass" element={<ForgotPass />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/auction" element={<Auction />} />
+          <Route path="/all-authors" element={<AllAuthor />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/activity" element={<Activity />} />
+          <Route path="/search-result" element={<SearchResult />} />
+          <Route component={NotFound} />
+        </Routes>
+      </ScrollToTop>
     </BrowserRouter>
   );
 }
