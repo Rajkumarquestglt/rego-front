@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { logout } from "../reducers/authReducer";
-import logoImage from "../assets/images/logo-white.png";
+import { logout } from "../../reducers/authReducer";
+import logoImage from "../../assets/images/logo-white.png";
 
 
 export default function Header() {

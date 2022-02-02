@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Footer from "../Components/Footer";
-import Header from "../Components/Header";
-import UpperStrip from "../Components/UpperStrip";
+import Footer from "../Components/Index/Footer";
+import Header from "../Components/Index/Header";
+import UpperStrip from "../Components/Index/UpperStrip";
 import { Link } from "react-router-dom";
 
 import axios from "axios";

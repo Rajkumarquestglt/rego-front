@@ -1,5 +1,5 @@
 import React from 'react'
-import bgLight from "../assets/images/footer/bg-light.jpg"
+import bgLight from "../../assets/images/footer/bg-light.jpg"
 import {Link} from "react-router-dom";
 
 export default function Footer() {

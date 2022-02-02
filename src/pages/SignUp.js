@@ -5,8 +5,8 @@ import { useState } from "react";
 import { ToastContainer,toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-import Header from '../Components/Header'
-import UpperStrip from '../Components/UpperStrip'
+import Header from '../Components/Index/Header'
+import UpperStrip from '../Components/Index/UpperStrip'
 
 // import "../assets/css/bootstrap.min.css"
 import "../assets/css/icofont.min.css"

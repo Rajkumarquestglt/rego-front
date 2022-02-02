@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from "react";
-import Appstore from "../assets/images/appstore.png"
-import Playstore from "../assets/images/playstore.png"
+import Appstore from "../../assets/images/appstore.png"
+import Playstore from "../../assets/images/playstore.png"
 import {Link} from "react-router-dom";
 import axios from "axios";
 

@@ -1,22 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import {swiper} from "../assets/js/functions.js"
 
 
-import bprak from "../assets/images/bprak.png";
-import banner1 from "../assets/images/banner1.jpg";
-import banner2 from "../assets/images/banner2.jpg";
-import banner3 from "../assets/images/banner3.jpg";
-import banner4 from "../assets/images/banner4.jpg";
+import bprak from "../../assets/images/bprak.png";
+import banner1 from "../../assets/images/banner1.jpg";
+import banner2 from "../../assets/images/banner2.jpg";
+import banner3 from "../../assets/images/banner3.jpg";
+import banner4 from "../../assets/images/banner4.jpg";
 
 export default function Banner() {
 
-  
-
   return (
+    
     <section
       className="banner-section light-version"
       style={{ backgroundImage: `url(${"../assets/images/banner/bg-4.png"}` }}
     >
+      
+
       <div className="container">
         <div className="banner-wrapper">
           <div className="row align-items-center g-5">

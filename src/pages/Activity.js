@@ -1,16 +1,16 @@
 import React from 'react';
-import ActivityBody from '../Components/Activity/ActivityBody';
-import ActivityHeader from '../Components/Activity/ActivityHeader';
-import Footer from '../Components/Footer';
-import Header from '../Components/Header';
-import UpperStrip from '../Components/UpperStrip';
+import ActivityBody from '../Components/Activity/ActivityBody.jsx';
+import CommonHeader from '../Components/CommonHeader/CommonHeader.jsx';
+import Footer from '../Components/Index/Footer';
+import Header from '../Components/Index/Header';
+import UpperStrip from '../Components/Index/UpperStrip';
 
 export default function Activity() {
   return (
   <div>
       <UpperStrip />
       <Header />
-      <ActivityHeader />
+      <CommonHeader heading="All Activities" name="Home" active="Activity" />
       <ActivityBody />
       <Footer />
   </div>

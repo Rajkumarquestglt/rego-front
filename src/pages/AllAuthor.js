@@ -1,9 +1,9 @@
 import React from 'react';
 import AllAuthorExplore from '../Components/AllAuthor/AllAuthorExplore';
-import AllAuthorHeader from '../Components/AllAuthor/AllAuthorHeader';
-import Footer from '../Components/Footer';
-import Header from '../Components/Header';
-import UpperStrip from '../Components/UpperStrip';
+import CommonHeader from '../Components/CommonHeader/CommonHeader'
+import Footer from '../Components/Index/Footer';
+import Header from '../Components/Index/Header';
+import UpperStrip from '../Components/Index/UpperStrip';
 
 // import "../assets/css/bootstrap.min.css"
 // import "../assets/css/icofont.min.css"
@@ -18,7 +18,8 @@ export default function AllAuthor() {
     <div>
       <UpperStrip />
       <Header />
-      <AllAuthorHeader />
+      
+      <CommonHeader heading="All of our Authors" name="Home" active="All-authors"/>
       <AllAuthorExplore />
 
       <Footer />

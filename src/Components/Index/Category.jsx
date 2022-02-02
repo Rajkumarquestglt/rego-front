@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import slideImage from "../assets/images/nft-item/category/02.jpg";
+import slideImage from "../../assets/images/nft-item/category/02.jpg";
 
 const url = "http://nft.regoex.com:3001/users/categories-nft";
 

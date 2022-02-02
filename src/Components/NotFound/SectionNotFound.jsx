@@ -159,7 +159,7 @@ function Section404() {
                           <div className="error-content">
                               <h2>Oops! This Page Not Found</h2>
                               <p>We are Really Sorry But the Page you Requested is Missing <i className="icofont-worried"></i></p>
-                              <Link href="/index" className="default-btn move-left"><span>Go Back to Home</span> </Link>
+                              <Link to="/" className="default-btn move-left"><span>Go Back to Home</span> </Link>
                           </div>
                       </div>
                   </div>

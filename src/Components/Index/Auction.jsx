@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import sellerImage from "../assets/images/seller/01.png";
+import sellerImage from "../../assets/images/seller/01.png";
 // import "../assets/css/icofont.min.css"
 // import "../assets/css/lightcase.css"
 // import "../assets/css/animate.css"

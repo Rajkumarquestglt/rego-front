@@ -1,16 +1,16 @@
 import React from 'react';
 import AuctionBody from '../Components/auction/AuctionBody';
-import AuctionHeader from '../Components/auction/AuctionHeader';
-import Footer from '../Components/Footer';
-import Header from '../Components/Header';
-import UpperStrip from '../Components/UpperStrip';
+import CommonHeader from '../Components/CommonHeader/CommonHeader';
+import Footer from '../Components/Index/Footer';
+import Header from '../Components/Index/Header';
+import UpperStrip from '../Components/Index/UpperStrip';
 
 function Auction() {
   return (
   <div>
       <UpperStrip />
       <Header />
-      <AuctionHeader />
+      <CommonHeader heading="NFT's Live Auction" name="Home" active="auction" />
       <AuctionBody />
       <Footer />
 

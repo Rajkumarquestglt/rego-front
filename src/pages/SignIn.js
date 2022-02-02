@@ -6,8 +6,8 @@ import { useDispatch } from "react-redux";
 import { login } from "../reducers/authReducer";
 import signInImg from "../assets/images/account/01.png";
 
-import Header from "../Components/Header";
-import UpperStrip from "../Components/UpperStrip";
+import Header from "../Components/Index/Header";
+import UpperStrip from "../Components/Index/UpperStrip";
 
 // import "../assets/css/bootstrap.min.css"
 import "../assets/css/icofont.min.css";

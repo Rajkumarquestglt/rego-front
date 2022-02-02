@@ -1,5 +1,5 @@
 import "./App.css";
-import PreLoader from "./Components/PreLoader";
+import PreLoader from "./Components/Index/PreLoader";
 import MainRoutes from "./routes/MainRoutes";
 
 function App() {

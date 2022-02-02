@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ContactHeader() {
+export default function ActivityHeader(props) {
   return (
   <div>
       {/* <!-- ==========Page Header Section Start Here========== --> */}
@@ -9,11 +9,11 @@ export default function ContactHeader() {
             <div className="page-header-content">
                 <div className="page-header-inner">
                     <div className="page-title">
-                        <h2>Contact Us </h2>
+                        <h2>{props.heading} </h2>
                     </div>
                     <ol className="breadcrumb">
-                        <li><a href="index.html">Home</a></li>
-                        <li className="active">Contact </li>
+                        <li><a href="/">{props.name}</a></li>
+                        <li className="active">{props.active}</li>
                     </ol>
                 </div>
             </div>
@@ -21,5 +21,5 @@ export default function ContactHeader() {
     </section>
     {/* <!-- ==========Page Header Section Ends Here========== --> */}
   </div>
-    )
+  )
 }
