@@ -10,12 +10,9 @@ import BlogSection from "../Components/Index/BlogSection";
 import Footer from "../Components/Index/Footer";
 import Banner from "../Components/Index/Banner";
 
-
-
 export default function Index() {
   return (
     <div>
-     
       <Header />
       <Banner />
       <BlogSection />
