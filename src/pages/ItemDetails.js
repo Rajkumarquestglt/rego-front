@@ -1,33 +1,42 @@
-import React from 'react'
-import Footer from '../Components/Index/Footer'
-import Header from '../Components/Index/Header'
-import UpperStrip from '../Components/Index/UpperStrip';
+import React, { useState } from "react";
+import Footer from "../Components/Index/Footer";
+import Header from "../Components/Index/Header";
+import UpperStrip from "../Components/Index/UpperStrip";
 import { Link } from "react-router-dom";
 // import "../assets/css/bootstrap.min.css"
-import "../assets/css/icofont.min.css"
-import "../assets/css/lightcase.css"
-import "../assets/css/animate.css"
-import "../assets/css/swiper-bundle.min.css"
-import "../assets/css/style.min.css"
-import "../assets/css/custom.css"
-import nft_img from "../assets/images/nft-item/item-details-light.gif"
-import author_img from "../assets/images/seller/02.gif"
+import "../assets/css/icofont.min.css";
+import "../assets/css/lightcase.css";
+import "../assets/css/animate.css";
+import "../assets/css/swiper-bundle.min.css";
+import "../assets/css/style.min.css";
+import "../assets/css/custom.css";
+import nft_img from "../assets/images/nft-item/item-details-light.gif";
+import author_img from "../assets/images/seller/02.gif";
 
 export default function ItemDetails() {
+  // const url ="http://nft.regoex.com:3001/users/content-detail"
+
+  // const[itemDetail, setItemDetail] = useState("")
+
+  // const getData = async () => {
+  //   console.log("get data hit");
+  //   const res = await axios.post(url, {
+
+  //   });
+
   return (
     <>
-
       <UpperStrip />
       <Header />
       <div className="item-details-section light-version padding-top padding-bottom">
-        <div className='container'>
+        <div className="container">
           <div className="item-details-wrapper">
             <div className="row g-5">
               <div className="col-lg-6">
                 <div className="item-desc-part">
                   <div className="item-desc-inner">
                     <div className="item-desc-thumb">
-                      <img src={nft_img} alt="item-img"/>
+                      <img src={nft_img} alt="item-img" />
                     </div>
                     <div className="item-desc-content">
                       <nav>
@@ -90,10 +99,7 @@ export default function ItemDetails() {
                           <div className="author-profile d-flex flex-wrap align-items-center gap-15">
                             <div className="author-p-thumb">
                               <Link to="author.html">
-                                <img
-                                  src={author_img}
-                                  alt="author-img "
-                                />
+                                <img src={author_img} alt="author-img " />
                               </Link>
                             </div>
                             <div className="author-p-info">
@@ -159,13 +165,16 @@ export default function ItemDetails() {
                             </li>
                           </ul>
                         </div>
-                        <div className="bids-tab tab-pane fade" id="nav-bids" role="tabpanel" aria-labelledby="nav-bids-tab">
+                        <div
+                          className="bids-tab tab-pane fade"
+                          id="nav-bids"
+                          role="tabpanel"
+                          aria-labelledby="nav-bids-tab"
+                        >
                           <span>
                             <i className="icofont-law-order"></i>
                           </span>
-                          <p>
-                            No active bids yet. Be the first to make a bid!
-                          </p>
+                          <p>No active bids yet. Be the first to make a bid!</p>
                         </div>
                         <div
                           className="history-tab tab-pane fade"
@@ -176,13 +185,15 @@ export default function ItemDetails() {
                           <ul className="item-histo-list">
                             <li className="histo-item">
                               <p>
-                                Created by <Link to="author.html">@alex joe</Link>
+                                Created by{" "}
+                                <Link to="author.html">@alex joe</Link>
                               </p>
                               <time>2021-08-04 23:05:07</time>
                             </li>
                             <li className="histo-item">
                               <p>
-                                Listed by <Link to="author.html">@alex joe</Link>
+                                Listed by{" "}
+                                <Link to="author.html">@alex joe</Link>
                               </p>
                               <time>2021-08-04 20:05:07</time>
                             </li>
@@ -205,7 +216,14 @@ export default function ItemDetails() {
                     <h3>#003 da Silly Cat wid baLoon NFT: size 1/50</h3>
                     <div className="share-btn">
                       <div className=" dropstart">
-                        <Link className=" dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"data-bs-offset="25,0">
+                        <Link
+                          className=" dropdown-toggle"
+                          to="#"
+                          role="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                          data-bs-offset="25,0"
+                        >
                           <i className="icofont-share-alt"></i>
                         </Link>
 

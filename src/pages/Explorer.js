@@ -157,6 +157,12 @@ export default function Explorer() {
                       likes="230"
                     />
                   ))}
+                {!loading && list.content.length === 0 && (
+                  <div className="text-center text-black">
+                    {" "}
+                    No Data Available With Selected Category
+                  </div>
+                )}
               </div>
             </div>
           </div>
