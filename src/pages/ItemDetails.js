@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../Components/Index/Footer";
 import Header from "../Components/Index/Header";
 import UpperStrip from "../Components/Index/UpperStrip";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
+
 // import "../assets/css/bootstrap.min.css"
 import "../assets/css/icofont.min.css";
 import "../assets/css/lightcase.css";
@@ -14,15 +16,21 @@ import nft_img from "../assets/images/nft-item/item-details-light.gif";
 import author_img from "../assets/images/seller/02.gif";
 
 export default function ItemDetails() {
-  // const url ="http://nft.regoex.com:3001/users/content-detail"
+  const url = "http://nft.regoex.com:3001/users/content-detail";
+  const { id } = useParams();
+  const [itemDetail, setItemDetail] = useState();
 
-  // const[itemDetail, setItemDetail] = useState("")
+  const getData = async () => {
+    console.log("get data hit");
 
-  // const getData = async () => {
-  //   console.log("get data hit");
-  //   const res = await axios.post(url, {
-
-  //   });
+    const res = await axios.post(url, { content_id: id });
+    console.log("data", res);
+    setItemDetail(res.data.data);
+  };
+  console.log(itemDetail);
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>
@@ -36,7 +44,10 @@ export default function ItemDetails() {
                 <div className="item-desc-part">
                   <div className="item-desc-inner">
                     <div className="item-desc-thumb">
-                      <img src={nft_img} alt="item-img" />
+                      <img
+                        src={`http://nft.regoex.com:3001/content/${itemDetail?.content.image}`}
+                        alt="item-img"
+                      />
                     </div>
                     <div className="item-desc-content">
                       <nav>
@@ -118,7 +129,7 @@ export default function ItemDetails() {
                                 <div id="cryptoCode" className="crypto-page">
                                   <input
                                     id="cryptoLink"
-                                    value="0x1dDB2C0897daF134545641545462E71fdD2dbDC0eB3a9Ec"
+                                    value="0x00c5F809606EB7867e3FB4cF22DA5FD258f5C8E0"
                                     readonly
                                   />
                                   <div
@@ -143,7 +154,7 @@ export default function ItemDetails() {
                                 <h6>Token ID</h6>
                               </div>
                               <div className="item-info-details">
-                                <p>0005515456416</p>
+                                <p>{itemDetail?.content.tokenId}</p>
                               </div>
                             </li>
                             <li className="item-other-info">
@@ -213,7 +224,7 @@ export default function ItemDetails() {
               <div className="col-lg-6">
                 <div className="item-buy-part">
                   <div className="nft-item-title">
-                    <h3>#003 da Silly Cat wid baLoon NFT: size 1/50</h3>
+                    <h3>{itemDetail?.content.description}</h3>
                     <div className="share-btn">
                       <div className=" dropstart">
                         <Link
@@ -254,7 +265,87 @@ export default function ItemDetails() {
                           </li>
                         </ul>
                       </div>
-                    </div>
+                    </div>{" "}
+                    {/* <li className="share-active">
+                      <Link className="share-btn" to="">
+                        <i className="fa fa-share-alt"></i>
+                      </Link>
+                      <div
+                        className="button-share"
+                        style={{ backgroundSize: "cover" }}
+                      >
+                        <ul>
+                          <li className="facebook">
+                            <Link
+                              to=""
+                              onclick="fbshareCurrentPage()"
+                              target="_blank"
+                              alt="Share on Facebook"
+                            >
+                              <i className="fa fa-facebook-f"></i>
+                            </Link>
+                          </li>
+                          <li className="twitter">
+                            <Link
+                              className="tweet"
+                              to=""
+                              onclick="tweetCurrentPage()"
+                              target="_blank"
+                              alt="Tweet this page"
+                            >
+                              {" "}
+                              <i className="icon fab fa fa-twitter"></i>
+                            </Link>
+                          </li>
+                          <li className="whatsapp">
+                            <Link
+                              className="w-inline-block social-share-btn pin"
+                              to="https://api.whatsapp.com/send?text=http://18.223.117.55/nft-detail/ART-DFF-629"
+                              target="_blank"
+                              title="WhatsApp"
+                            >
+                              {" "}
+                              <i className="fa fa-whatsapp"></i>
+                            </Link>
+                          </li>
+                          <li className="linkedin">
+                            <Link
+                              className="w-inline-block social-share-btn pin"
+                              to="#"
+                              title="Linked In"
+                              onclick="linkedCurrentPage()"
+                            >
+                              {" "}
+                              <i className="fa fa-linkedin"></i>
+                            </Link>
+                          </li>
+                          <li className="telegram">
+                            <Link
+                              className="w-inline-block social-share-btn pin"
+                              to="#"
+                              onclick="teleCurrentPage()"
+                              target="_blank"
+                              title="Telegram"
+                            >
+                              {" "}
+                              <i className="fa fa-telegram"></i>
+                            </Link>
+                          </li>
+                          <li className="instagram">
+                            <Link
+                              className="w-inline-block social-share-btn pin"
+                              to="#"
+                              target="_blank"
+                              title="Instagram"
+                              onclick="instaCurrentPage()"
+                            >
+                              {" "}
+                              <i className="fa fa-instagram"></i>
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </li> */}
                   </div>
                   <div className="item-details-countdown">
                     <h4>Ends In:</h4>
@@ -284,7 +375,8 @@ export default function ItemDetails() {
                     <h4>Price</h4>
                     <p>
                       <span>
-                        <i className="icofont-coins"></i> 2.29 ETH
+                        <i className="icofont-coins"></i>
+                        {itemDetail?.content.price} ETH
                       </span>
                       ($ 6,227.15)
                     </p>

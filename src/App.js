@@ -4,12 +4,11 @@ import "./App.css";
 import PreLoader from "./Components/Index/PreLoader";
 import MainRoutes from "./routes/MainRoutes";
 
-
 function App() {
   return (
     <>
-                <PreLoader />
-                <MainRoutes />
+      <PreLoader />
+      <MainRoutes />
     </>
   );
 }

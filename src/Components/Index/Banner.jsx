@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import {swiper} from "../assets/js/functions.js"
 
-
 import bprak from "../../assets/images/bprak.png";
 import banner1 from "../../assets/images/banner1.jpg";
 import banner2 from "../../assets/images/banner2.jpg";
@@ -10,15 +9,11 @@ import banner3 from "../../assets/images/banner3.jpg";
 import banner4 from "../../assets/images/banner4.jpg";
 
 export default function Banner() {
-
   return (
-    
     <section
       className="banner-section light-version"
       style={{ backgroundImage: `url(${"../assets/images/banner/bg-4.png"}` }}
     >
-      
-
       <div className="container">
         <div className="banner-wrapper">
           <div className="row align-items-center g-5">
@@ -51,11 +46,9 @@ export default function Banner() {
             </div>
 
             <div className="col-lg-6">
-              
               <div className="nft-slider-wrapper">
                 <div className="banner-item-slider">
                   <div className="swiper-wrapper">
-                  
                     <div className="swiper-slide">
                       <div className="nft-item light-version">
                         <div className="nft-inner">
@@ -77,8 +70,11 @@ export default function Banner() {
                                 </li>
                               </ul>
                             </div>
-                            <div className="dropdown-item" style={{textAlign:'right'}}>
-                              <Link to="#" style={{color:'blue'}}>
+                            <div
+                              className="dropdown-item"
+                              style={{ textAlign: "right" }}
+                            >
+                              <Link to="#" style={{ color: "blue" }}>
                                 <span>
                                   <i className="icofont-reply"></i>
                                 </span>
@@ -110,7 +106,7 @@ export default function Banner() {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="swiper-slide">
                       <div className="nft-item light-version">
                         <div className="nft-inner">
@@ -132,8 +128,11 @@ export default function Banner() {
                                 </li>
                               </ul>
                             </div>
-                            <div className="dropdown-item" style={{textAlign:'right'}}>
-                              <Link to="#" style={{color:'blue'}}>
+                            <div
+                              className="dropdown-item"
+                              style={{ textAlign: "right" }}
+                            >
+                              <Link to="#" style={{ color: "blue" }}>
                                 <span>
                                   <i className="icofont-reply"></i>
                                 </span>
@@ -181,7 +180,7 @@ export default function Banner() {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="swiper-slide">
                       <div className="nft-item light-version">
                         <div className="nft-inner">
@@ -203,8 +202,11 @@ export default function Banner() {
                                 </li>
                               </ul>
                             </div>
-                            <div className="dropdown-item" style={{textAlign:'right'}}>
-                              <Link to="#" style={{color:'blue'}}>
+                            <div
+                              className="dropdown-item"
+                              style={{ textAlign: "right" }}
+                            >
+                              <Link to="#" style={{ color: "blue" }}>
                                 <span>
                                   <i className="icofont-reply"></i>
                                 </span>
@@ -273,10 +275,13 @@ export default function Banner() {
                                 </li>
                               </ul>
                             </div>
-                            <div className="dropdown-item" style={{textAlign:'right'}}>
-                              <Link to="#" style={{color:'blue'}}>
-                                <span >
-                                  <i className="icofont-reply" ></i>
+                            <div
+                              className="dropdown-item"
+                              style={{ textAlign: "right" }}
+                            >
+                              <Link to="#" style={{ color: "blue" }}>
+                                <span>
+                                  <i className="icofont-reply"></i>
                                 </span>
                                 Share
                               </Link>
@@ -324,11 +329,9 @@ export default function Banner() {
                         </div>
                       </div>
                     </div>
-                    
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
         </div>

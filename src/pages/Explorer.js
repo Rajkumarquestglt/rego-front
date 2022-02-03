@@ -158,7 +158,14 @@ export default function Explorer() {
                     />
                   ))}
                 {!loading && list.content.length === 0 && (
-                  <div className="text-center text-black">
+                  <div
+                    className="text-center text-black"
+                    style={{
+                      color: "#000",
+                      fontSize: "large",
+                      fontFamily: "inherit",
+                    }}
+                  >
                     {" "}
                     No Data Available With Selected Category
                   </div>

@@ -19,7 +19,7 @@ export default function Nftbottom({ item }) {
 
     if (isAuthenticated) {
       const res = await axios.post(url, {
-        email: loginUser.user.email,
+        email: loginUser.data.user.email,
         amount: item.price,
         content_price: item.price,
       });
@@ -40,8 +40,8 @@ export default function Nftbottom({ item }) {
             content_id: item._id,
             amount: item.price,
             token_id: item.tokenId,
-            to_address: null,
-            from_address: null,
+            to_address: loginUser.data.user.address,
+            from_address: "0x15C989EC8d1b4AF23894900a624889B33d0Dc645",
             hash: hash.transactionHash,
             nft_url: item.ipfs_hash,
           }
@@ -94,7 +94,7 @@ export default function Nftbottom({ item }) {
       </div>
       <div className="nft-content">
         <h4>
-          <Link to="/item-details">{item.description}</Link>{" "}
+          <Link to={`/item-details/${item._id}`}>{item.description}</Link>{" "}
         </h4>
         <div className="price-like d-flex justify-content-between align-items-center">
           <p className="nft-price">
