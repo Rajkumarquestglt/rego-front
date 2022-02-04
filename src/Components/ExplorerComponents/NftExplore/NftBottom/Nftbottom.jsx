@@ -40,7 +40,7 @@ export default function Nftbottom({ item }) {
             content_id: item._id,
             amount: item.price,
             token_id: item.tokenId,
-            to_address: loginUser.data.user.address,
+            to_address: loginUser.data.address,
             from_address: "0x15C989EC8d1b4AF23894900a624889B33d0Dc645",
             hash: hash.transactionHash,
             nft_url: item.ipfs_hash,
@@ -52,9 +52,7 @@ export default function Nftbottom({ item }) {
           toast.success("Transaction Successful", {
             position: "top-center",
           });
-          setTimeout(() => {
-            window.location.reload();
-          }, 1500);
+          navigate("/transactions");
         }
       } else {
         toast.error("You do not have sufficient Fund", {
