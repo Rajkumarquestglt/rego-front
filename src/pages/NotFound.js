@@ -11,7 +11,7 @@ export default function Fourofour() {
     <div>
       <UpperStrip />
       <Header />
-      <CommonHeader heading="404 Error Page" name="Home" active="404"/>
+      <CommonHeader heading="404 Error Page" name="Home" active="404" />
 
       <SectionNotFound />
 

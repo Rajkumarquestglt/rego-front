@@ -35,7 +35,7 @@ function MainRoutes() {
           <Route path="/activity" element={<Activity />} />
           <Route path="/search-result" element={<SearchResult />} />
           <Route path="/transactions" element={<Transactions />} />
-          <Route component={NotFound} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>
