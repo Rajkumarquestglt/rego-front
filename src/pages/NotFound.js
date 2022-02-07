@@ -3,7 +3,6 @@ import CommonHeader from "../Components/CommonHeader/CommonHeader";
 import SectionNotFound from "../Components/NotFound/SectionNotFound";
 import Footer from "../Components/Index/Footer";
 import Header from "../Components/Index/Header";
-// import PreLoader from "../Components/Index/PreLoader";
 import UpperStrip from "../Components/Index/UpperStrip";
 
 export default function Fourofour() {

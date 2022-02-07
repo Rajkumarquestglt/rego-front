@@ -1,5 +1,5 @@
 import React from 'react';
-import AuctionBody from '../Components/auction/AuctionBody';
+import AuctionBody from '../Components/Auction/AuctionBody';
 import CommonHeader from '../Components/CommonHeader/CommonHeader';
 import Footer from '../Components/Index/Footer';
 import Header from '../Components/Index/Header';
