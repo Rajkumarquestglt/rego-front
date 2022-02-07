@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import Footer from "../Components/Index/Footer";
 import Header from "../Components/Index/Header";
 import UpperStrip from "../Components/Index/UpperStrip";
-import { Link, useParams } from "react-router-dom";
+import Offer from "../Components/Offer";
+
+import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
+import { toast } from "react-toastify";
+import { BuyNFT } from "../helpers/BuyNFT";
 
 // import "../assets/css/bootstrap.min.css"
 import "../assets/css/icofont.min.css";
@@ -12,13 +17,85 @@ import "../assets/css/animate.css";
 import "../assets/css/swiper-bundle.min.css";
 import "../assets/css/style.min.css";
 import "../assets/css/custom.css";
-import nft_img from "../assets/images/nft-item/item-details-light.gif";
-import author_img from "../assets/images/seller/02.gif";
+const buyUrl = "http://regoex.com/Buy-NFT";
 
-export default function ItemDetails() {
+export default function ItemDetails({ item }) {
   const url = "http://nft.regoex.com:3001/users/content-detail";
+  const navigate = useNavigate();
   const { id } = useParams();
   const [itemDetail, setItemDetail] = useState();
+  const [makeOffer, setMakeOffer] = useState(false);
+  const isAuthenticated = useSelector(
+    (state) => state.auth.value.isAuthenticated
+  );
+  const loginUser = useSelector((state) => state.auth.value.user);
+  //   console.log(collectionData)
+
+  const buyNowHandler = async (item) => {
+    console.log("loginUser", loginUser);
+
+    console.log(item);
+    if (isAuthenticated) {
+      console.log("hello...");
+      const res = await axios.post(buyUrl, {
+        email: loginUser.data.user.email,
+        amount: item.price,
+        content_price: item.price,
+      });
+
+      console.log(res);
+      if (res.data.status == true) {
+        let hash = await BuyNFT(
+          item.tokenId,
+          item.ipfs_hash,
+          item.price,
+          item.signature
+        );
+
+        console.log("hash", hash);
+
+        const buyRes = await axios.post(
+          "http://nft.regoex.com:3001/users/buy",
+          {
+            content_id: item._id,
+            amount: item.price,
+            token_id: item.tokenId,
+            to_address: loginUser.data.address,
+            from_address: "0x15C989EC8d1b4AF23894900a624889B33d0Dc645",
+            hash: hash.transactionHash,
+            nft_url: item.ipfs_hash,
+          }
+        );
+
+        console.log(buyRes);
+        if (buyRes.data.status === true) {
+          toast.success("Transaction Successful", {
+            position: "top-center",
+          });
+          navigate("/transactions");
+        }
+      } else {
+        toast.error("You do not have sufficient Fund", {
+          position: "top-center",
+        });
+      }
+    } else {
+      console.log("Nft change...");
+      navigate("/signin");
+    }
+  };
+
+  // const makeOffer = await axios.post(
+  //   "http://nft.regoex.com:3001/users/make-offer",
+  //   {
+  //     content_id: item._id,
+  //     wallet_address: item.wallet_address,
+  //     content_price: item.content_price,
+  //     offer_price: loginUser.data.offer_price,
+  //     hash: hash.transactionHash,
+  //     status: item.status,
+  //   }
+  // );
 
   const getData = async () => {
     console.log("get data hit");
@@ -69,7 +146,7 @@ export default function ItemDetails() {
                             Details
                           </button>
                           <button
-                            className="nav-link"
+                            className="nav-link d-none"
                             id="nav-bids-tab"
                             data-bs-toggle="tab"
                             data-bs-target="#nav-bids"
@@ -101,16 +178,16 @@ export default function ItemDetails() {
                           role="tabpanel"
                           aria-labelledby="nav-details-tab"
                         >
-                          <p>
-                            This is the second batch of Cybertino Genesis NFTs
-                            for early adopters and is 1 of 5. This Genesis NFT
-                            will be interactive: hold and wait for future
-                            exclusive benefits and early access to new drops!
-                          </p>
+                          <p>{itemDetail?.content.description}</p>
                           <div className="author-profile d-flex flex-wrap align-items-center gap-15">
                             <div className="author-p-thumb">
                               <Link to="author.html">
-                                <img src={author_img} alt="author-img " />
+                                <img
+                                  src={
+                                    "https://regoex.com/assets/images/logo-white.png"
+                                  }
+                                  alt="author-img "
+                                />
                               </Link>
                             </div>
                             <div className="author-p-info">
@@ -376,18 +453,24 @@ export default function ItemDetails() {
                     <p>
                       <span>
                         <i className="icofont-coins"></i>
-                        {itemDetail?.content.price} ETH
+                        {itemDetail?.content.price} REGO
                       </span>
-                      ($ 6,227.15)
                     </p>
                   </div>
                   <div className="buying-btns d-flex flex-wrap">
-                    <Link to="wallet.html" className="default-btn move-right">
-                      <span>Buy Now</span>{" "}
-                    </Link>
-                    <Link to="wallet.html" className="default-btn move-right">
+                    <button
+                      className="default-btn"
+                      onClick={() => buyNowHandler(itemDetail.content)}
+                    >
+                      Buy Now
+                    </button>{" "}
+                    <button className="default-btn move-right">
                       <span>Make a Offer</span>{" "}
-                    </Link>
+                    </button>
+                    <Offer
+                      show={makeOffer}
+                      onHide={() => setMakeOffer(false)}
+                    />
                   </div>
                 </div>
               </div>
