@@ -369,28 +369,45 @@ export default function ItemDetails({ item }) {
 
                         <ul className="dropdown-menu">
                           <li>
-                            <Link className="dropdown-item" to="#">
+                            <a
+                              className="dropdown-item"
+                              href={`https://twitter.com/intent/tweet?url=https://regoex.com/?code=${itemDetail?.content._id}" data-url="https://regoex.com/?code=${itemDetail?.content._id}`}
+                            >
                               <span>
                                 <i className="icofont-twitter"></i>
                               </span>{" "}
                               Twitter{" "}
-                            </Link>
+                            </a>
                           </li>
                           <li>
-                            <Link className="dropdown-item" to="#">
+                            <a
+                              className="dropdown-item"
+                              href={`https://telegram.me/share/url?url=https://regoex.com/signup?code=${itemDetail?.content._id}&amp;text=Signup on Rego Exchange at regoex.com and get exclusive REGO tokens for free. Use my referral code to get 50 FREE REGO as signup bonus. Limited time offer. Code - ${itemDetail?.content._id} Direct Link -- https://regoex.com/signup?code=${itemDetail?.content._id}`}
+                            >
                               <span>
                                 <i className="icofont-telegram"></i>
                               </span>{" "}
                               Telegram
-                            </Link>
+                            </a>
                           </li>
                           <li>
-                            <Link className="dropdown-item" to="#">
+                            {/* <Link className="dropdown-item" to="#">
                               <span>
                                 <i className="icofont-envelope"></i>
                               </span>{" "}
                               Email
-                            </Link>
+                            </Link> */}
+                            <a
+                              className="dropdown-item"
+                              href={`mailto:?subject=REGO NFT&amp;body=Signup on Rego NFT at nft.regoex.com.<br><br>\n\n
+                  Direct Link -- http://nft.regoex.com:3000/item-details/${itemDetail?.content._id}<br><br>\n\n
+                  Code - ${itemDetail?.content._id}`}
+                            >
+                              <span>
+                                <i className="icofont-envelope"></i>
+                              </span>{" "}
+                              Email
+                            </a>
                           </li>
                         </ul>
                       </div>
