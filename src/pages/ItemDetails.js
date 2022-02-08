@@ -18,16 +18,18 @@ import "../assets/css/swiper-bundle.min.css";
 import "../assets/css/style.min.css";
 import "../assets/css/custom.css";
 const buyUrl = "http://regoex.com/Buy-NFT";
+const makeOfferUrl = "http://nft.regoex.com:3001/users/make-offer";
 
 export default function ItemDetails({ item }) {
   const url = "http://nft.regoex.com:3001/users/content-detail";
   const navigate = useNavigate();
   const { id } = useParams();
   const [itemDetail, setItemDetail] = useState();
-  const [makeOffer, setMakeOffer] = useState(false);
+
   const isAuthenticated = useSelector(
     (state) => state.auth.value.isAuthenticated
   );
+
   const loginUser = useSelector((state) => state.auth.value.user);
   //   console.log(collectionData)
 
@@ -85,18 +87,6 @@ export default function ItemDetails({ item }) {
     }
   };
 
-  // const makeOffer = await axios.post(
-  //   "http://nft.regoex.com:3001/users/make-offer",
-  //   {
-  //     content_id: item._id,
-  //     wallet_address: item.wallet_address,
-  //     content_price: item.content_price,
-  //     offer_price: loginUser.data.offer_price,
-  //     hash: hash.transactionHash,
-  //     status: item.status,
-  //   }
-  // );
-
   const getData = async () => {
     console.log("get data hit");
 
@@ -108,6 +98,34 @@ export default function ItemDetails({ item }) {
   useEffect(() => {
     getData();
   }, []);
+
+  //////////////////////////////////////////Make offer function////////////
+
+  const makeOfferHandler = async (itemDetail) => {
+    // e.preventDefault();
+    console.log("inside offer handler", itemDetail);
+
+    const makeOffer = await axios.post(makeOfferUrl, {
+      content_id: itemDetail._id,
+      wallet_address: itemDetail.wallet_address,
+      content_price: itemDetail.price,
+      offer_price: "0",
+      hash: itemDetail.ipfs_hash,
+      status: itemDetail.status,
+    });
+
+    console.log("MakeOffer", makeOffer);
+    if (makeOffer.status === 200) {
+      toast.success("Message Has Been Sent Successfully", {
+        position: "top-center",
+      });
+    } else {
+      toast.error("Something went wrong", {
+        position: "top-center",
+      });
+    }
+    return;
+  };
 
   return (
     <>
@@ -464,13 +482,15 @@ export default function ItemDetails({ item }) {
                     >
                       Buy Now
                     </button>{" "}
-                    <button className="default-btn move-right">
+                    <button
+                      className="default-btn"
+                      onClick={() => makeOfferHandler(itemDetail.content)}
+                    >
                       <span>Make a Offer</span>{" "}
                     </button>
-                    <Offer
+                    {/* <Offer
                       show={makeOffer}
-                      onHide={() => setMakeOffer(false)}
-                    />
+                      onHide={() => setMakeOffer(false)} */}
                   </div>
                 </div>
               </div>
