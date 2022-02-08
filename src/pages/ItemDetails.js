@@ -7,7 +7,7 @@ import Offer from "../Components/Offer";
 
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import { BuyNFT } from "../helpers/BuyNFT";
 
 // import "../assets/css/bootstrap.min.css"
@@ -25,10 +25,27 @@ export default function ItemDetails({ item }) {
   const navigate = useNavigate();
   const { id } = useParams();
   const [itemDetail, setItemDetail] = useState();
+  const [offerAmount, setOfferAmount] = useState(false);
 
   const isAuthenticated = useSelector(
     (state) => state.auth.value.isAuthenticated
   );
+
+  const checkAmount = (e) => {
+    let amount = e.target.value;
+    console.log(amount);
+    let balance = loginUser.data.balance;
+    balance = parseFloat(balance);
+    console.log("Balance...", balance);
+    amount = parseFloat(amount);
+    if (amount > balance) {
+      toast.error("You do not have sufficient Fund", {
+        position: "top-center",
+      });
+    } else {
+      setOfferAmount(amount);
+    }
+  };
 
   const loginUser = useSelector((state) => state.auth.value.user);
   //   console.log(collectionData)
@@ -46,7 +63,10 @@ export default function ItemDetails({ item }) {
       });
 
       // console.log(res);
+
       if (res.data.status == true) {
+        document.getElementById("exampleModal").style.display = "none";
+
         let hash = await BuyNFT(
           item.tokenId,
           item.ipfs_hash,
@@ -102,29 +122,41 @@ export default function ItemDetails({ item }) {
   //////////////////////////////////////////Make offer function////////////
 
   const makeOfferHandler = async (itemDetail) => {
-    // e.preventDefault();
-    // console.log("inside offer handler", itemDetail);
-
-    const makeOffer = await axios.post(makeOfferUrl, {
-      content_id: itemDetail._id,
-      wallet_address: itemDetail.wallet_address,
-      content_price: itemDetail.price,
-      offer_price: "0",
-      hash: itemDetail.ipfs_hash,
-      status: itemDetail.status,
-    });
-
-    console.log("MakeOffer", makeOffer);
-    if (makeOffer.status === 200) {
-      toast.success("Message Has Been Sent Successfully", {
-        position: "top-center",
+    if (isAuthenticated) {
+      const res = await axios.post(buyUrl, {
+        email: loginUser.data.user.email,
+        amount: offerAmount,
+        content_price: offerAmount,
       });
+      // e.preventDefault();
+      // console.log("inside offer handler", itemDetail);
+      if (res.data.status == true) {
+        const makeOffer = await axios.post(makeOfferUrl, {
+          content_id: itemDetail._id,
+          wallet_address: itemDetail.wallet_address,
+          content_price: itemDetail.price,
+          offer_price: offerAmount,
+          hash: itemDetail.ipfs_hash,
+          status: itemDetail.status,
+        });
+
+        console.log("MakeOffer", makeOffer);
+        if (makeOffer.status === 200) {
+          toast.success("Offer Created Successfully", {
+            position: "top-center",
+          });
+        } else {
+          toast.error("Something went wrong", {
+            position: "top-center",
+          });
+        }
+      } else {
+        toast.error("Something went wrong", {
+          position: "top-center",
+        });
+      }
     } else {
-      toast.error("Something went wrong", {
-        position: "top-center",
-      });
     }
-    return;
   };
 
   return (
@@ -133,6 +165,8 @@ export default function ItemDetails({ item }) {
       <Header />
       <div className="item-details-section light-version padding-top padding-bottom">
         <div className="container">
+          <ToastContainer />
+
           <div className="item-details-wrapper">
             <div className="row g-5">
               <div className="col-lg-6">
@@ -442,7 +476,7 @@ export default function ItemDetails({ item }) {
                       </div>
                     </li> */}
                   </div>
-                  <div className="item-details-countdown">
+                  <div className="item-details-countdown d-none">
                     <h4>Ends In:</h4>
                     <ul
                       className="item-countdown-list count-down"
@@ -535,6 +569,7 @@ export default function ItemDetails({ item }) {
                       <input
                         type="text"
                         className="form-control"
+                        onKeyUp={checkAmount}
                         // value={price}
                         placeholder="Amount"
                       />
@@ -543,7 +578,9 @@ export default function ItemDetails({ item }) {
                       </div>
                     </div>
                   </div>
-                  <p className="text-right">Balance: 0.0000 REGO</p>
+                  <p className="text-right">
+                    Balance: {loginUser.data.balance} REGO
+                  </p>
                 </div>
               </div>
               <div className="text-center">
