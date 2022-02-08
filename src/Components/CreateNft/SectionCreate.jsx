@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
-import {ipfsMint} from "../../helpers/ipfs"
+import { ipfsMint } from "../../helpers/ipfs";
 import { Mint } from "../../helpers/Mint";
 function SectionCreate() {
   const url = "http://nft.regoex.com:3001/users/add-content";
   const [photoUrl, setPhotoUrl] = useState(null);
-  const [contentImage,setContentImage]=useState(null);
+  const [contentImage, setContentImage] = useState(null);
   const [formData, setFormData] = useState({
     title: "",
     file: "",
@@ -19,31 +19,20 @@ function SectionCreate() {
 
   const { title, file, price, category, metadata, description } = formData;
 
-  const handleFile=(e)=>{
-
+  const handleFile = (e) => {
     const { files } = e.target;
 
-
-      
     const reader = new window.FileReader();
     reader.readAsArrayBuffer(files[0]);
-     
+
     reader.onloadend = () => {
-      setContentImage(reader.result)
-     }
+      setContentImage(reader.result);
+    };
 
-
-
-
-     if (files[0]) { 
-
-      
-      
+    if (files[0]) {
       if (files[0].type.includes("image")) {
         const filename = files[0].name;
-        const fileExtension = filename.substr(
-          filename.lastIndexOf(".") + 1
-        );
+        const fileExtension = filename.substr(filename.lastIndexOf(".") + 1);
         if (
           fileExtension.toLowerCase() === "png" ||
           fileExtension.toLowerCase() === "jpg" ||
@@ -54,14 +43,11 @@ function SectionCreate() {
             ...formData,
             file: e.currentTarget.files[0],
           });
-          setPhotoUrl(
-            URL.createObjectURL(files[0])
-          );
+          setPhotoUrl(URL.createObjectURL(files[0]));
         }
       }
     }
-
-  }  
+  };
   const handleFormInput = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -88,11 +74,11 @@ function SectionCreate() {
     }
 
     console.log(formData);
-    const DataObj={name:title,price:price,description:description}
-    const hash=await ipfsMint(contentImage,DataObj);
+    const DataObj = { name: title, price: price, description: description };
+    const hash = await ipfsMint(contentImage, DataObj);
 
-    const voucher= await Mint(hash,price);
-    console.log('voucher',voucher)
+    const voucher = await Mint(hash, price);
+    console.log("voucher", voucher);
     const dataToSubmit = new FormData();
     dataToSubmit.append("email", "amantotla@questglt.org");
     dataToSubmit.append("title", title);
@@ -101,13 +87,12 @@ function SectionCreate() {
     dataToSubmit.append("metadata", metadata);
     dataToSubmit.append("category", category);
     dataToSubmit.append("description", description);
-    dataToSubmit.append("wallet_address",voucher.address);
+    dataToSubmit.append("wallet_address", voucher.address);
     dataToSubmit.append("ipfs_hash", hash);
-     
-    dataToSubmit.append("tokenId",voucher.voucher.tokenId);
 
-    dataToSubmit.append("signature",voucher.voucher.signature);
+    dataToSubmit.append("tokenId", voucher.voucher.tokenId);
 
+    dataToSubmit.append("signature", voucher.voucher.signature);
 
     console.log(dataToSubmit);
 
@@ -170,7 +155,7 @@ function SectionCreate() {
                             <label>Name</label>
                           </div>
                         </div>
-                        
+
                         <div className="col-md-6">
                           <div className="form-floating">
                             <input
@@ -200,7 +185,9 @@ function SectionCreate() {
                               <option value="Art">Art</option>
                               <option value="Music">Music</option>
                               <option value="Video">Video</option>
-                              <option value="Digital Anime">Digital Anime</option>
+                              <option value="Digital Anime">
+                                Digital Anime
+                              </option>
                             </select>
 
                             <label>Category</label>
@@ -229,7 +216,7 @@ function SectionCreate() {
                                   id="file-input-1"
                                   style={{ width: "0" }}
                                   placeholder="No File Selected"
-                                  onChange={(e) =>handleFile(e)}
+                                  onChange={(e) => handleFile(e)}
                                   aria-required="true"
                                 />
                                 <span className="input-group-btn"></span>
@@ -250,7 +237,7 @@ function SectionCreate() {
                             <label>Price</label>
                           </div>
                         </div>
-                        
+
                         <div className="col-md-6 d-none">
                           <div className="form-floating">
                             <input
@@ -314,7 +301,7 @@ function SectionCreate() {
                                   <Link to="/author" className="veryfied">
                                     <img
                                       loading="lazy"
-                                      src={("../../assets/images/seller/04.png")}
+                                      src={"../../assets/images/seller/04.png"}
                                       alt="author-img"
                                     />
                                   </Link>

@@ -34,18 +34,18 @@ export default function ItemDetails({ item }) {
   //   console.log(collectionData)
 
   const buyNowHandler = async (item) => {
-    console.log("loginUser", loginUser);
+    // console.log("loginUser", loginUser);
 
-    console.log(item);
+    // console.log(item);
     if (isAuthenticated) {
-      console.log("hello...");
+      // console.log("hello...");
       const res = await axios.post(buyUrl, {
         email: loginUser.data.user.email,
         amount: item.price,
         content_price: item.price,
       });
 
-      console.log(res);
+      // console.log(res);
       if (res.data.status == true) {
         let hash = await BuyNFT(
           item.tokenId,
@@ -54,7 +54,7 @@ export default function ItemDetails({ item }) {
           item.signature
         );
 
-        console.log("hash", hash);
+        // console.log("hash", hash);
 
         const buyRes = await axios.post(
           "http://nft.regoex.com:3001/users/buy",
@@ -69,7 +69,7 @@ export default function ItemDetails({ item }) {
           }
         );
 
-        console.log(buyRes);
+        // console.log(buyRes);
         if (buyRes.data.status === true) {
           toast.success("Transaction Successful", {
             position: "top-center",
@@ -82,16 +82,16 @@ export default function ItemDetails({ item }) {
         });
       }
     } else {
-      console.log("Nft change...");
+      // console.log("Nft change...");
       navigate("/signin");
     }
   };
 
   const getData = async () => {
-    console.log("get data hit");
+    // console.log("get data hit");
 
     const res = await axios.post(url, { content_id: id });
-    console.log("data", res);
+    // console.log("data", res);
     setItemDetail(res.data.data);
   };
   console.log(itemDetail);
@@ -103,7 +103,7 @@ export default function ItemDetails({ item }) {
 
   const makeOfferHandler = async (itemDetail) => {
     // e.preventDefault();
-    console.log("inside offer handler", itemDetail);
+    // console.log("inside offer handler", itemDetail);
 
     const makeOffer = await axios.post(makeOfferUrl, {
       content_id: itemDetail._id,
@@ -114,7 +114,7 @@ export default function ItemDetails({ item }) {
       status: itemDetail.status,
     });
 
-    console.log("MakeOffer", makeOffer);
+    // console.log("MakeOffer", makeOffer);
     if (makeOffer.status === 200) {
       toast.success("Message Has Been Sent Successfully", {
         position: "top-center",
