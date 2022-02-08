@@ -114,7 +114,7 @@ export default function ItemDetails({ item }) {
       status: itemDetail.status,
     });
 
-    // console.log("MakeOffer", makeOffer);
+    console.log("MakeOffer", makeOffer);
     if (makeOffer.status === 200) {
       toast.success("Message Has Been Sent Successfully", {
         position: "top-center",
@@ -483,14 +483,12 @@ export default function ItemDetails({ item }) {
                       Buy Now
                     </button>{" "}
                     <button
-                      className="default-btn"
-                      onClick={() => makeOfferHandler(itemDetail.content)}
+                      class="default-btn move-right"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
                     >
-                      <span>Make a Offer</span>{" "}
+                      <span>Make Offer</span>
                     </button>
-                    {/* <Offer
-                      show={makeOffer}
-                      onHide={() => setMakeOffer(false)} */}
                   </div>
                 </div>
               </div>
@@ -499,6 +497,70 @@ export default function ItemDetails({ item }) {
         </div>
       </div>
       <Footer />
+      {/* <!-- Modal --> */}
+      <div
+        className="modal fade make-offer-modal"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-body">
+              <h5 className="modal-title" id="exampleModalLabel">
+                Make Offer
+              </h5>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+              <div className="row">
+                <div className="col-md-12">
+                  <div className="form-group">
+                    <label>Price</label>
+                    <div className="input-group mb-3">
+                      <div className="input-group-prepend">
+                        <img
+                          src={
+                            "https://regoex.com/assets/images/logo-white.png"
+                          }
+                        />
+                      </div>
+                      {/* <select className="form-control select-width">
+                        <option>REGO</option>
+                      </select> */}
+                      <input
+                        type="text"
+                        className="form-control"
+                        // value={price}
+                        placeholder="Amount"
+                      />
+                      <div className="input-group-append">
+                        <span className="input-group-text">$ 0.00</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-right">Balance: 0.0000 REGO</p>
+                </div>
+              </div>
+              <div className="text-center">
+                <button
+                  className="default-btn move-right mt-3"
+                  onClick={() => makeOfferHandler(itemDetail.content)}
+                >
+                  <span>Make Offer</span>
+                </button>
+                {/* <button className="default-btn move-right mt-3">
+                  <span>Convert ETH</span>
+                </button> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
