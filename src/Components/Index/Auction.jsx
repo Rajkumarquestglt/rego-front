@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import sellerImage from "../../assets/images/seller/01.png";
 import live1 from "../../assets/images/liveAuc1.jpeg";
-import live2 from "../../assets/images/liveAuc2.png";
-import live3 from "../../assets/images/liveAuc3.png";
+import live2 from "../../assets/images/liveAuc2.jpg";
+import live3 from "../../assets/images/raj1.jpg";
 import live4 from "../../assets/images/liveAuc4.png";
 
 // import "../assets/css/icofont.min.css"
