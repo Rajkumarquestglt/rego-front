@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import logo from "../../assets/images/logo/logo-letter.png";
-import banner1 from "../../assets/images/banner1.jpg";
+import banner1 from "../../assets/images/seller5.png";
+import banner2 from "../../assets/images/seller2.jpeg";
+import banner3 from "../../assets/images/seller3.jpeg";
+import banner4 from "../../assets/images/seller4.jpeg";
+
 
 const limitedCollectionUrl =
   "http://nft.regoex.com:3001/users/limited-collection";
@@ -87,7 +91,7 @@ export default function TopSeller() {
                     <div className="nft-inner">
                       <div className="nft-thumb">
                         <img
-                          src={banner1}
+                          src={banner2}
                           alt="nft-img"
                           style={{ width: "227px", height: "170px" }}
                         />
@@ -126,7 +130,7 @@ export default function TopSeller() {
                                     <div className="nft-inner">
                                       <div className="nft-thumb">
                                         <img
-                                          src={banner1}
+                                          src={banner3}
                                           alt="nft-img"
                                           style={{ width: "227px", height: "170px" }}
                                         />
@@ -165,7 +169,7 @@ export default function TopSeller() {
                     <div className="nft-inner">
                       <div className="nft-thumb">
                         <img
-                          src={banner1}
+                          src={banner4}
                           alt="nft-img"
                           style={{ width: "227px", height: "170px" }}
                         />

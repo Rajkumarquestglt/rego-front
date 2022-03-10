@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import sellerImage from "../../assets/images/seller/01.png";
-import banner2 from "../../assets/images/banner2.jpg";
+import live1 from "../../assets/images/liveAuc1.jpeg";
+import live2 from "../../assets/images/liveAuc2.png";
+import live3 from "../../assets/images/liveAuc3.png";
+import live4 from "../../assets/images/liveAuc4.png";
 
 // import "../assets/css/icofont.min.css"
 // import "../assets/css/lightcase.css"
@@ -121,7 +124,7 @@ export default function Auction() {
                     <div className="nft-item-bottom">
                       <div className="nft-thumb">
                         <img
-                          src={"../../assets/images/nft-item/03.jpg"}
+                          src={live1}
                           alt="nft-img"
                         />
 
@@ -242,7 +245,7 @@ export default function Auction() {
                     <div className="nft-item-bottom">
                       <div className="nft-thumb">
                         <img
-                          src={"../../assets/images/nft-item/03.jpg"}
+                          src={live2}
                           alt="nft-img"
                         />
 
@@ -347,7 +350,7 @@ export default function Auction() {
                     <div className="nft-item-bottom">
                       <div className="nft-thumb">
                         <img
-                          src={"../../assets/images/nft-item/04.jpg"}
+                          src={live3}
                           alt="nft-img"
                         />
 
@@ -468,7 +471,7 @@ export default function Auction() {
                     <div className="nft-item-bottom">
                       <div className="nft-thumb">
                         <img
-                          src={"../../assets/images/nft-item/03.jpg"}
+                          src={live4}
                           alt="nft-img"
                         />
 
