@@ -272,7 +272,7 @@ export default function Auction() {
                                 to="author.html"
                                 style={{ paddingLeft: "10px" }}
                               >
-                                Raj Dash
+                                Klarens Malluta
                               </Link>
                             </h6>
                           </li>
@@ -343,7 +343,7 @@ export default function Auction() {
                       </div>
                       <div className="nft-content">
                         <h4>
-                          <Link to="item-details.html">Raj Dash</Link>{" "}
+                          <Link to="item-details.html">Klarens Malluta</Link>{" "}
                         </h4>
                         <div className="price-like d-flex justify-content-between align-items-center">
                           <p className="nft-price">
