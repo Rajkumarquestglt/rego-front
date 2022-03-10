@@ -1,6 +1,6 @@
 import React from "react";
-import { Modal } from "bootstrap";
-import { Button } from "bootstrap";
+import { Modal } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 export default function Offer(props) {
   return (

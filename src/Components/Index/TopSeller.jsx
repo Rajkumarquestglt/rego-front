@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import logo from "../../assets/images/logo/logo-letter.png";
+import banner1 from "../../assets/images/banner1.jpg";
 
 const limitedCollectionUrl =
   "http://nft.regoex.com:3001/users/limited-collection";
@@ -42,13 +43,13 @@ export default function TopSeller() {
         <div className="section-wrapper">
           <div className="nft-sell-wrapper">
             <div className="row justify-content-center gx-4 gy-3">
-              {list?.map((item, i) => (
-                <div className="col-xl-3 col-lg-4 col-sm-6" key={i}>
+              {/* {list?.map((item, i) => ( */}
+                <div className="col-xl-3 col-lg-4 col-sm-6">
                   <div className="nft-item light-version style-2">
                     <div className="nft-inner">
                       <div className="nft-thumb">
                         <img
-                          src={item.image}
+                          src={banner1}
                           alt="nft-img"
                           style={{ width: "227px", height: "170px" }}
                         />
@@ -61,7 +62,7 @@ export default function TopSeller() {
                         </div>
                         <div className="author-details d-flex flex-wrap align-items-center gap-15">
                           <div className="author-number">
-                            <h3 className="fs-36">{i + 1}</h3>
+                            <h3 className="fs-36"></h3>
                           </div>
                           <div className="author-det-info">
                             <h5>
@@ -70,7 +71,7 @@ export default function TopSeller() {
                             <p className="nft-price">
                               Price:{" "}
                               <span className="yellow-color">
-                                {item.price} Rego
+                                1 Rego
                               </span>
                             </p>
                           </div>
@@ -79,7 +80,125 @@ export default function TopSeller() {
                     </div>
                   </div>
                 </div>
-              ))}
+
+                {/* start */}
+                <div className="col-xl-3 col-lg-4 col-sm-6">
+                  <div className="nft-item light-version style-2">
+                    <div className="nft-inner">
+                      <div className="nft-thumb">
+                        <img
+                          src={banner1}
+                          alt="nft-img"
+                          style={{ width: "227px", height: "170px" }}
+                        />
+                      </div>
+                      <div className="nft-content">
+                        <div className="author-thumb">
+                          <Link to="author.html" className="veryfied">
+                            <img src={logo} alt="author-img" />
+                          </Link>
+                        </div>
+                        <div className="author-details d-flex flex-wrap align-items-center gap-15">
+                          <div className="author-number">
+                            <h3 className="fs-36"></h3>
+                          </div>
+                          <div className="author-det-info">
+                            <h5>
+                              <Link to="author.html">Gihan Fernindo</Link>{" "}
+                            </h5>
+                            <p className="nft-price">
+                              Price:{" "}
+                              <span className="yellow-color">
+                                1 Rego
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* end */}
+
+                {/* start */}
+                <div className="col-xl-3 col-lg-4 col-sm-6">
+                                  <div className="nft-item light-version style-2">
+                                    <div className="nft-inner">
+                                      <div className="nft-thumb">
+                                        <img
+                                          src={banner1}
+                                          alt="nft-img"
+                                          style={{ width: "227px", height: "170px" }}
+                                        />
+                                      </div>
+                                      <div className="nft-content">
+                                        <div className="author-thumb">
+                                          <Link to="author.html" className="veryfied">
+                                            <img src={logo} alt="author-img" />
+                                          </Link>
+                                        </div>
+                                        <div className="author-details d-flex flex-wrap align-items-center gap-15">
+                                          <div className="author-number">
+                                            <h3 className="fs-36"></h3>
+                                          </div>
+                                          <div className="author-det-info">
+                                            <h5>
+                                              <Link to="author.html">Gihan Fernindo</Link>{" "}
+                                            </h5>
+                                            <p className="nft-price">
+                                              Price:{" "}
+                                              <span className="yellow-color">
+                                                1 Rego
+                                              </span>
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                </div>
+                {/* end */}
+
+                {/* start */}
+                <div className="col-xl-3 col-lg-4 col-sm-6">
+                  <div className="nft-item light-version style-2">
+                    <div className="nft-inner">
+                      <div className="nft-thumb">
+                        <img
+                          src={banner1}
+                          alt="nft-img"
+                          style={{ width: "227px", height: "170px" }}
+                        />
+                      </div>
+                      <div className="nft-content">
+                        <div className="author-thumb">
+                          <Link to="author.html" className="veryfied">
+                            <img src={logo} alt="author-img" />
+                          </Link>
+                        </div>
+                        <div className="author-details d-flex flex-wrap align-items-center gap-15">
+                          <div className="author-number">
+                            <h3 className="fs-36"></h3>
+                          </div>
+                          <div className="author-det-info">
+                            <h5>
+                              <Link to="author.html">Gihan Fernindo</Link>{" "}
+                            </h5>
+                            <p className="nft-price">
+                              Price:{" "}
+                              <span className="yellow-color">
+                                1 Rego
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* end */}
+
+              {/* ))} */}
             </div>
           </div>
         </div>

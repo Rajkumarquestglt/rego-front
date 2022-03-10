@@ -3,7 +3,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import Footer from "../Components/Index/Footer";
 import Header from "../Components/Index/Header";
 import UpperStrip from "../Components/Index/UpperStrip";
-import Offer from "../Components/Offer";
+// import Offer from "../Components/Offer";
 
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";

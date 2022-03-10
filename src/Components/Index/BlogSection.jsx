@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import bprak from "../../assets/images/bprak.png";
-import banner1 from "../../assets/images/banner1.jpg";
-import banner2 from "../../assets/images/banner2.jpg";
-import banner3 from "../../assets/images/banner3.jpg";
+import banner1 from "../../assets/images/blog1.jpg";
+import banner2 from "../../assets/images/blog2.png";
+import banner3 from "../../assets/images/blog3.jpeg";
 import banner4 from "../../assets/images/banner4.jpg";
 
 export default function BlogSection() {
@@ -29,9 +29,11 @@ export default function BlogSection() {
                     <div className="nft-content">
                       <div className="author-details">
                         <h4>
-                          <Link to="blog-single.html">
+                          {/* <Link to="">
                             The Rise of the Non Fungible Tokens (NFTs)
-                          </Link>{" "}
+                          </Link>{" "} */}
+                          <a target={"_blank"} href="https://www.forbes.com/sites/forbesbusinesscouncil/2021/11/19/the-future-of-nfts-digital-entertainment-at-its-finest/?sh=2b45eddf22ac">
+                            The Rise of the Non Fungible Tokens (NFTs)</a>
                         </h4>
                         <div className="meta-info">
                           <p>
@@ -106,9 +108,12 @@ export default function BlogSection() {
                     <div className="nft-content">
                       <div className="author-details">
                         <h4>
-                          <Link to="blog-single.html">
+                          {/* <Link to="blog-single.html">
                             Best NFT Selling Marketplace website
-                          </Link>
+                          </Link> */}
+                          <a target={"_blank"} href="https://www.bloombergquint.com/bq-brand-studio/how-nfts-will-change-the-world-in-2022-5-key-trends">
+                          Best NFT Selling Marketplace website
+                            </a>
                         </h4>
                         <div className="meta-info">
                           <p>
