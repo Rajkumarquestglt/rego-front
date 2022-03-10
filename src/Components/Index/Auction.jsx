@@ -15,7 +15,6 @@ import live4 from "../../assets/images/liveAuc4.png";
 // import "../assets/css/custom.css"
 // import "../assets/js/countdown.min.js"
 
-
 // const limitedCollectionUrl =
 //   "http://nft.regoex.com:3001/users/limited-collection";
 
@@ -56,8 +55,6 @@ export default function Auction() {
         <div className="section-wrapper">
           <div className="auction-holder">
             <div className="swiper-wrapper">
-              
-
               <div className="swiper-slide">
                 <div className="nft-item light-version">
                   <div className="nft-inner">
@@ -65,23 +62,16 @@ export default function Auction() {
                     <div className="nft-item-top d-flex justify-content-between align-items-center">
                       <div className="author-part">
                         <ul className="author-list d-flex">
-                          <li className="single-author">
-                            <Link to="author.html">
-                              <img
-                                src={require("../../assets/images/seller/04.png")}
-                                alt="author-img"
-                              />
-                            </Link>
-                          </li>
+                          <li className="single-author"></li>
                           <li className="single-author d-flex align-items-center">
-                            <Link to="author.html" className="veryfied">
-                              <img
-                                src={require("../../assets/images/seller/01.gif")}
-                                alt="author-img"
-                              />
-                            </Link>
                             <h6>
-                              <Link to="author.html">Jhon Doe</Link>
+                              <Link
+                                to="author.html"
+                                className="text-center"
+                                style={{ paddingLeft: "10px" }}
+                              >
+                                B Praak
+                              </Link>
                             </h6>
                           </li>
                         </ul>
@@ -123,15 +113,12 @@ export default function Auction() {
                     {/* <!-- nft-bottom part --> */}
                     <div className="nft-item-bottom">
                       <div className="nft-thumb">
-                        <img
-                          src={live1}
-                          alt="nft-img"
-                        />
+                        <img src={live1} alt="nft-img" />
 
                         {/* <!-- nft countdwon --> */}
                         <ul
                           className="nft-countdown count-down"
-                          data-date="July 05, 2022 21:14:01"
+                          data-date="March 25, 2022 21:14:01"
                           data-blast="bgColor"
                         >
                           <li>
@@ -154,12 +141,11 @@ export default function Auction() {
                       </div>
                       <div className="nft-content">
                         <h4>
-                          <Link to="item-details.html">Walking On Air</Link>{" "}
+                          <Link to="item-details.html">B Praak</Link>{" "}
                         </h4>
                         <div className="price-like d-flex justify-content-between align-items-center">
                           <p className="nft-price">
-                            Price:{" "}
-                            <span className="yellow-color">0.34 REGO</span>
+                            Price: <span className="yellow-color">0 REGO</span>
                           </p>
                           <Link to="#" className="nft-like">
                             <i className="icofont-heart"></i>
@@ -178,31 +164,16 @@ export default function Auction() {
                     <div className="nft-item-top d-flex justify-content-between align-items-center">
                       <div className="author-part">
                         <ul className="author-list d-flex">
-                          <li className="single-author">
-                            <Link to="author.html">
-                              <img
-                                src={require("../../assets/images/seller/04.png")}
-                                alt="author-img"
-                              />
-                            </Link>
-                          </li>
-                          <li className="single-author">
-                            <Link to="author.html">
-                              <img
-                                src={require("../../assets/images/seller/02.gif")}
-                                alt="author-img"
-                              />
-                            </Link>
-                          </li>
+                          <li className="single-author"></li>
+                          <li className="single-author"></li>
                           <li className="single-author d-flex align-items-center">
-                            <Link to="author.html" className="veryfied">
-                              <img
-                                src={require("../../assets/images/seller/02.png")}
-                                alt="author-img"
-                              />
-                            </Link>
                             <h6>
-                              <Link to="author.html">Gucci L.</Link>
+                              <Link
+                                to="author.html"
+                                style={{ paddingLeft: "10px" }}
+                              >
+                                Snoop Dogg
+                              </Link>
                             </h6>
                           </li>
                         </ul>
@@ -244,15 +215,12 @@ export default function Auction() {
                     {/* <!-- nft-bottom part --> */}
                     <div className="nft-item-bottom">
                       <div className="nft-thumb">
-                        <img
-                          src={live2}
-                          alt="nft-img"
-                        />
+                        <img src={live2} alt="nft-img" />
 
                         {/* <!-- nft countdwon --> */}
                         <ul
                           className="nft-countdown count-down"
-                          data-date="July 05, 2022 21:14:01"
+                          data-date="March 25, 2022 21:14:01"
                           data-blast="bgColor"
                         >
                           <li>
@@ -275,12 +243,11 @@ export default function Auction() {
                       </div>
                       <div className="nft-content">
                         <h4>
-                          <Link to="item-details.html">EUPHORIA de</Link>{" "}
+                          <Link to="item-details.html">Snoop Dogg</Link>{" "}
                         </h4>
                         <div className="price-like d-flex justify-content-between align-items-center">
                           <p className="nft-price">
-                            Price:{" "}
-                            <span className="yellow-color">0.34 REGO</span>
+                            Price: <span className="yellow-color">0 REGO</span>
                           </p>
                           <Link to="#" className="nft-like">
                             <i className="icofont-heart"></i>
@@ -300,14 +267,13 @@ export default function Auction() {
                       <div className="author-part">
                         <ul className="author-list d-flex">
                           <li className="single-author d-flex align-items-center">
-                            <Link to="author.html" className="veryfied">
-                              <img
-                                src={require("../../assets/images/seller/04.png")}
-                                alt="author-img"
-                              />
-                            </Link>
                             <h6>
-                              <Link to="author.html">Rassel mrh</Link>
+                              <Link
+                                to="author.html"
+                                style={{ paddingLeft: "10px" }}
+                              >
+                                Raj Dash
+                              </Link>
                             </h6>
                           </li>
                         </ul>
@@ -349,19 +315,16 @@ export default function Auction() {
                     {/* <!-- nft-bottom part --> */}
                     <div className="nft-item-bottom">
                       <div className="nft-thumb">
-                        <img
-                          src={live3}
-                          alt="nft-img"
-                        />
+                        <img src={live3} alt="nft-img" />
 
                         {/* <!-- nft countdwon --> */}
                         <ul
                           className="nft-countdown count-down"
-                          data-date="July 05, 2022 21:14:01"
+                          data-date="March 25, 2022 21:14:01"
                           data-blast="bgColor"
                         >
                           <li>
-                            <span className="days">34</span>
+                            <span className="days">10</span>
                             <span className="count-txt">D</span>
                           </li>
                           <li>
@@ -380,12 +343,11 @@ export default function Auction() {
                       </div>
                       <div className="nft-content">
                         <h4>
-                          <Link to="item-details.html">Futuristic cols</Link>{" "}
+                          <Link to="item-details.html">Raj Dash</Link>{" "}
                         </h4>
                         <div className="price-like d-flex justify-content-between align-items-center">
                           <p className="nft-price">
-                            Price:{" "}
-                            <span className="yellow-color">0.34 REGO</span>
+                            Price: <span className="yellow-color">0 REGO</span>
                           </p>
                           <Link to="#" className="nft-like">
                             <i className="icofont-heart"></i>
@@ -404,31 +366,16 @@ export default function Auction() {
                     <div className="nft-item-top d-flex justify-content-between align-items-center">
                       <div className="author-part">
                         <ul className="author-list d-flex">
-                          <li className="single-author">
-                            <Link to="author.html">
-                              <img
-                                src={require("../../assets/images/seller/04.png")}
-                                alt="author-img"
-                              />
-                            </Link>
-                          </li>
-                          <li className="single-author">
-                            <Link to="author.html">
-                              <img
-                                src={require("../../assets/images/seller/05.png")}
-                                alt="author-img"
-                              />
-                            </Link>
-                          </li>
+                          <li className="single-author"></li>
+                          <li className="single-author"></li>
                           <li className="single-author d-flex align-items-center">
-                            <Link to="author.html" className="veryfied">
-                              <img
-                                src={require("../../assets/images/seller/04.gif")}
-                                alt="author-img"
-                              />
-                            </Link>
                             <h6>
-                              <Link to="author.html">Blexa z</Link>
+                              <Link
+                                to="author.html"
+                                style={{ paddingLeft: "10px" }}
+                              >
+                                Big B
+                              </Link>
                             </h6>
                           </li>
                         </ul>
@@ -470,15 +417,12 @@ export default function Auction() {
                     {/* <!-- nft-bottom part --> */}
                     <div className="nft-item-bottom">
                       <div className="nft-thumb">
-                        <img
-                          src={live4}
-                          alt="nft-img"
-                        />
+                        <img src={live4} alt="nft-img" />
 
                         {/* <!-- nft countdwon --> */}
                         <ul
                           className="nft-countdown count-down"
-                          data-date="July 05, 2022 21:14:01"
+                          data-date="March 25, 2022 21:14:01"
                           data-blast="bgColor"
                         >
                           <li>
@@ -501,12 +445,11 @@ export default function Auction() {
                       </div>
                       <div className="nft-content">
                         <h4>
-                          <Link to="item-details.html">Space Crafts</Link>{" "}
+                          <Link to="item-details.html">Big B</Link>{" "}
                         </h4>
                         <div className="price-like d-flex justify-content-between align-items-center">
                           <p className="nft-price">
-                            Price:{" "}
-                            <span className="yellow-color">0.34 REGO</span>
+                            Price: <span className="yellow-color">0 REGO</span>
                           </p>
                           <Link to="#" className="nft-like">
                             <i className="icofont-heart"></i>

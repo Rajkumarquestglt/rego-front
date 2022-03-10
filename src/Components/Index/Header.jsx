@@ -4,9 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../reducers/authReducer";
 import logoImage from "../../assets/images/logo-white.png";
 
-
 export default function Header() {
-
   const dispatch = useDispatch();
   const isAuthenticated = useSelector(
     (state) => state.auth.value.isAuthenticated
@@ -28,7 +26,11 @@ export default function Header() {
             </Link>
           </div>
 
-          <form action="/search-result" className="header__search">
+          <form
+            action="/search-result"
+            className="header__search"
+            style={{ marginLeft: "20%" }}
+          >
             <input
               type="text"
               name="search"
@@ -45,7 +47,7 @@ export default function Header() {
           </form>
           <div className="header__menu ms-auto">
             <ul className="header__nav mb-0">
-             {/* <!-- <li className="header__nav-item">
+              {/* <!-- <li className="header__nav-item">
                 <Link to="/" className="header__nav-link">
                   Drop
                 </Link>
@@ -188,9 +190,15 @@ export default function Header() {
                 {/* <Link to="https://regoex.com/buy" target="_blank" className="header__nav-link sign-up-btn">
                   Buy Rego
                 </Link> */}
-                <a href="https://regoex.com/buy" target="_blank" className="header__nav-link sign-up-btn">Buy Rego</a>
+                <a
+                  href="https://regoex.com/buy"
+                  target="_blank"
+                  className="header__nav-link sign-up-btn"
+                >
+                  Buy Rego
+                </a>
               </li>
-            {/*<!--   {isAuthenticated ? (
+              {/*<!--   {isAuthenticated ? (
                 ""
               ) : (
                 <li className="header__nav-item">
@@ -206,85 +214,85 @@ export default function Header() {
               </li>
             </ul>
           </div>
-          
-            <div className="header__actions">
-              <div className="header__action header__action--search">
-                <button className="header__action-btn" type="button">
-                  <i className="icofont-search-1"></i>
-                </button>
-              </div>
 
-               {isAuthenticated && (
-                <>
-                  <div className="header__action header__action--profile">
-                    <div className="dropdown">
-                      <Link
-                        className="dropdown-toggle"
-                        to="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                        data-bs-offset="-100,10"
-                      >
-                        <span data-blast="bgColor">
-                          <i className="icofont-user"></i>
-                        </span>{" "}
-                        <span className="d-none d-md-inline">
-                          {loginUser?.data?.user.name}
-                        </span>
-                      </Link>
+          <div className="header__actions">
+            <div className="header__action header__action--search">
+              <button className="header__action-btn" type="button">
+                <i className="icofont-search-1"></i>
+              </button>
+            </div>
 
-                      <ul className="dropdown-menu">
-                        <li>
-                          <Link className="dropdown-item" to="author.html">
-                            <span className="me-1">
-                              <i className="icofont-options"></i>
-                            </span>
-                            Profile
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="dropdown-item" to="/activity">
-                            <span className="me-1">
-                              <i className="icofont-lightning-ray"></i>
-                            </span>
-                            Activity
-                          </Link>
-                        </li>
-                        <li>
-                          <hr className="dropdown-divider" />
-                        </li>
-
-                        <li>
-                          <button
-                            className="dropdown-item"
-                            onClick={() => {
-                              dispatch(logout());
-                            }}
-                          >
-                            {" "}
-                            Sign Out{" "}
-                            <span className="ms-1">
-                              <i className="icofont-logout"></i>
-                            </span>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="wallet-btn">
-                    <Link to="wallet.html">
-                      <span>
-                        <i className="icofont-wallet" data-blast="color"></i>
+            {isAuthenticated && (
+              <>
+                <div className="header__action header__action--profile">
+                  <div className="dropdown">
+                    <Link
+                      className="dropdown-toggle"
+                      to="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      data-bs-offset="-100,10"
+                    >
+                      <span data-blast="bgColor">
+                        <i className="icofont-user"></i>
                       </span>{" "}
                       <span className="d-none d-md-inline">
-                        {loginUser?.data?.balance}Rego
-                      </span>{" "}
+                        {loginUser?.data?.user.name}
+                      </span>
                     </Link>
+
+                    <ul className="dropdown-menu">
+                      <li>
+                        <Link className="dropdown-item" to="author.html">
+                          <span className="me-1">
+                            <i className="icofont-options"></i>
+                          </span>
+                          Profile
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="dropdown-item" to="/activity">
+                          <span className="me-1">
+                            <i className="icofont-lightning-ray"></i>
+                          </span>
+                          Activity
+                        </Link>
+                      </li>
+                      <li>
+                        <hr className="dropdown-divider" />
+                      </li>
+
+                      <li>
+                        <button
+                          className="dropdown-item"
+                          onClick={() => {
+                            dispatch(logout());
+                          }}
+                        >
+                          {" "}
+                          Sign Out{" "}
+                          <span className="ms-1">
+                            <i className="icofont-logout"></i>
+                          </span>
+                        </button>
+                      </li>
+                    </ul>
                   </div>
-                </>
-              )}
-            </div>
+                </div>
+                <div className="wallet-btn">
+                  <Link to="wallet.html">
+                    <span>
+                      <i className="icofont-wallet" data-blast="color"></i>
+                    </span>{" "}
+                    <span className="d-none d-md-inline">
+                      {loginUser?.data?.balance}Rego
+                    </span>{" "}
+                  </Link>
+                </div>
+              </>
+            )}
+          </div>
           <button className="menu-trigger header__btn" id="menu05">
             <span></span>
             <span></span>

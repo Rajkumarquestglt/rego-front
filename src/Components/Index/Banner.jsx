@@ -65,7 +65,7 @@ export default function Banner() {
                                     />
                                   </Link>
                                   <h6>
-                                    <Link to="author.html">rasselmrh</Link>
+                                    <Link to="author.html">B Praak</Link>
                                   </h6>
                                 </li>
                               </ul>
@@ -89,12 +89,12 @@ export default function Banner() {
                             </div>
                             <div className="nft-content">
                               <h4>
-                                <Link to="item-details.html">Black Cat </Link>{" "}
+                                <Link to="item-details.html">B Praak </Link>{" "}
                               </h4>
                               <div className="price-like d-flex justify-content-between align-items-center">
                                 <p className="nft-price">
                                   Price:{" "}
-                                  <span className="yellow-color">0.34 REGO</span>
+                                  <span className="yellow-color">0 REGO</span>
                                 </p>
                                 <Link to="#" className="nft-like">
                                   <i className="icofont-heart"></i>
@@ -123,7 +123,7 @@ export default function Banner() {
                                     />
                                   </Link>
                                   <h6>
-                                    <Link to="author.html">Gucci Lucas</Link>
+                                    <Link to="author.html">B Praak</Link>
                                   </h6>
                                 </li>
                               </ul>
@@ -163,12 +163,12 @@ export default function Banner() {
                             </div>
                             <div className="nft-content">
                               <h4>
-                                <Link to="item-details.html">EUPHORIA de</Link>{" "}
+                                <Link to="item-details.html">B Praak</Link>{" "}
                               </h4>
                               <div className="price-like d-flex justify-content-between align-items-center">
                                 <p className="nft-price">
                                   Price:{" "}
-                                  <span className="yellow-color">0.34 REGO</span>
+                                  <span className="yellow-color">0 REGO</span>
                                 </p>
                                 <Link to="#" className="nft-like">
                                   <i className="icofont-heart"></i>
@@ -197,7 +197,7 @@ export default function Banner() {
                                     />
                                   </Link>
                                   <h6>
-                                    <Link to="author.html">lcus x3</Link>
+                                    <Link to="author.html">B Praak</Link>
                                   </h6>
                                 </li>
                               </ul>
@@ -237,12 +237,12 @@ export default function Banner() {
                             </div>
                             <div className="nft-content">
                               <h4>
-                                <Link to="item-details.html">Silly C4T de</Link>{" "}
+                                <Link to="item-details.html">B Praak</Link>{" "}
                               </h4>
                               <div className="price-like d-flex justify-content-between align-items-center">
                                 <p className="nft-price">
                                   Price:{" "}
-                                  <span className="yellow-color">0.34 REGO</span>
+                                  <span className="yellow-color">0 REGO</span>
                                 </p>
                                 <Link to="#" className="nft-like">
                                   <i className="icofont-heart"></i>
@@ -270,7 +270,7 @@ export default function Banner() {
                                     />
                                   </Link>
                                   <h6>
-                                    <Link to="author.html">Imo35 ucas</Link>
+                                    <Link to="author.html">B Praak</Link>
                                   </h6>
                                 </li>
                               </ul>
@@ -310,14 +310,12 @@ export default function Banner() {
                             </div>
                             <div className="nft-content">
                               <h4>
-                                <Link to="item-details.html">
-                                  Future Rocket
-                                </Link>{" "}
+                                <Link to="item-details.html">B Praak</Link>{" "}
                               </h4>
                               <div className="price-like d-flex justify-content-between align-items-center">
                                 <p className="nft-price">
                                   Price:{" "}
-                                  <span className="yellow-color">0.34 REGO</span>
+                                  <span className="yellow-color">0 REGO</span>
                                 </p>
                                 <Link to="#" className="nft-like">
                                   <i className="icofont-heart"></i>

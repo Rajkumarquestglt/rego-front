@@ -7,7 +7,6 @@ import banner2 from "../../assets/images/seller2.jpeg";
 import banner3 from "../../assets/images/seller3.jpeg";
 import banner4 from "../../assets/images/seller4.jpeg";
 
-
 const limitedCollectionUrl =
   "http://nft.regoex.com:3001/users/limited-collection";
 
@@ -48,159 +47,131 @@ export default function TopSeller() {
           <div className="nft-sell-wrapper">
             <div className="row justify-content-center gx-4 gy-3">
               {/* {list?.map((item, i) => ( */}
-                <div className="col-xl-3 col-lg-4 col-sm-6">
-                  <div className="nft-item light-version style-2">
-                    <div className="nft-inner">
-                      <div className="nft-thumb">
-                        <img
-                          src={banner1}
-                          alt="nft-img"
-                          style={{ width: "227px", height: "170px" }}
-                        />
-                      </div>
-                      <div className="nft-content">
-                        <div className="author-thumb">
-                          <Link to="author.html" className="veryfied">
-                            <img src={logo} alt="author-img" />
-                          </Link>
+              <div className="col-xl-3 col-lg-4 col-sm-6">
+                <div className="nft-item light-version style-2">
+                  <div className="nft-inner">
+                    <div className="nft-thumb">
+                      <img
+                        src={banner1}
+                        alt="nft-img"
+                        style={{ width: "227px", height: "170px" }}
+                      />
+                    </div>
+                    <div className="nft-content">
+                      <div className="author-thumb"></div>
+                      <div className="author-details d-flex flex-wrap align-items-center gap-15">
+                        <div className="author-number">
+                          <h3 className="fs-36"></h3>
                         </div>
-                        <div className="author-details d-flex flex-wrap align-items-center gap-15">
-                          <div className="author-number">
-                            <h3 className="fs-36"></h3>
-                          </div>
-                          <div className="author-det-info">
-                            <h5>
-                              <Link to="author.html">Gihan Fernindo</Link>{" "}
-                            </h5>
-                            <p className="nft-price">
-                              Price:{" "}
-                              <span className="yellow-color">
-                                1 Rego
-                              </span>
-                            </p>
-                          </div>
+                        <div className="author-det-info">
+                          <h5>
+                            <Link to="author.html">Gihan Fernindo</Link>{" "}
+                          </h5>
+                          <p className="nft-price">
+                            Price: <span className="yellow-color">0 Rego</span>
+                          </p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                {/* start */}
-                <div className="col-xl-3 col-lg-4 col-sm-6">
-                  <div className="nft-item light-version style-2">
-                    <div className="nft-inner">
-                      <div className="nft-thumb">
-                        <img
-                          src={banner2}
-                          alt="nft-img"
-                          style={{ width: "227px", height: "170px" }}
-                        />
-                      </div>
-                      <div className="nft-content">
-                        <div className="author-thumb">
-                          <Link to="author.html" className="veryfied">
-                            <img src={logo} alt="author-img" />
-                          </Link>
+              {/* start */}
+              <div className="col-xl-3 col-lg-4 col-sm-6">
+                <div className="nft-item light-version style-2">
+                  <div className="nft-inner">
+                    <div className="nft-thumb">
+                      <img
+                        src={banner2}
+                        alt="nft-img"
+                        style={{ width: "227px", height: "170px" }}
+                      />
+                    </div>
+                    <div className="nft-content">
+                      <div className="author-thumb"></div>
+                      <div className="author-details d-flex flex-wrap align-items-center gap-15">
+                        <div className="author-number">
+                          <h3 className="fs-36"></h3>
                         </div>
-                        <div className="author-details d-flex flex-wrap align-items-center gap-15">
-                          <div className="author-number">
-                            <h3 className="fs-36"></h3>
-                          </div>
-                          <div className="author-det-info">
-                            <h5>
-                              <Link to="author.html">Gihan Fernindo</Link>{" "}
-                            </h5>
-                            <p className="nft-price">
-                              Price:{" "}
-                              <span className="yellow-color">
-                                1 Rego
-                              </span>
-                            </p>
-                          </div>
+                        <div className="author-det-info">
+                          <h5>
+                            <Link to="author.html">Gihan Fernindo</Link>{" "}
+                          </h5>
+                          <p className="nft-price">
+                            Price: <span className="yellow-color">0 Rego</span>
+                          </p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                {/* end */}
+              </div>
+              {/* end */}
 
-                {/* start */}
-                <div className="col-xl-3 col-lg-4 col-sm-6">
-                                  <div className="nft-item light-version style-2">
-                                    <div className="nft-inner">
-                                      <div className="nft-thumb">
-                                        <img
-                                          src={banner3}
-                                          alt="nft-img"
-                                          style={{ width: "227px", height: "170px" }}
-                                        />
-                                      </div>
-                                      <div className="nft-content">
-                                        <div className="author-thumb">
-                                          <Link to="author.html" className="veryfied">
-                                            <img src={logo} alt="author-img" />
-                                          </Link>
-                                        </div>
-                                        <div className="author-details d-flex flex-wrap align-items-center gap-15">
-                                          <div className="author-number">
-                                            <h3 className="fs-36"></h3>
-                                          </div>
-                                          <div className="author-det-info">
-                                            <h5>
-                                              <Link to="author.html">Gihan Fernindo</Link>{" "}
-                                            </h5>
-                                            <p className="nft-price">
-                                              Price:{" "}
-                                              <span className="yellow-color">
-                                                1 Rego
-                                              </span>
-                                            </p>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                </div>
-                {/* end */}
-
-                {/* start */}
-                <div className="col-xl-3 col-lg-4 col-sm-6">
-                  <div className="nft-item light-version style-2">
-                    <div className="nft-inner">
-                      <div className="nft-thumb">
-                        <img
-                          src={banner4}
-                          alt="nft-img"
-                          style={{ width: "227px", height: "170px" }}
-                        />
-                      </div>
-                      <div className="nft-content">
-                        <div className="author-thumb">
-                          <Link to="author.html" className="veryfied">
-                            <img src={logo} alt="author-img" />
-                          </Link>
+              {/* start */}
+              <div className="col-xl-3 col-lg-4 col-sm-6">
+                <div className="nft-item light-version style-2">
+                  <div className="nft-inner">
+                    <div className="nft-thumb">
+                      <img
+                        src={banner3}
+                        alt="nft-img"
+                        style={{ width: "227px", height: "170px" }}
+                      />
+                    </div>
+                    <div className="nft-content">
+                      <div className="author-thumb"></div>
+                      <div className="author-details d-flex flex-wrap align-items-center gap-15">
+                        <div className="author-number">
+                          <h3 className="fs-36"></h3>
                         </div>
-                        <div className="author-details d-flex flex-wrap align-items-center gap-15">
-                          <div className="author-number">
-                            <h3 className="fs-36"></h3>
-                          </div>
-                          <div className="author-det-info">
-                            <h5>
-                              <Link to="author.html">Gihan Fernindo</Link>{" "}
-                            </h5>
-                            <p className="nft-price">
-                              Price:{" "}
-                              <span className="yellow-color">
-                                1 Rego
-                              </span>
-                            </p>
-                          </div>
+                        <div className="author-det-info">
+                          <h5>
+                            <Link to="author.html">Gihan Fernindo</Link>{" "}
+                          </h5>
+                          <p className="nft-price">
+                            Price: <span className="yellow-color">0 Rego</span>
+                          </p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                {/* end */}
+              </div>
+              {/* end */}
+
+              {/* start */}
+              <div className="col-xl-3 col-lg-4 col-sm-6">
+                <div className="nft-item light-version style-2">
+                  <div className="nft-inner">
+                    <div className="nft-thumb">
+                      <img
+                        src={banner4}
+                        alt="nft-img"
+                        style={{ width: "227px", height: "170px" }}
+                      />
+                    </div>
+                    <div className="nft-content">
+                      <div className="author-thumb"></div>
+                      <div className="author-details d-flex flex-wrap align-items-center gap-15">
+                        <div className="author-number">
+                          <h3 className="fs-36"></h3>
+                        </div>
+                        <div className="author-det-info">
+                          <h5>
+                            <Link to="author.html">Gihan Fernindo</Link>{" "}
+                          </h5>
+                          <p className="nft-price">
+                            Price: <span className="yellow-color">0 Rego</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* end */}
 
               {/* ))} */}
             </div>
