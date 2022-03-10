@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import bprak from "../../assets/images/bprak.png";
 import banner1 from "../../assets/images/banner1-temp.jpeg";
 import banner2 from "../../assets/images/banner2-temp.jpeg";
-import banner3 from "../../assets/images/banner1-temp.jpeg";
-import banner4 from "../../assets/images/banner2-temp.jpeg";
+import banner3 from "../../assets/images/banner3-temp.png";
+import banner4 from "../../assets/images/banner3-temp.png";
 
 export default function Banner() {
   return (
