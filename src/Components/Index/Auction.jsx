@@ -159,7 +159,7 @@ export default function Auction() {
                         <div className="price-like d-flex justify-content-between align-items-center">
                           <p className="nft-price">
                             Price:{" "}
-                            <span className="yellow-color">0.34 ETH</span>
+                            <span className="yellow-color">0.34 REGO</span>
                           </p>
                           <Link to="#" className="nft-like">
                             <i className="icofont-heart"></i>
@@ -280,7 +280,7 @@ export default function Auction() {
                         <div className="price-like d-flex justify-content-between align-items-center">
                           <p className="nft-price">
                             Price:{" "}
-                            <span className="yellow-color">0.34 ETH</span>
+                            <span className="yellow-color">0.34 REGO</span>
                           </p>
                           <Link to="#" className="nft-like">
                             <i className="icofont-heart"></i>
@@ -385,7 +385,7 @@ export default function Auction() {
                         <div className="price-like d-flex justify-content-between align-items-center">
                           <p className="nft-price">
                             Price:{" "}
-                            <span className="yellow-color">0.34 ETH</span>
+                            <span className="yellow-color">0.34 REGO</span>
                           </p>
                           <Link to="#" className="nft-like">
                             <i className="icofont-heart"></i>
@@ -506,7 +506,7 @@ export default function Auction() {
                         <div className="price-like d-flex justify-content-between align-items-center">
                           <p className="nft-price">
                             Price:{" "}
-                            <span className="yellow-color">0.34 ETH</span>
+                            <span className="yellow-color">0.34 REGO</span>
                           </p>
                           <Link to="#" className="nft-like">
                             <i className="icofont-heart"></i>
